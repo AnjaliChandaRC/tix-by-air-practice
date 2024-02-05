@@ -10,7 +10,7 @@ const Hero = () => {
         <div className='flex items-center flex-col md:flex-row '>
           <div className='max-w-[586px]'>
             <p className='ff_inter text-eerieblack text-base font-semibold !leading-[150%] mb-[10px]'>Welcome To TixByAir</p>
-            <h1 className='text-smokyblack  text-[40px] lg:text-[55px] xl:text-textXXl !leading-[120%] ff_satoshi_black'>Instantly Track <span className='inline-block '>Your Community</span> Engagement!</h1>
+            <h1 className='text-smokyblack  text-[40px] lg:text-[55px] xl:text-textXXl !leading-[120%] ff_satoshi_black'>Instantly Track <span className='inline-block combined'>Your Community</span> Engagement!</h1>
             <p className='text-darkgray text-base leading-[150%] ff_inter mt-4 max-w-[530px] mb-10' >See who showed up. View analytics, create tickets, and track who's supporting you the most.</p>
             <CustomButton buttonText="CREATE YOUR COMMUNITY" />
           </div>
