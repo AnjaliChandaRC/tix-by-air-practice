@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Satoshi-Black";
-  src: url("./fonts/Satoshi-Black.otf");
+  src: url("./fonts//Satoshi-Black.otf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Satoshi-medium";
-  src: url("./fonts/Satoshi-Medium.otf");
+  src: url("./fonts//Satoshi-Medium.otf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
