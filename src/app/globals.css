@@ -31,3 +31,7 @@
 .ff_inter {
   font-family: 'Inter', sans-serif;
 }
+
+.common_btn_bg {
+  background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
+}

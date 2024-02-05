@@ -43,6 +43,7 @@ module.exports = {
         applegreen: "#84B140",
         racingred: "#CD0404",
         eerieblack: "#252423",
+        seashell: "#FFF7F3",
       },
     },
   },
