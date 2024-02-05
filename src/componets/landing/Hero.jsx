@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { HeroLine } from '../icons/Landing'
 import CustomButton from '../common/button/CustomButton'
 
 const Hero = () => {
