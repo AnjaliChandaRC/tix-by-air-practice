@@ -6,9 +6,9 @@ export default function Home() {
     <>
       <Header />
       <Hero />
-      <div>
+      {/* <div>
         <MovingBanner />
-      </div>
+      </div> */}
     </>
   );
 }

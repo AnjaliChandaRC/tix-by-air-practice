@@ -5,25 +5,21 @@ import React, { useEffect, useState } from "react";
 import { CrossIcon, HamburgerIcon } from "../icons/Landing";
 
 const Header = () => {
-  const [isSidebarVisible, setSidebarVisible] = useState(false);
-  const toggleSidebar = (e) => {
-    e.stopPropagation();
-    setSidebarVisible(!isSidebarVisible);
-  };
-  const closeSidebar = () => {
-    setSidebarVisible(false);
+  const [menuPopup, setMenuPopUp] = useState(false);
+  // Add Close Function Here
+  const closeMenuPopup = () => {
+    setMenuPopUp(false);
   };
   useEffect(() => {
-    document.body.addEventListener("click", closeSidebar);
+    document.body.addEventListener("click", closeMenuPopup);
     return () => {
-      document.body.removeEventListener("click", closeSidebar);
+      document.body.removeEventListener("click", closeMenuPopup);
     };
   }, []);
-  const handleSidebarClick = (e) => {
-    e.stopPropagation();
-  };
+
+  // Add overflow in Body
   useEffect(() => {
-    if (isSidebarVisible) {
+    if (menuPopup) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -31,9 +27,10 @@ const Header = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [isSidebarVisible]);
+  }, [menuPopup]);
   return (
     <>
+      {/* DESKTOP CODE START HERE */}
       <div className="flex justify-between items-center h-[40px] sm:h-[80px] border-b-2 border-black relative z-20 bg-white">
         <Link
           href="/"
@@ -69,44 +66,45 @@ const Header = () => {
         </div>
         <button
           className="py-[15px] px-[13px] border-l-2 border-black sm:hidden"
-          onClick={toggleSidebar}
+          onClick={() => setMenuPopUp(!menuPopup)}
         >
-          <HamburgerIcon />
+          {menuPopup === false ? <HamburgerIcon /> : <CrossIcon />}
         </button>
       </div>
+
+      {/* MOBILE CODE START HERE */}
       <div
-        onClick={handleSidebarClick}
         className={`${
-          isSidebarVisible === false
-            ? "right-[-400px]"
-            : "right-[5px] top-[45px]"
-        } fixed z-20 w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
+          menuPopup === false ? "right-[-400px]" : "right-[5px]"
+        } fixed z-20 top-[45px] w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
       >
         <Link
-          onClick={closeSidebar}
+          onClick={closeMenuPopup}
           href="#feature"
           className="ff_inter hover:text-orangecrayola transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center w-full"
         >
           Features
         </Link>
         <Link
-          onClick={closeSidebar}
+          onClick={closeMenuPopup}
           href="#faq"
           className="ff_inter hover:text-orangecrayola transition-all ease-in-out duration-300 py-[18px] flex justify-center w-full items-center  border-t-2 border-black"
         >
           FAQ
         </Link>
         <button
-          onClick={closeSidebar}
+          onClick={closeMenuPopup}
           className="ff_inter font-semibold log_in_btn_bg transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center text-nowrap w-full  border-t-2 border-black"
         >
           LOG IN
         </button>
       </div>
-      {isSidebarVisible && (
+
+      {/* ADD OVERLAY HERE */}
+      {menuPopup && (
         <div
-          onClick={closeSidebar}
-          className="w-screen h-screen top-0 left-0 fixed z-10 bg-[#000000a7]"
+          onClick={closeMenuPopup}
+          className="w-screen h-screen top-0 left-0 fixed z-10 bg-overlayBg"
         ></div>
       )}
     </>
