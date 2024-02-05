@@ -45,7 +45,7 @@
   background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
 }
 
-@keyframes ticker-kf {
+@keyframes slider {
   0% {
     transform: translate3d(0, 0, 0);
   }
@@ -56,10 +56,10 @@
 }
 
 .img-ticker {
-  animation: ticker-kf 16s linear infinite;
+  animation: slider 16s linear infinite;
 }
 
-.combined {
+.text_border {
   -webkit-text-stroke: 1px black;
   color: #FFF7F3;
   text-shadow:
