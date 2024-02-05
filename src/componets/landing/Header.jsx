@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { CrossIcon, HamburgerIcon } from "../icons/Landing";
+import { HamburgerIcon } from "../icons/Landing";
 
 const Header = () => {
   const [isSidebarVisible, setSidebarVisible] = useState(false);
@@ -77,10 +77,8 @@ const Header = () => {
       <div
         onClick={handleSidebarClick}
         className={`${
-          isSidebarVisible === false
-            ? "right-[-400px]"
-            : "right-[5px] top-[45px]"
-        } fixed z-20 w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
+          isSidebarVisible === false ? "right-[-400px]" : "right-[5px]"
+        } fixed z-20 top-[45px] w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
       >
         <Link
           onClick={closeSidebar}
