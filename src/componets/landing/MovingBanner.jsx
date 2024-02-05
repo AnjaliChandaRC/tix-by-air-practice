@@ -1,25 +1,24 @@
-import React from 'react'
+import { SliderText } from "@/utils/LandingHelper";
 
-const MovingBanner = () => {
-  return (
-    <div class="overflow-hidden bg-black -rotate-[2.209deg] w-full mt-10">
-      <div class="flex -mx-4 img-ticker gap-14  py-6">
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-        <h2 className='text-white ff_inter text-4xl font-bold tracking-[0.76px]'>TixByAir</h2>
-      </div>
+export default function MovingBanner() {
+  const renderSliderText = (className) => (
+    <div className={`flex gap-9 sm:gap-14 items-center absolute top-[50%] left-0 ${className}`}>
+      {SliderText.map((obj, index) => (
+        <h4
+          className={`text-3xl sm:text-4xl font-bold ff_inter ${index % 2 === 0 ? "text-white" : "text-black"}`}
+          style={{ WebkitTextStroke: index % 2 === 0 ? "" : "0.79px white", textShadow: index % 2 === 0 ? "" : "0.79px white" }}
+          key={index}
+        >
+          {obj.heading}
+        </h4>
+      ))}
     </div>
-  )
-}
+  );
 
-export default MovingBanner
+  return (
+    <div className="bg-smokyblack overflow-hidden relative h-16 sm:h-24 transform -rotate-[2.209deg] mt-[-20px] md:mt-[-40px] z-10 mx-[-4px]">
+      {renderSliderText("slider_text")}
+      {renderSliderText("slider_text2")}
+    </div>
+  );
+}
