@@ -31,3 +31,19 @@
 .ff_inter {
   font-family: 'Inter', sans-serif;
 }
+
+/*HEADER CSS START HERE==================================*/
+.log_in_btn_bg {
+  background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
+}
+
+.log_in_btn_bg:hover {
+  background: var(--Gradient, linear-gradient(143deg, #FB6609 0%, #FB981D 89.88%));
+}
+
+@media (max-width:639.98px) {
+  .logo_img {
+    width: 33px;
+    height: 23px;
+  }
+}
