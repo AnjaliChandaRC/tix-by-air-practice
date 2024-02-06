@@ -11,7 +11,7 @@ const Services = () => {
           <h2 className='ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl !leading-[120%] text-black max-w-[531px] text-start sm:text-center lg:text-start mb-[10px]'>Discover Our Service Spectrum</h2>
           <p className='text-davygray ff_inter text-base leading-[150%] max-w-[403px] text-start sm:text-center lg:text-start '>Lorem ipsum dolor sit amet consectetur. Eget mattis justo cras amet tortor nisl lacinia. Ut et donec ac velit diam lectus dui.</p>
         </div>
-        <div className='flex flex-row flex-wrap justify-center gap-[34px] ps-6 pe-[33px]'>
+        <div className='flex flex-row flex-wrap justify-center gap-[34px] ps-6 sm:px-5 pe-[33px]'>
           {CardNameList.map((data, index) => {
             // Define an array of background colors
             const bgColors = ['bg-orange', 'bg-yellow', 'bg-green']; // Add more colors as needed
@@ -20,7 +20,7 @@ const Services = () => {
             const bgColorClass = bgColors[index % bgColors.length];
 
             return (
-              <div key={index} className={`border-2 border-black ${bgColorClass} hover:shadow-none transition-all duration-200 ease-linear shadow-[10px_10px_0px_0px] p-6  rounded-[10px] max-w-[354px] w-full min-h-[305px] `}>
+              <div key={index} className={`border-2 border-black ${bgColorClass} hover:shadow-none transition-all duration-200 ease-linear shadow-[10px_10px_0px_0px] p-6  rounded-[10px] max-w-[355px] w-full min-h-[310px] `}>
                 <Image width={65} height={65} src={data.image} alt='ticket-image' />
                 <h2 className='text-black text-xl md:text-2xl ff_satoshi_medium leading-[120%] mt-6 mb-3'>{data.title}</h2>
                 <p className='text-cedarbrown ff_inter leading-[150%]'>{data.description}</p>
