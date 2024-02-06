@@ -17,7 +17,7 @@ export default function MovingBanner() {
           key={index}
         >
           {/* Display heading text from SliderText array */}
-          {obj.heading}
+          {obj.title}
         </h4>
       ))}
     </div>
