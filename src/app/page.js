@@ -1,4 +1,3 @@
-import Faqs from "@/componets/landing/Faqs";
 import Footer from "@/componets/landing/Footer";
 import Header from "@/componets/landing/Header";
 import Hero from "@/componets/landing/Hero";
@@ -11,7 +10,6 @@ export default function Home() {
       <Hero />
       <MovingBanner />
       <Services />
-      <Faqs />
       <Footer />
     </div>
   );
