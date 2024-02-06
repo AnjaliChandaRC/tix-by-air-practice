@@ -9,23 +9,23 @@ const Faqs = () => {
   };
   return (
     <>
-      <div className="py-12 mb-12 relative">
+      <div className="pb-12 mb-12 relative">
         <Image
           src="/assets/images/svg/left_vector.svg"
           alt="hero-image"
-          className="z-[-1] -right-[50px] bottom-0 xl:bottom-[55px] md:left-[-35px] absolute h-[20px] md:h-[38px]"
+          className="z-[-1] hidden md:block -right-[50px] bottom-0 xl:bottom-[55px] md:left-[-35px] absolute h-[20px] md:h-[38px]"
           width={127}
           height={38}
         />
         <Image
           src="/assets/images/svg/left_vector.svg"
           alt="hero-image"
-          className="z-[-1] -right-[70px] rotate-180 top-0 absolute h-[20px] md:h-[38px]"
+          className="z-[-1] hidden md:block -right-[70px] rotate-180 top-0 absolute h-[20px] md:h-[38px]"
           width={127}
           height={38}
         />
         <div className="max-w-[1164px] mx-auto px-3">
-          <h4 className="ff_satoshi_black text-5xl font-black text-black text-center">
+          <h4 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl font-black text-black text-center">
             Frequently Asked Questions
           </h4>
           <p className="mt-4 ff_inter font-normal text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
@@ -46,15 +46,15 @@ const Faqs = () => {
                 >
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full text-left focus:outline-none hover:bg-gray-100 transition duration-300 ease-in-out"
+                    className="w-full text-left focus:outline-none flex items-center justify-between hover:bg-gray-100 transition duration-300 ease-in-out"
                   >
                     <span className="ff_inter font-medium text-xl text-black">
                       {faq.question}
                     </span>
                     <span className="float-right">
                       <svg
-                        className={`h-6 w-6 ${
-                          activeIndex === index ? "transform rotate-180" : ""
+                        className={`w-4 md:h-5 h-4 md:w-5 ${
+                          activeIndex === index ? " " : " rotate-180"
                         }`}
                         width="19"
                         height="12"
@@ -71,7 +71,7 @@ const Faqs = () => {
                   </button>
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
-                      activeIndex === index ? "max-h-[130px]" : "max-h-0"
+                      activeIndex === index ? "h-full" : "max-h-0"
                     }`}
                   >
                     <div className="ff_inter font-normal text-base text-davygray mt-2">
@@ -81,7 +81,7 @@ const Faqs = () => {
                 </div>
               ))}
             </div>
-            <div className="w-full lg:w-6/12 lg:pe-3 lg:ps-[23px] mt-6 lg:mt-0 ">
+            <div className="w-full lg:w-6/12 lg:pe-3 lg:ps-[23px] mt-6 pt-12 lg:mt-0 ">
               <div className="relative max-w-[350px] sm:max-w-[476px] mx-auto">
                 <Image
                   src="/assets/images/png/faq-img.png"
