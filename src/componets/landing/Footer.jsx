@@ -13,7 +13,7 @@ const Footer = () => {
   const getYear = new Date().getFullYear();
   return (
     <>
-      <div className="sm:h-[421px] bg-black pt-10 sm:pt-[51px] text-center">
+      <div className="sm:h-[421px] bg-black pt-8 sm:pt-[51px] text-center">
         {/* FOOTER LOGO CODE START HERE */}
         <Link href="/" className="flex items-center justify-center gap-2">
           <Image
@@ -23,31 +23,33 @@ const Footer = () => {
             height={89}
             className="w-[104px] h-[74px] md:w-[126px] md:h-[89px]"
           />
-          <p className="text-textXl ff_inter font-bold text-white leading-[100%]">TixByAir</p>
+          <p className="text-[27px] sm:text-textXl ff_inter font-bold text-white leading-[100%]">
+            TixByAir
+          </p>
         </Link>
-        <p className="ff_inter text-darkgray pt-4 px-3 leading-[150%]">
+        <p className="text-sm sm:text-base ff_inter text-darkgray pt-3 sm:pt-4 px-12 sm:px-3 leading-[150%]">
           See who showed up. View analytics, create tickets, and track{" "}
           <br className="hidden sm:block" /> who's supporting you the most.
         </p>
 
         {/* FOOTER LINKS CODE START HERE */}
-        <div className="pt-6">
+        <div className="pt-3 sm:pt-6">
           <Link
             href="#feature"
-            className="ff_inter text-white leading-[150%] hover:text-orangecrayola transition-all ease-in-out duration-300 me-4"
+            className="text-sm sm:text-base ff_inter text-white leading-[150%] hover:text-orangecrayola transition-all ease-in-out duration-300 me-2 sm:me-4"
           >
             Features
           </Link>
           <Link
             href="#faq"
-            className="ff_inter text-white leading-[150%] hover:text-orangecrayola transition-all ease-in-out duration-300 ms-4"
+            className="text-sm sm:text-base ff_inter text-white leading-[150%] hover:text-orangecrayola transition-all ease-in-out duration-300 ms-2 sm:ms-4"
           >
             FAQ
           </Link>
         </div>
 
         {/* SOCIAL ICONS CODE START HERE */}
-        <div className="flex justify-center gap-5 py-8">
+        <div className="flex justify-center gap-4 sm:gap-5 pt-5 pb-8 sm:py-8">
           <Link
             href="https://www.instagram.com/"
             className="footer_social_icons"
@@ -76,7 +78,7 @@ const Footer = () => {
 
         {/* YEAR CODE START HERE */}
         <div className="border-t border-darkBorder">
-          <p className="ff_inter text-granitegray py-4 leading-[150%]">
+          <p className="text-sm sm:text-base ff_inter text-granitegray py-2 sm:py-4 leading-[150%]">
             {getYear} TixByAir. All Rights reserved.
           </p>
         </div>

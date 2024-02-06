@@ -32,7 +32,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-/*HEADER CSS START HERE==================================*/
+/* HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
   background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
 }
@@ -40,6 +40,8 @@
 .log_in_btn_bg:hover {
   background: var(--Gradient, linear-gradient(143deg, #FB6609 0%, #FB981D 89.88%));
 }
+
+/* FOOTER CSS START HERE==================================*/
 
 .footer_social_icons:hover svg path {
   transition: all 0.3s ease-in-out;
@@ -95,27 +97,38 @@
     transform: translateX(2985px) translateY(-50%);
   }
 }
+
 .moving_annimation {
   animation: moving 6s infinite linear;
 }
+
 @keyframes moving {
   0% {
-      transform: translateX(0px);
+    transform: translateX(0px);
   }
+
   40% {
-      transform: translateY(30px);
+    transform: translateY(30px);
   }
+
   70% {
-      transform: translateX(40px);
+    transform: translateX(40px);
   }
+
   100% {
-      transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
+
 @media (max-width:639.98px) {
   .logo_img {
     width: 33px;
     height: 23px;
+  }
+
+  .footer_social_icons svg {
+    width: 33px;
+    height: 33px;
   }
 
   @keyframes textSCroll {
@@ -127,5 +140,4 @@
       transform: translateX(2010px) translateY(-50%);
     }
   }
-
 }

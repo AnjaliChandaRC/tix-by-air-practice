@@ -50,17 +50,17 @@ const Header = () => {
         <div className="hidden sm:block">
           <Link
             href="#feature"
-            className="ff_inter border-l-2 border-black px-[29px] pt-[31px] pb-[33px] hover:text-orangecrayola transition-all ease-in-out duration-300"
+            className="ff_inter border-l-2 border-black px-[29px] py-[31px] hover:text-orangecrayola transition-all ease-in-out duration-300"
           >
             Features
           </Link>
           <Link
             href="#faq"
-            className="ff_inter border-l-2 border-black px-[29px] pt-[31px] pb-[33px] hover:text-orangecrayola transition-all ease-in-out duration-300"
+            className="ff_inter border-l-2 border-black px-[29px] py-[31px] hover:text-orangecrayola transition-all ease-in-out duration-300"
           >
             FAQ
           </Link>
-          <button className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack px-[29px] pt-[25px] pb-[29px] transition-all ease-in-out duration-300">
+          <button className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300">
             LOG IN
           </button>
         </div>
