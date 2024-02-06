@@ -26,7 +26,7 @@ const Hero = () => {
             {/* Main heading */}
             <h1 className='text-smokyblack text-[40px] lg:text-[55px] xl:text-textXXl !leading-[120%] ff_satoshi_black'>Instantly Track <span className='inline-block text_border text-seashell'>Your Community</span> Engagement!</h1>
             {/* Subtitle */}
-            <p className='text-darkgraytwo text-base leading-[150%] ff_inter mt-4 max-w-[450px] xl:max-w-[530px] mb-10' >See who showed up. View analytics, create tickets, and track who's supporting you the most.</p>
+            <p className='text-darkgraytwo text-base leading-[150%] ff_inter mt-4 max-w-[450px] xl:max-w-[530px] mb-6 md:mb-10' >See who showed up. View analytics, create tickets, and track who's supporting you the most.</p>
             {/* Custom button */}
             <CustomButton title="create your community" link="/" />
           </div>
