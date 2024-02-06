@@ -21,11 +21,11 @@ const Footer = () => {
             alt="footer logo"
             width={126}
             height={89}
-            className="logo_img"
+            className="w-[104px] h-[74px] md:w-[126px] md:h-[89px]"
           />
-          <p className="text-textXl ff_inter font-bold text-white">TixByAir</p>
+          <p className="text-textXl ff_inter font-bold text-white leading-[100%]">TixByAir</p>
         </Link>
-        <p className="ff_inter text-white opacity-70 pt-4 px-3">
+        <p className="ff_inter text-darkgray pt-4 px-3 leading-[150%]">
           See who showed up. View analytics, create tickets, and track{" "}
           <br className="hidden sm:block" /> who's supporting you the most.
         </p>
@@ -34,13 +34,13 @@ const Footer = () => {
         <div className="pt-6">
           <Link
             href="#feature"
-            className="ff_inter text-white hover:text-orangecrayola transition-all ease-in-out duration-300 me-4"
+            className="ff_inter text-white leading-[150%] hover:text-orangecrayola transition-all ease-in-out duration-300 me-4"
           >
             Features
           </Link>
           <Link
             href="#faq"
-            className="ff_inter text-white hover:text-orangecrayola transition-all ease-in-out duration-300 ms-4"
+            className="ff_inter text-white leading-[150%] hover:text-orangecrayola transition-all ease-in-out duration-300 ms-4"
           >
             FAQ
           </Link>
@@ -76,7 +76,7 @@ const Footer = () => {
 
         {/* YEAR CODE START HERE */}
         <div className="border-t border-darkBorder">
-          <p className="ff_inter text-granitegray py-4">
+          <p className="ff_inter text-granitegray py-4 leading-[150%]">
             {getYear} TixByAir. All Rights reserved.
           </p>
         </div>
