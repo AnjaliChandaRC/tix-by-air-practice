@@ -41,8 +41,12 @@
   background: var(--Gradient, linear-gradient(143deg, #FB6609 0%, #FB981D 89.88%));
 }
 
-.common_btn_bg {
-  background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
+.footer_social_icons:hover svg path {
+  transition: all 0.3s ease-in-out;
+}
+
+.footer_social_icons:hover svg path {
+  fill: #FB6609;
 }
 
 @keyframes slider {
