@@ -5,7 +5,7 @@ import React from 'react'
 const Services = () => {
   return (
     <div className='relative'>
-      <Image src='/assets/images/svg/left_vector.svg' alt='hero-image' className='top-[45%] z-[-1] -left-14 md:left-[-35px] absolute h-[20px] md:h-[38px]' width={127} height={38} />
+      <Image src='/assets/images/svg/left_vector.svg' alt='hero-image' className='top-[16%] md:top-[45%] z-[-1] -right-[50px] md:left-[-35px] absolute h-[20px] md:h-[38px]' width={127} height={38} />
       <div className='container mx-auto  max-w-[1188px] py-14 lg:pt-32 lg:pb-[118px] static z-10'>
         <div className='flex sm:items-center px-6 flex-col lg:flex-row justify-between mb-7 md:mb-12'>
           <h2 className='ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl !leading-[120%] text-black max-w-[531px] text-start sm:text-center lg:text-start mb-[10px]'>Discover Our Service Spectrum</h2>
