@@ -35,7 +35,7 @@
 /* SCROLL BAR DESIGN CSS START HERE==================================*/
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
