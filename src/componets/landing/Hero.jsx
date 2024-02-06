@@ -11,7 +11,7 @@ const Hero = () => {
       {/* Hidden line image for larger screens */}
       <Image src='/assets/images/svg/heroline.svg' alt='hero-line' className='hidden md:block bottom-0 left-[-35px] absolute h-[320px]' width={328} height={328} />
       {/* Left vector image */}
-      <Image src='/assets/images/svg/left_vector.svg' alt='hero-image' className='top-4 xl:top-20 left-[-35px] absolute h-[20px] md:h-[38px]' width={127} height={38} />
+      <Image src='/assets/images/svg/left_vector.svg' alt='hero-image' className='top-4 xl:top-20 -left-14 md:left-[-35px] absolute h-[20px] md:h-[38px]' width={127} height={38} />
       {/* Half circle image */}
       <Image src='/assets/images/svg/halfcircel.svg' alt='hero-image' className='w-5 h-5 sm:w-7 sm:h-7 top-20 right-[-5px] absolute ' width={27} height={27} />
       {/* Full circle image */}

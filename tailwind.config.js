@@ -46,6 +46,7 @@ module.exports = {
         seashell: "#FFF7F3",
         overlayBg: "#000000a7",
         darkBorder: "#4c4c4c",
+        cedarbrown: "#4C3628",
       },
     },
   },
