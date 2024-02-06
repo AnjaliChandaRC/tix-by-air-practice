@@ -25,7 +25,7 @@ export default function MovingBanner() {
 
   // Main component rendering slider text with background styling
   return (
-    <div className="bg-smokyblack overflow-hidden relative h-16 sm:h-24 transform -rotate-[2.209deg] mt-[-20px] md:mt-[-40px] z-10 mx-[-4px]">
+    <div className="bg-smokyblack overflow-hidden relative h-16 sm:h-20 lg::h-24 transform -rotate-[2.209deg] mt-[-20px] md:mt-[-40px] z-10 mx-[-4px]">
       {/* Render slider text with the first set of styles */}
       {renderSliderText("slider_text")}
       {/* Render slider text with the second set of styles */}
