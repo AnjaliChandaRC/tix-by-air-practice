@@ -95,7 +95,23 @@
     transform: translateX(2985px) translateY(-50%);
   }
 }
-
+.moving_annimation {
+  animation: moving 6s infinite linear;
+}
+@keyframes moving {
+  0% {
+      transform: translateX(0px);
+  }
+  40% {
+      transform: translateY(30px);
+  }
+  70% {
+      transform: translateX(40px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
 @media (max-width:639.98px) {
   .logo_img {
     width: 33px;

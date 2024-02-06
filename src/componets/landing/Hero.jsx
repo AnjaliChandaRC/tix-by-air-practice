@@ -13,9 +13,9 @@ const Hero = () => {
       {/* Left vector image */}
       <Image src='/assets/images/svg/left_vector.svg' alt='hero-image' className='top-4 xl:top-20 -left-14 md:left-[-35px] absolute h-[20px] md:h-[38px]' width={127} height={38} />
       {/* Half circle image */}
-      <Image src='/assets/images/svg/halfcircel.svg' alt='hero-image' className='w-5 h-5 sm:w-7 sm:h-7 top-20 right-[-5px] absolute ' width={27} height={27} />
+      <Image src='/assets/images/svg/fullcircel.svg' alt='hero-image' className='moving_annimation w-5 h-5 sm:w-7 sm:h-7 top-20 right-[3%] absolute ' width={27} height={27} />
       {/* Full circle image */}
-      <Image src='/assets/images/svg/fullcircel.svg' alt='hero-image' className='bottom-8 md:bottom-16 lg:bottom-20 left-2/4 absolute ' width={27} height={27} />
+      <Image src='/assets/images/svg/fullcircel.svg' alt='hero-image' className='moving_annimation bottom-8 md:bottom-16 lg:bottom-20 left-2/4 absolute ' width={27} height={27} />
       {/* Container for content */}
       <div className='container mx-auto px-6 max-w-[1188px]'>
         <div className='flex items-center flex-col md:flex-row '>
@@ -26,7 +26,7 @@ const Hero = () => {
             {/* Main heading */}
             <h1 className='text-smokyblack text-[40px] lg:text-[55px] xl:text-textXXl !leading-[120%] ff_satoshi_black'>Instantly Track <span className='inline-block text_border text-seashell'>Your Community</span> Engagement!</h1>
             {/* Subtitle */}
-            <p className='text-darkgray text-base leading-[150%] ff_inter mt-4 max-w-[450px] xl:max-w-[530px] mb-10' >See who showed up. View analytics, create tickets, and track who's supporting you the most.</p>
+            <p className='text-darkgraytwo text-base leading-[150%] ff_inter mt-4 max-w-[450px] xl:max-w-[530px] mb-10' >See who showed up. View analytics, create tickets, and track who's supporting you the most.</p>
             {/* Custom button */}
             <CustomButton title="create your community" link="/" />
           </div>
