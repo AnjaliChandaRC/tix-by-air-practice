@@ -25,7 +25,7 @@ const Faqs = () => {
           height={38}
         />
         <div className="max-w-[1164px] mx-auto px-3">
-          <h4 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl font-black text-black text-center">
+          <h4 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl font-black text-black text-center lg:pt-4">
             Frequently Asked Questions
           </h4>
           <p className="mt-4 ff_inter font-normal text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
