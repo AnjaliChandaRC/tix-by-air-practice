@@ -32,6 +32,15 @@
   font-family: 'Inter', sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FB6609;
+  /* Change this to the desired color */
+}
+
 /*HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
   background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
@@ -95,23 +104,29 @@
     transform: translateX(2985px) translateY(-50%);
   }
 }
+
 .moving_annimation {
   animation: moving 6s infinite linear;
 }
+
 @keyframes moving {
   0% {
-      transform: translateX(0px);
+    transform: translateX(0px);
   }
+
   40% {
-      transform: translateY(30px);
+    transform: translateY(30px);
   }
+
   70% {
-      transform: translateX(40px);
+    transform: translateX(40px);
   }
+
   100% {
-      transform: translateX(0px);
+    transform: translateX(0px);
   }
 }
+
 @media (max-width:639.98px) {
   .logo_img {
     width: 33px;
