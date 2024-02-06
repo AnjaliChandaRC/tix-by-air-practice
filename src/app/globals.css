@@ -35,11 +35,12 @@
 /* SCROLL BAR DESIGN CSS START HERE==================================*/
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #FB6609;
+  border-radius: 8px;
 }
 
 /*HEADER CSS START HERE==================================*/
