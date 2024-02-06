@@ -29,7 +29,7 @@ const Footer = () => {
         </Link>
         <p className="text-sm sm:text-base ff_inter text-darkgray pt-3 sm:pt-4 px-12 sm:px-3 leading-[150%]">
           See who showed up. View analytics, create tickets, and track{" "}
-          <br className="hidden sm:block" /> who's supporting you the most.
+          <br className="hidden sm:block" /> who supporting you the most.
         </p>
 
         {/* FOOTER LINKS CODE START HERE */}
