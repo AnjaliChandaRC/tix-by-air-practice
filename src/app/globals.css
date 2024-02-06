@@ -32,7 +32,17 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* HEADER CSS START HERE==================================*/
+/* SCROLL BAR DESIGN CSS START HERE==================================*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FB6609;
+}
+
+/*HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
   background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
 }
@@ -50,6 +60,8 @@
 .footer_social_icons:hover svg path {
   fill: #FB6609;
 }
+
+/* SLIDER CSS START HERE==================================*/
 
 @keyframes slider {
   0% {
@@ -119,6 +131,8 @@
     transform: translateX(0px);
   }
 }
+
+/* MEDIA QUERIES CSS START HERE==================================*/
 
 @media (max-width:639.98px) {
   .logo_img {
