@@ -9,7 +9,7 @@ const Faqs = () => {
   };
   return (
     <>
-      <div className="pb-12 mb-12 relative">
+      <div className="pb-10 lg:pb-12 mb-12 pt-5 lg:pt-0 relative">
         <Image
           src="/assets/images/svg/left_vector.svg"
           alt="hero-image"
@@ -24,8 +24,8 @@ const Faqs = () => {
           width={127}
           height={38}
         />
-        <div className="max-w-[1164px] mx-auto px-3">
-          <h4 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl font-black text-black text-center lg:pt-4">
+        <div className="max-w-[1188px] mx-auto px-6">
+          <h4 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl font-black text-black text-center xl:pt-4">
             Frequently Asked Questions
           </h4>
           <p className="mt-4 ff_inter font-normal text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
@@ -33,8 +33,8 @@ const Faqs = () => {
             consectetur mi. Vulputate sapien a a bibendum suspendisse quam. Hac
             posuere eget nam diam velit urna adipiscing diam.
           </p>
-          <div className="flex flex-wrap items-center mt-6 md:mt-12">
-            <div className="w-full sm:w-11/12 md:w-9/12 mx-auto lg:w-6/12 lg:ps-3 lg:pe-[23px]">
+          <div className="flex flex-wrap items-center mt-4 md:mt-12">
+            <div className="w-full lg:w-6/12 lg:ps-3 lg:pe-[23px]">
               {FaqsMap.map((faq, index) => (
                 <div
                   key={index}
@@ -81,7 +81,7 @@ const Faqs = () => {
                 </div>
               ))}
             </div>
-            <div className="w-full lg:w-6/12 lg:pe-3 lg:ps-[23px] mt-6 pt-12 lg:mt-0 ">
+            <div className="w-full lg:w-6/12 lg:pe-3 lg:ps-[23px] mt-4 pt-12 lg:mt-0 ">
               <div className="relative max-w-[350px] sm:max-w-[476px] mx-auto">
                 <Image
                   src="/assets/images/png/faq-img.png"
