@@ -74,10 +74,6 @@
   }
 }
 
-.img-ticker {
-  animation: slider 16s linear infinite;
-}
-
 .text_border {
   -webkit-text-stroke: 1px black;
   text-shadow:
