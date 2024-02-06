@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Satoshi-Black";
-  src: url("./fonts//Satoshi-Black.otf");
+  src: url("../../public/assets/fonts/Satoshi-Black.otf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Satoshi-medium";
-  src: url("./fonts//Satoshi-Medium.otf");
+  src: url("../../public/assets/fonts/Satoshi-Medium.otf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -97,14 +97,15 @@
     width: 33px;
     height: 23px;
   }
+
   @keyframes textSCroll {
     0% {
       transform: translateX(-2220px) translateY(-50%);
     }
-  
+
     100% {
       transform: translateX(2220px) translateY(-50%);
     }
   }
-  
+
 }
