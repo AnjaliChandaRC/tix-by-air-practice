@@ -11,7 +11,7 @@ export default function MovingBanner() {
       {SliderText.map((obj, index) => (
         // Individual heading with dynamic styling based on index
         <h4
-          className={`text-3xl sm:text-4xl font-bold ff_inter ${index % 2 === 0 ? "text-white" : "text-black"}`}
+          className={`text-[26px] sm:text-4xl font-bold ff_inter ${index % 2 === 0 ? "text-white" : "text-black"}`}
           // Apply text stroke and shadow styles based on index
           style={{ WebkitTextStroke: index % 2 === 0 ? "" : "0.79px white", textShadow: index % 2 === 0 ? "" : "0.79px white" }}
           key={index}
