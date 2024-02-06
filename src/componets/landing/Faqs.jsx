@@ -1,8 +1,5 @@
 import Image from "next/image";
 import React from "react";
-// import classNames from "classnames";
-import * as Accordion from "@radix-ui/react-accordion";
-// import { ChevronDownIcon } from "@radix-ui/react-icons";
 const Faqs = () => {
   return (
     <>
@@ -17,34 +14,6 @@ const Faqs = () => {
             posuere eget nam diam velit urna adipiscing diam.
           </p>
           <div className="flex flex-wrap items-center mt-16">
-            {/* <Accordion.Root
-              className="bg-mauve6 w-[300px] rounded-md shadow-[0_2px_10px] shadow-black/5"
-              type="single"
-              defaultValue="item-1"
-              collapsible
-            >
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Is it accessible?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It adheres to the WAI-ARIA design pattern.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Is it unstyled?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. It's unstyled by default, giving you freedom over the
-                  look and feel.
-                </AccordionContent>
-              </AccordionItem>
-
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Can it be animated?</AccordionTrigger>
-                <AccordionContent>
-                  Yes! You can animate the Accordion with CSS or JavaScript.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion.Root> */}
             <div className="w-full lg:w-6/12 lg:ps-3 lg:pe-[23px]">
               <div className="border border-black p-5 rounded-[10px]">
                 <h5 className="ff_inter font-medium text-xl text-black">
