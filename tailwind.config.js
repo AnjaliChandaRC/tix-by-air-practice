@@ -22,7 +22,7 @@ module.exports = {
       },
       colors: {
         gray: "#E7E7E7",
-        darkgray: "#565351",
+        darkgraytwo: "#565351",
         orange: "#FDB384",
         yellow: "#FCD168",
         green: "#A1D2BA",
@@ -45,6 +45,8 @@ module.exports = {
         eerieblack: "#252423",
         seashell: "#FFF7F3",
         overlayBg: "#000000a7",
+        darkBorder: "#4c4c4c",
+        cedarbrown: "#4C3628",
       },
     },
   },

@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Satoshi-Black";
-  src: url("../../public/assets/fonts/Satoshi-Black.otf");
+  src: url("../../public/assets/fonts/Satoshi-Black.ttf");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Satoshi-medium";
-  src: url("../../public/assets/fonts/Satoshi-Medium.otf");
+  src: url("../../public/assets/fonts/Satoshi-Medium.ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -32,6 +32,17 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* SCROLL BAR DESIGN CSS START HERE==================================*/
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FB6609;
+  border-radius: 8px;
+}
+
 /*HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
   background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
@@ -41,9 +52,17 @@
   background: var(--Gradient, linear-gradient(143deg, #FB6609 0%, #FB981D 89.88%));
 }
 
-.common_btn_bg {
-  background: var(--Gradient, linear-gradient(143deg, #FB981D 0%, #FB6609 89.88%));
+/* FOOTER CSS START HERE==================================*/
+
+.footer_social_icons:hover svg path {
+  transition: all 0.3s ease-in-out;
 }
+
+.footer_social_icons:hover svg path {
+  fill: #FB6609;
+}
+
+/* SLIDER CSS START HERE==================================*/
 
 @keyframes slider {
   0% {
@@ -92,20 +111,48 @@
   }
 }
 
+.moving_annimation {
+  animation: moving 6s infinite linear;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0px);
+  }
+
+  40% {
+    transform: translateY(30px);
+  }
+
+  70% {
+    transform: translateX(40px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* MEDIA QUERIES CSS START HERE==================================*/
+
 @media (max-width:639.98px) {
   .logo_img {
     width: 33px;
     height: 23px;
   }
 
+  .footer_social_icons svg {
+    width: 33px;
+    height: 33px;
+  }
+
   @keyframes textSCroll {
     0% {
-      transform: translateX(-2220px) translateY(-50%);
+      transform: translateX(-2010px) translateY(-50%);
     }
 
     100% {
-      transform: translateX(2220px) translateY(-50%);
+      transform: translateX(2010px) translateY(-50%);
     }
   }
-
 }
