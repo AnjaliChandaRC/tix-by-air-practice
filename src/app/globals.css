@@ -103,11 +103,11 @@ html {
 
 @keyframes textSCroll {
   0% {
-    transform: translateX(-2725px) translateY(-50%);
+    transform: translateX(-2625px) translateY(-50%);
   }
 
   100% {
-    transform: translateX(2985px) translateY(-50%);
+    transform: translateX(2789px) translateY(-50%);
   }
 }
 
@@ -148,11 +148,11 @@ html {
 
   @keyframes textSCroll {
     0% {
-      transform: translateX(-2010px) translateY(-50%);
+      transform: translateX(-1900px) translateY(-50%);
     }
 
     100% {
-      transform: translateX(2010px) translateY(-50%);
+      transform: translateX(1900px) translateY(-50%);
     }
   }
 }

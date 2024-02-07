@@ -13,9 +13,8 @@ export default function MovingBanner() {
       {SliderText.map((obj, index) => (
         // Individual heading with dynamic styling based on index
         <h4
-          className={`text-[26px] sm:text-4xl font-bold ff_satoshi_bold ${
-            index % 2 === 0 ? "text-white" : "text-black"
-          } ${index % 2 !== 0 ? "text-stroke" : ""}`}
+          className={`text-[26px] sm:text-4xl font-bold ff_satoshi_bold ${index % 2 === 0 ? "text-white" : "text-black"
+            } ${index % 2 !== 0 ? "text-stroke" : ""}`}
           key={index}
         >
           {/* Display heading text from SliderText array */}
