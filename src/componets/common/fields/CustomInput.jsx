@@ -1,26 +1,19 @@
 import React from "react";
-
-const CustomInput = ({ error, handleInputChange, phoneNumber, type, placeholder, classNames }) => {
-  const isPhoneNumberValid = phoneNumber && phoneNumber.length === 6;
-
+const CustomInput = ({ onChange, value, type, placeholder }) => {
+  const handleInputChange = (e) => {
+    const inputValue = e.target.value.replace(/\D/g, "").slice(0, 6);
+    onChange(inputValue);
+  };
   return (
     <>
       <input
-        type={type}
-        placeholder={placeholder}
-        className={`w-full focus-visible:border-orange rounded-lg border-granitegray border-[1px] pt-[13px] pb-[14px] px-3 h-[44px] input-no-spinner outline-orange ${classNames}`}
+        type={type} // Set the type attribute using the passed type prop
+        placeholder={placeholder} // Set the placeholder attribute using the passed placeholder prop
+        value={value}
         onChange={handleInputChange}
-        maxLength={6}
-        aria-label={placeholder} // Add aria-label for accessibility
+        className="w-full focus-visible:border-orange rounded-lg border-granitegray border-[1px] pt-[13px] pb-[14px] px-3 h-[44px] input-no-spinner outline-orange" // Added input-no-spinner class here
       />
-      {error && (
-        <p className="text-red-500 text-xs font-inter mt-1">
-          {phoneNumber === "" ? 'Code is required' : 'must be 6 digits'} {/* Improve error message */}
-        </p>
-      )}
     </>
   );
 };
-
 export default CustomInput;
-
