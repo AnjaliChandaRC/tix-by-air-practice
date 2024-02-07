@@ -133,6 +133,11 @@ html {
   }
 }
 
+.popup_cross_icon svg{
+  width: 13px;
+  height: 13px;
+}
+
 /* MEDIA QUERIES CSS START HERE==================================*/
 
 @media (max-width:639.98px) {
