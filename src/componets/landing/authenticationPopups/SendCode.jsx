@@ -1,7 +1,7 @@
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import CustomButton from "@/componets/common/button/CustomButton";
-import { CrossIcon } from "@/componets/icons/Landing";
+import { CrossIcon } from "@/componets/common/icons/ToggleIcon";
 const SendCode = () => {
   return (
     <>

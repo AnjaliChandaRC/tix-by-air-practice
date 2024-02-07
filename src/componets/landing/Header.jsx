@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { CrossIcon, HamburgerIcon } from "../common/icons/ToggleIcon";
+import SendCode from "./authenticationPopups/SendCode";
 
 const Header = () => {
   const [ismenupopupvisible, setIsmenupopupvisible] = useState(false);
