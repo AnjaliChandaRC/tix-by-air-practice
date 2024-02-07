@@ -7,6 +7,7 @@ import {
   TelegramIcon,
   TwitterIcon,
 } from "../icons/Landing";
+import { FooterIconsList } from "@/utils/LandingHelper";
 
 const Footer = () => {
   // YEAR FUNCTION CODE HERE
@@ -49,35 +50,13 @@ const Footer = () => {
         </div>
 
         {/* SOCIAL ICONS CODE START HERE */}
+
         <div className="flex justify-center gap-4 sm:gap-5 pt-5 pb-8 sm:py-8">
-          <Link
-            href="https://www.instagram.com/"
-            target="_blank"
-            className="footer_social_icons"
-          >
-            <InstagramIcon />
-          </Link>
-          <Link
-            href="https://www.facebook.com/"
-            target="_blank"
-            className="footer_social_icons"
-          >
-            <FacebookIcon />
-          </Link>
-          <Link
-            href="https://web.telegram.org/k/"
-            target="_blank"
-            className="footer_social_icons"
-          >
-            <TelegramIcon />
-          </Link>
-          <Link
-            href="https://twitter.com/i/flow/login?redirect_after_login=%2Fhome"
-            target="_blank"
-            className="footer_social_icons"
-          >
-            <TwitterIcon />
-          </Link>
+          {FooterIconsList.map((data, index) => (
+            <a href={data.href} key={index} className="footer_social_icons">
+              {data.image}
+            </a>
+          ))}
         </div>
 
         {/* YEAR CODE START HERE */}

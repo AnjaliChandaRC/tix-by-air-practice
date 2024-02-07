@@ -59,34 +59,14 @@
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import SendCode from "@/componets/landing/authenticationPopups/SendCode";
-import VerifyCodeModal from "@/componets/landing/authenticationPopups/SendCode";
-import CreateUserModal from "@/componets/landing/authenticationPopups/SendCode";
-import DemographicsModal from "@/componets/landing/authenticationPopups/SendCode";
+
 import { useState } from "react";
+import VerifyCode from "@/componets/landing/authenticationPopups/VerifyCode";
+import CreateUser from "@/componets/landing/authenticationPopups/CreateUser";
+import Demographics from "@/componets/landing/authenticationPopups/Demographics";
 
 const CommonModal = () => {
   const [currentModal, setCurrentModal] = useState(null);
-
-  const openNextModal = () => {
-    switch (currentModal) {
-      case null:
-        setCurrentModal("sendCode");
-        break;
-      case "sendCode":
-        setCurrentModal("verifyCode");
-        break;
-      case "verifyCode":
-        setCurrentModal("createUser");
-        break;
-      case "createUser":
-        setCurrentModal("demographics");
-        break;
-      case "demographics":
-        break;
-      default:
-        setCurrentModal(null);
-    }
-  };
 
   const renderCurrentModal = () => {
     switch (currentModal) {
@@ -98,11 +78,11 @@ const CommonModal = () => {
           />
         );
       case "verifyCode":
-        return <VerifyCodeModal setCurrentModal={setCurrentModal} />;
+        return <VerifyCode setCurrentModal={setCurrentModal} />;
       case "createUser":
-        return <CreateUserModal setCurrentModal={setCurrentModal} />;
+        return <CreateUser setCurrentModal={setCurrentModal} />;
       case "demographics":
-        return <DemographicsModal setCurrentModal={setCurrentModal} />;
+        return <Demographics setCurrentModal={setCurrentModal} />;
       default:
         return null;
     }
@@ -112,7 +92,7 @@ const CommonModal = () => {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button
-          onClick={() => openNextModal("sendCode")}
+          onClick={() => setCurrentModal("sendCode")}
           className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none"
         >
           Edit profile

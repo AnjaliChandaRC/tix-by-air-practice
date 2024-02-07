@@ -2,13 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { CrossIcon, HamburgerIcon } from "../icons/Landing";
+import { CrossIcon, HamburgerIcon } from "../common/icons/ToggleIcon";
+import SendCode from "./authenticationPopups/SendCode";
 
 const Header = () => {
-  const [menuPopup, setMenuPopUp] = useState(false);
+  const [ismenupopupvisible, setIsmenupopupvisible] = useState(false);
   // Add Close Function Here
   const closeMenuPopup = () => {
-    setMenuPopUp(false);
+    setIsmenupopupvisible(false);
   };
   useEffect(() => {
     document.body.addEventListener("click", closeMenuPopup);
@@ -19,7 +20,7 @@ const Header = () => {
 
   // Add overflow in Body
   useEffect(() => {
-    if (menuPopup) {
+    if (ismenupopupvisible) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -27,7 +28,14 @@ const Header = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [menuPopup]);
+  }, [ismenupopupvisible]);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  // Function jo handle karega "log in" button click
+  const handleLoginClick = () => {
+    setIsLoggedIn(true);
+  };
   return (
     <>
       {/* DESKTOP CODE START HERE */}
@@ -60,22 +68,26 @@ const Header = () => {
           >
             FAQ
           </Link>
-          <button className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300">
+          <button
+            className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300"
+            onClick={handleLoginClick}
+          >
             LOG IN
           </button>
+          {isLoggedIn && <SendCode />}
         </div>
         <button
           className="py-[15px] px-[13px] border-l-2 border-black sm:hidden"
-          onClick={() => setMenuPopUp(!menuPopup)}
+          onClick={() => setIsmenupopupvisible(!ismenupopupvisible)}
         >
-          {menuPopup === false ? <HamburgerIcon /> : <CrossIcon />}
+          {ismenupopupvisible === false ? <HamburgerIcon /> : <CrossIcon />}
         </button>
       </div>
 
       {/* MOBILE CODE START HERE */}
       <div
         className={`${
-          menuPopup === false ? "right-[-400px]" : "right-[5px]"
+          ismenupopupvisible === false ? "right-[-400px]" : "right-[5px]"
         } fixed z-20 top-[45px] w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
       >
         <Link
@@ -93,15 +105,16 @@ const Header = () => {
           FAQ
         </Link>
         <button
-          onClick={closeMenuPopup}
           className="ff_inter font-semibold log_in_btn_bg transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center text-nowrap w-full  border-t-2 border-black"
+          onClick={handleLoginClick}
         >
           LOG IN
         </button>
+        {isLoggedIn && <SendCode />}
       </div>
 
       {/* ADD OVERLAY HERE */}
-      {menuPopup && (
+      {ismenupopupvisible && (
         <div
           onClick={closeMenuPopup}
           className="w-screen h-screen top-0 left-0 fixed z-10 bg-overlayBg"

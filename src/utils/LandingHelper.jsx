@@ -1,8 +1,9 @@
 import card_img_one from "../../public/assets/images/png/card_img_one.png";
 import card_img_two from "../../public/assets/images/png/card_img_two.png";
 import card_img_three from "../../public/assets/images/png/card_img_three.png";
+import { FacebookIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "@/componets/icons/Landing";
 
-export const SliderText = [
+export const TixByAirText = [
   {
     title: "TixByAir",
   },
@@ -47,7 +48,7 @@ export const SliderText = [
   },
 ];
 
-export const CardNameList = [
+export const OurServiceList = [
   {
     image: card_img_one,
     title: "Grow Your Community With Free Tickets",
@@ -98,5 +99,23 @@ export const FaqsMap = [
     question: "Can I make multiple communities?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",
+  },
+];
+export const FooterIconsList = [
+  {
+    image: <InstagramIcon />,
+    href: "https://www.instagram.com/",
+  },
+  {
+    image: <FacebookIcon />,
+    href: "https://www.facebook.com/",
+  },
+  {
+    image: <TelegramIcon />,
+    href: "https://telegram.me/",
+  },
+  {
+    image: <TwitterIcon />,
+    href: "https://twitter.com/",
   },
 ];

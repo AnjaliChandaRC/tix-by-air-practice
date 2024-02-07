@@ -85,7 +85,7 @@ html {
 }
 
 .text-stroke {
-  -webkit-text-stroke: 0.3px white;
+  -webkit-text-stroke: 0.79px white;
 }
 
 .slider_text,
@@ -131,6 +131,11 @@ html {
   100% {
     transform: translateX(0px);
   }
+}
+
+.popup_cross_icon svg{
+  width: 13px;
+  height: 13px;
 }
 
 /* MEDIA QUERIES CSS START HERE==================================*/
