@@ -1,6 +1,5 @@
 import CustomButton from "@/componets/common/button/CustomButton";
-import CustomInput from "@/componets/common/fields/CustomInput";
-import CustomSelect from "@/componets/common/fields/CustomSelect";
+import CustomSelect from "@/componets/common/selector/CustomSelect";
 import { CrossIcon } from "@/componets/common/icons/ToggleIcon";
 import React from "react";
 

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import * as Select from "@radix-ui/react-select";
-import classnames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const CustomSelect = () => (
@@ -37,10 +36,9 @@ const SelectItem = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => {
     return (
       <Select.Item
-        className={classnames(
-          "rounded-lg border-[1px] border-granitegray ps-3 pt-[13px] pb-[14px] ff_inter text-sm text-black leading-[100%]",
-          className
-        )}
+        className={
+          "rounded-lg border-[1px] border-granitegray ps-3 pt-[13px] pb-[14px] ff_inter text-sm text-black leading-[100%]"
+        }
         {...props}
         ref={forwardedRef}
       >
