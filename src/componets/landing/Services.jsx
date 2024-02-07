@@ -1,10 +1,11 @@
-import { OurServiceList } from "@/utils/LandingHelper";
-import Image from "next/image";
-import React from "react";
+import { OurServiceList } from "@/utils/LandingHelper"; // Importing service data
+import Image from "next/image"; // Importing Image component from Next.js
+import React from "react"; // Importing React library
 
 const Services = () => {
   return (
     <div className="relative" id="feature">
+      {/* Left vector image */}
       <Image
         src="/assets/images/svg/left_vector.svg"
         alt="hero-image"
@@ -12,7 +13,8 @@ const Services = () => {
         width={127}
         height={38}
       />
-      <div className="container mx-auto  max-w-[1188px] py-14 lg:pt-32 lg:pb-[118px] static z-10">
+      <div className="container mx-auto max-w-[1188px] py-14 lg:pt-32 lg:pb-[118px] static z-10">
+        {/* Section title and description */}
         <div className="flex sm:items-center px-6 flex-col lg:flex-row justify-between mb-7 md:mb-12">
           <h2 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl !leading-[120%] text-black max-w-[531px] text-start sm:text-center lg:text-start mb-[10px]">
             Discover Our Service Spectrum
@@ -22,6 +24,7 @@ const Services = () => {
             tortor nisl lacinia. Ut et donec ac velit diam lectus dui.
           </p>
         </div>
+        {/* Service cards */}
         <div className="flex flex-row flex-wrap justify-center gap-[34px] ps-6 sm:px-5 pe-[33px]">
           {OurServiceList.map((data, index) => {
             // Define an array of background colors
@@ -33,7 +36,7 @@ const Services = () => {
             return (
               <div
                 key={index}
-                className={`border-2 border-black ${bgColorClass} hover:shadow-none transition-all duration-200 ease-linear shadow-[10px_10px_0px_0px] p-6  rounded-[10px] max-w-[355px] w-full min-h-[310px] `}
+                className={`border-2 border-black ${bgColorClass} hover:shadow-none transition-all duration-200 ease-linear shadow-[10px_10px_0px_0px] p-6 rounded-[10px] max-w-[355px] w-full min-h-[310px] `}
               >
                 <Image
                   width={65}

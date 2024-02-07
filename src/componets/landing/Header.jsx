@@ -2,13 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { CrossIcon, HamburgerIcon } from "../icons/Landing";
+import { CrossIcon, HamburgerIcon } from "../common/icons/ToggleIcon";
 
 const Header = () => {
-  const [menuPopup, setMenuPopUp] = useState(false);
+  const [ismenupopupvisible, setIsmenupopupvisible] = useState(false);
   // Add Close Function Here
   const closeMenuPopup = () => {
-    setMenuPopUp(false);
+    setIsmenupopupvisible(false);
   };
   useEffect(() => {
     document.body.addEventListener("click", closeMenuPopup);
@@ -19,7 +19,7 @@ const Header = () => {
 
   // Add overflow in Body
   useEffect(() => {
-    if (menuPopup) {
+    if (ismenupopupvisible) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -27,7 +27,7 @@ const Header = () => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [menuPopup]);
+  }, [ismenupopupvisible]);
   return (
     <>
       {/* DESKTOP CODE START HERE */}
@@ -66,17 +66,16 @@ const Header = () => {
         </div>
         <button
           className="py-[15px] px-[13px] border-l-2 border-black sm:hidden"
-          onClick={() => setMenuPopUp(!menuPopup)}
+          onClick={() => setIsmenupopupvisible(!ismenupopupvisible)}
         >
-          {menuPopup === false ? <HamburgerIcon /> : <CrossIcon />}
+          {ismenupopupvisible === false ? <HamburgerIcon /> : <CrossIcon />}
         </button>
       </div>
 
       {/* MOBILE CODE START HERE */}
       <div
-        className={`${
-          menuPopup === false ? "right-[-400px]" : "right-[5px]"
-        } fixed z-20 top-[45px] w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
+        className={`${ismenupopupvisible === false ? "right-[-400px]" : "right-[5px]"
+          } fixed z-20 top-[45px] w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
       >
         <Link
           onClick={closeMenuPopup}
@@ -101,7 +100,7 @@ const Header = () => {
       </div>
 
       {/* ADD OVERLAY HERE */}
-      {menuPopup && (
+      {ismenupopupvisible && (
         <div
           onClick={closeMenuPopup}
           className="w-screen h-screen top-0 left-0 fixed z-10 bg-overlayBg"
