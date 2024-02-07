@@ -1,15 +1,21 @@
 "use client";
-import { FaqsMap } from "@/utils/LandingHelper";
+import { FaqsMap } from "@/utils/LandingHelper"; // Importing FaqsMap from utility module
 import Image from "next/image";
 import React, { useState } from "react";
+
 const Faqs = () => {
+  // State to track the active FAQ index
   const [activeIndex, setActiveIndex] = useState(0);
+
+  // Function to toggle the accordion (expand/collapse)
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   return (
     <>
-      <div className="pb-10 lg:pb-12 mb-12 pt-5 lg:pt-0 relative">
+      <div className="pb-11 lg:pb-12 mb-11 pt-5 lg:pt-0 relative">
+        {/* Left vector image */}
         <Image
           src="/assets/images/svg/left_vector.svg"
           alt="hero-image"
@@ -17,6 +23,7 @@ const Faqs = () => {
           width={127}
           height={38}
         />
+        {/* Right vector image */}
         <Image
           src="/assets/images/svg/left_vector.svg"
           alt="hero-image"
@@ -25,25 +32,29 @@ const Faqs = () => {
           height={38}
         />
         <div className="max-w-[1188px] mx-auto px-6">
+          {/* Heading */}
           <h4 className="ff_satoshi_black text-[28px] sm:text-[38px] lg:text-5xl font-black text-black text-center xl:pt-4">
             Frequently Asked Questions
           </h4>
+          {/* Description */}
           <p className="mt-4 ff_inter font-normal text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur. Semper vitae nullam eget
             consectetur mi. Vulputate sapien a a bibendum suspendisse quam. Hac
             posuere eget nam diam velit urna adipiscing diam.
           </p>
-          <div className="flex flex-wrap items-center mt-4 md:mt-12">
+          <div className="flex flex-wrap items-center mt-4 md:mt-11">
             <div className="w-full lg:w-6/12 lg:ps-3 lg:pe-[23px]">
+              {/* FAQ items */}
               {FaqsMap.map((faq, index) => (
                 <div
                   key={index}
                   className={`overflow-hidden transition-all duration-300 px-5 py-[19px] rounded-[10px] mt-5 ${
                     activeIndex === index
                       ? " border border-black shadow-faq_shadow !pb-[15px]"
-                      : " border border-neongray"
-                  } mt-3`}
+                      : " border border-black shadow-faq_shadow md:shadow-none md:border-neongray"
+                  }`}
                 >
+                  {/* FAQ question button */}
                   <button
                     onClick={() => toggleAccordion(index)}
                     className="w-full text-left focus:outline-none flex items-center justify-between hover:bg-gray-100 transition duration-300 ease-in-out"
@@ -51,6 +62,7 @@ const Faqs = () => {
                     <span className="ff_inter font-medium text-xl text-black">
                       {faq.question}
                     </span>
+                    {/* Arrow icon */}
                     <span className="float-right">
                       <svg
                         className={`w-4 md:h-5 h-4 md:w-5 ${
@@ -69,6 +81,7 @@ const Faqs = () => {
                       </svg>
                     </span>
                   </button>
+                  {/* FAQ answer */}
                   <div
                     className={`overflow-hidden transition-all duration-300 ${
                       activeIndex === index ? "h-full" : "max-h-0"
@@ -82,7 +95,8 @@ const Faqs = () => {
               ))}
             </div>
             <div className="w-full lg:w-6/12 lg:pe-3 lg:ps-[23px] mt-4 pt-12 lg:mt-0 ">
-              <div className="relative max-w-[350px] sm:max-w-[476px] mx-auto">
+              {/* Image section */}
+              <div className="relative max-w-[330px] sm:max-w-[476px] mx-auto">
                 <Image
                   src="/assets/images/png/faq-img.png"
                   alt=""
@@ -90,8 +104,9 @@ const Faqs = () => {
                   height={493}
                   className="mx-auto lg:mx-0"
                 />
+                {/* Line image */}
                 <Image
-                  className="w-[160px] h-[63px] absolute end-[-50px] sm:end-[-15px] lg:end-[-18px] min-[1100px]:end-[-15px] top-[26.2%]"
+                  className="w-[160px] h-[63px] absolute end-[-57px] sm:end-[-15px] lg:end-[-21px] min-[1100px]:end-[-15px] top-[25.9%]"
                   src="/assets/images/svg/single_line.svg"
                   alt="hero-line"
                   width={194}
@@ -105,4 +120,5 @@ const Faqs = () => {
     </>
   );
 };
+
 export default Faqs;
