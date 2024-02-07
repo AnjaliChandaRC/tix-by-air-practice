@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
 
-const SendCode = () => {
+const SendCode = ({ setCurrentModal, currentModal }) => {
+  console.log("currentModalcurrentModal", currentModal);
+
+  const handleClick = () => {
+    if (currentModal === "sendCode") {
+      setCurrentModal("verifyCode");
+    }
+  };
+
   return (
-    <div>SendCode</div>
-  )
-}
+    <button onClick={handleClick}>
+      SendCode
+    </button>
+  );
+};
 
-export default SendCode
+export default SendCode;
