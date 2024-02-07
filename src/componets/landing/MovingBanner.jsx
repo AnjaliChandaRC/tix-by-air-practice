@@ -1,5 +1,5 @@
 // Import SliderText from LandingHelper utility
-import { SliderText } from "@/utils/LandingHelper";
+import { TixByAirText } from "@/utils/LandingHelper";
 
 // Define the MovingBanner component
 export default function MovingBanner() {
@@ -10,7 +10,7 @@ export default function MovingBanner() {
       className={`flex gap-9 sm:gap-14 items-center absolute top-[50%] left-0 ${className}`}
     >
       {/* Map through SliderText array and render each heading */}
-      {SliderText.map((obj, index) => (
+      {TixByAirText.map((obj, index) => (
         // Individual heading with dynamic styling based on index
         <h4
           className={`text-[26px] sm:text-4xl font-bold ff_satoshi_bold ${index % 2 === 0 ? "text-white" : "text-black"
