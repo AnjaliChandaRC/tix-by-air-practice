@@ -145,18 +145,44 @@ html {
 }
 
 /* FAQ SECTION */
-.AccordionItem[data-state="open"] {
+.accordion_item[data-state="open"] {
   transition: all 300ms ease-in-out;
   border: 1px solid black;
   padding-bottom: 15px !important;
   box-shadow: 6px 6px 0px 0px #000;
 }
-.AccordionItem[data-state="closed"] {
+.accordion_item[data-state="closed"] {
   transition: all 300ms ease-in-out;
   border: 1px solid #808080;
 }
-.AccordionTrigger[data-state="closed"] > .faq_arrow {
+.accordion_trigger[data-state="closed"] > .faq_arrow {
   transform: rotate(180deg);
+}
+.accordion_content {
+  overflow: hidden;
+}
+.accordion_content[data-state="open"] {
+  animation: slideDown 300ms ease-out;
+}
+.accordion_content[data-state="closed"] {
+  animation: slideUp 300ms ease-out;
+}
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
 }
 /* MEDIA QUERIES CSS START HERE==================================*/
 
