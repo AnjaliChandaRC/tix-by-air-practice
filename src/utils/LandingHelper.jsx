@@ -68,34 +68,40 @@ export const OurServiceList = [
       "Learn how your links perform online with our free tool. You Track, Views, and conversions for your communities.",
   },
 ];
-
-export const FaqsMap = [
+// FAQ SECTION IN USE MAP
+export const FaqsList = [
   {
+    item: "item-1",
     question: "Is TixByAir free?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",
   },
   {
+    item: "item-2",
     question: "Who can use TixByAir?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",
   },
   {
+    item: "item-3",
     question: "What does TixByAir do?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",
   },
   {
+    item: "item-4",
     question: "How does TixByAir help my community?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",
   },
   {
+    item: "item-5",
     question: "How do I get started?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",
   },
   {
+    item: "item-6",
     question: "Can I make multiple communities?",
     answer:
       "Yes, TixByAir is 100% free and provides each community with unlimited QRs, links, and member analytics.",

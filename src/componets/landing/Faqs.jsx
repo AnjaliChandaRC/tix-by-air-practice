@@ -1,17 +1,9 @@
 "use client";
-import { FaqsMap } from "@/utils/LandingHelper"; // Importing FaqsMap from utility module
+import { FaqsList } from "@/utils/LandingHelper"; // Importing FaqsMap from utility module
 import Image from "next/image";
-import React, { useState } from "react";
-
+import * as Accordion from "@radix-ui/react-accordion";
+import { FaqArrowIcon } from "../icons/Landing";
 const Faqs = () => {
-  // State to track the active FAQ index
-  const [activeIndex, setActiveIndex] = useState(0);
-
-  // Function to toggle the accordion (expand/collapse)
-  const toggleAccordion = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
-  };
-
   return (
     <>
       <div className="pb-11 lg:pb-12 mb-11 pt-5 lg:pt-0 relative">
@@ -45,54 +37,25 @@ const Faqs = () => {
           <div className="flex flex-wrap items-center mt-4 md:mt-11">
             <div className="w-full lg:w-6/12 lg:ps-3 lg:pe-[23px]">
               {/* FAQ items */}
-              {FaqsMap.map((faq, index) => (
-                <div
-                  key={index}
-                  className={`overflow-hidden transition-all duration-300 px-5 py-[19px] rounded-[10px] mt-5 ${
-                    activeIndex === index
-                      ? " border border-black shadow-faq_shadow !pb-[15px]"
-                      : " border border-black shadow-faq_shadow md:shadow-none md:border-neongray"
-                  }`}
-                >
-                  {/* FAQ question button */}
-                  <button
-                    onClick={() => toggleAccordion(index)}
-                    className="w-full text-left focus:outline-none flex items-center justify-between hover:bg-gray-100 transition duration-300 ease-in-out"
-                  >
-                    <span className="ff_inter font-medium text-xl text-black">
-                      {faq.question}
-                    </span>
-                    {/* Arrow icon */}
-                    <span className="float-right">
-                      <svg
-                        className={`w-4 md:h-5 h-4 md:w-5 ${
-                          activeIndex === index ? " " : " rotate-180"
-                        }`}
-                        width="19"
-                        height="12"
-                        viewBox="0 0 19 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M2.89125 10.9435C2.23875 11.6185 1.15875 11.6185 0.506249 10.966C-0.16875 10.291 -0.16875 9.23354 0.506249 8.58104L8.31374 0.728536C8.62874 0.413535 9.05624 0.233536 9.50624 0.233536C9.95623 0.233536 10.3837 0.413535 10.6987 0.728536L18.5062 8.58104C18.8437 8.89604 19.0012 9.32354 19.0012 9.75104C19.0012 10.201 18.8437 10.6285 18.5062 10.966C17.8312 11.6185 16.7737 11.6185 16.1212 10.9435L9.50624 4.30604L2.89125 10.9435Z"
-                          fill="black"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                  {/* FAQ answer */}
-                  <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      activeIndex === index ? "h-full" : "max-h-0"
-                    }`}
-                  >
-                    <div className="ff_inter font-normal text-base text-davygray mt-2">
-                      <p>{faq.answer}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+              <Accordion.Root type="single" defaultValue="item-1" collapsible>
+                {FaqsList.map((object, index) => {
+                  return (
+                    <Accordion.Item
+                      value={object.item}
+                      key={index}
+                      className={`transition-all AccordionItem duration-300 px-5 py-[19px] rounded-[10px] mt-5`}
+                    >
+                      <Accordion.Trigger className="text-start ff_inter font-medium text-xl text-black flex items-center justify-between w-full AccordionTrigger">
+                        {object.question}
+                        <FaqArrowIcon />
+                      </Accordion.Trigger>
+                      <Accordion.Content className="ff_inter font-normal text-base text-davygray mt-2">
+                        {object.answer}
+                      </Accordion.Content>
+                    </Accordion.Item>
+                  );
+                })}
+              </Accordion.Root>
             </div>
             <div className="w-full lg:w-6/12 lg:pe-3 lg:ps-[23px] mt-4 pt-12 lg:mt-0 ">
               {/* Image section */}
