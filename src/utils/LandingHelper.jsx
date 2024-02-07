@@ -2,7 +2,7 @@ import card_img_one from "../../public/assets/images/png/card_img_one.png";
 import card_img_two from "../../public/assets/images/png/card_img_two.png";
 import card_img_three from "../../public/assets/images/png/card_img_three.png";
 
-export const SliderText = [
+export const TixByAirText = [
   {
     title: "TixByAir",
   },
@@ -47,7 +47,7 @@ export const SliderText = [
   },
 ];
 
-export const CardNameList = [
+export const OurServiceList = [
   {
     image: card_img_one,
     title: "Grow Your Community With Free Tickets",

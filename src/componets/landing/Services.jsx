@@ -1,4 +1,4 @@
-import { CardNameList } from "@/utils/LandingHelper";
+import { OurServiceList } from "@/utils/LandingHelper";
 import Image from "next/image";
 import React from "react";
 
@@ -23,7 +23,7 @@ const Services = () => {
           </p>
         </div>
         <div className="flex flex-row flex-wrap justify-center gap-[34px] ps-6 sm:px-5 pe-[33px]">
-          {CardNameList.map((data, index) => {
+          {OurServiceList.map((data, index) => {
             // Define an array of background colors
             const bgColors = ["bg-orange", "bg-yellow", "bg-green"]; // Add more colors as needed
 
