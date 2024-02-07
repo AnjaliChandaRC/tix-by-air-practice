@@ -16,6 +16,26 @@ export const HamburgerIcon = () => {
     </>
   );
 };
+// FAQ SECTION USE ARROW ICON IN ACCORDION
+export const FaqArrowIcon = () => {
+  return (
+    <>
+      <svg
+        className="w-4 md:h-5 h-4 md:w-5 transition-all duration-300 faq_arrow"
+        width="19"
+        height="12"
+        viewBox="0 0 19 12"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M2.89125 10.9435C2.23875 11.6185 1.15875 11.6185 0.506249 10.966C-0.16875 10.291 -0.16875 9.23354 0.506249 8.58104L8.31374 0.728536C8.62874 0.413535 9.05624 0.233536 9.50624 0.233536C9.95623 0.233536 10.3837 0.413535 10.6987 0.728536L18.5062 8.58104C18.8437 8.89604 19.0012 9.32354 19.0012 9.75104C19.0012 10.201 18.8437 10.6285 18.5062 10.966C17.8312 11.6185 16.7737 11.6185 16.1212 10.9435L9.50624 4.30604L2.89125 10.9435Z"
+          fill="black"
+        />
+      </svg>
+    </>
+  );
+};
 
 export const CrossIcon = () => {
   return (
