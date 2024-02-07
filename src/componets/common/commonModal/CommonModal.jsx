@@ -43,8 +43,8 @@ const CommonModal = () => {
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="bg-blackA6 data-[state=open]:animate-overlayShow fixed w-screen h-screen top-0 left-0 z-10 bg-overlayBg" />
-        <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none border-2 border-black w-[90%] sm:w-[388px] z-10 rounded-[20px] p-[55px]">
+        <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed w-screen h-screen top-0 left-0 z-0 bg-overlayBg" />
+        <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none border-2 border-black w-[90%] sm:w-[388px] rounded-[20px] p-5 sm:p-[55px]">
           {renderCurrentModal()}
         </Dialog.Content>
       </Dialog.Portal>

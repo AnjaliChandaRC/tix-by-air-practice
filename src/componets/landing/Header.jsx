@@ -30,12 +30,6 @@ const Header = () => {
     };
   }, [ismenupopupvisible]);
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  // Function jo handle karega "log in" button click
-  const handleLoginClick = () => {
-    setIsLoggedIn(true);
-  };
   return (
     <>
       {/* DESKTOP CODE START HERE */}
@@ -68,13 +62,9 @@ const Header = () => {
           >
             FAQ
           </Link>
-          <button
-            className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300"
-            onClick={handleLoginClick}
-          >
+          <button className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300">
             LOG IN
           </button>
-          {isLoggedIn && <SendCode />}
         </div>
         <button
           className="py-[15px] px-[13px] border-l-2 border-black sm:hidden"
@@ -104,13 +94,9 @@ const Header = () => {
         >
           FAQ
         </Link>
-        <button
-          className="ff_inter font-semibold log_in_btn_bg transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center text-nowrap w-full  border-t-2 border-black"
-          onClick={handleLoginClick}
-        >
+        <button className="ff_inter font-semibold log_in_btn_bg transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center text-nowrap w-full  border-t-2 border-black">
           LOG IN
         </button>
-        {isLoggedIn && <SendCode />}
       </div>
 
       {/* ADD OVERLAY HERE */}

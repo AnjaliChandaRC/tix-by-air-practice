@@ -1,6 +1,7 @@
 import CustomButton from "@/componets/common/button/CustomButton";
-import CustomSelect from "@/componets/common/selector/CustomSelect";
 import { CrossIcon } from "@/componets/common/icons/ToggleIcon";
+import CustomSelect from "@/componets/common/selector/CustomSelect";
+import { SelectDataList } from "@/utils/AuthenticationHelper";
 import React from "react";
 
 const Demographics = (setCurrentModal) => {
@@ -12,6 +13,18 @@ const Demographics = (setCurrentModal) => {
       <h3 className="ff_inter font-semibold text-black pb-4 text-center">
         Add Demographics
       </h3>
+      {/* {SelectDataList.map((obj, index) => {
+        return (
+          <>
+            <div key={index}>
+              <h4>{obj.title}</h4>
+              <div>
+                <p>{obj.raceItems}</p>
+              </div>
+            </div>
+          </>
+        );
+      })} */}
       <p className="ff_inter font-semibold text-black pb-4">Race</p>
       <CustomSelect />
       <p className="mt-2 mb-[31px] text-xs text-black opacity-70 ff_inter">

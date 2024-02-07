@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import * as Select from "@radix-ui/react-select";
+import classnames from "classnames";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 const CustomSelect = () => (
@@ -15,15 +16,34 @@ const CustomSelect = () => (
       <Select.Content className="overflow-hidden bg-white rounded-md shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] mt-[54px] ms-[16px] w-full max-w-[227px]">
         <Select.Viewport>
           <Select.Group className="rounded-xl bg-white border-[1px] border-black shadow-[0px_15px_30px_0px] shadow-[#C9C9C9] p-[10px]">
-            <SelectItem value="black">Black</SelectItem>
-            <SelectItem value="white" className="my-2">
+            <SelectItem
+              value="black"
+              className="my-2 bg-white hover:bg-orangecrayola transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Black
+            </SelectItem>
+            <SelectItem
+              value="white"
+              className="my-2 bg-white hover:bg-orangecrayola transition-all ease-in-out duration-300 cursor-pointer"
+            >
               White
             </SelectItem>
-            <SelectItem value="asian">Asian</SelectItem>
-            <SelectItem value="indian" className="my-2">
+            <SelectItem
+              value="asian"
+              className="bg-white hover:bg-orangecrayola transition-all ease-in-out duration-300 cursor-pointer"
+            >
+              Asian
+            </SelectItem>
+            <SelectItem
+              value="indian"
+              className="my-2 bg-white hover:bg-orangecrayola transition-all ease-in-out duration-300 cursor-pointer"
+            >
               Indian
             </SelectItem>
-            <SelectItem value="applicable" className=" bg-orangecrayola">
+            <SelectItem
+              value="applicable"
+              className="bg-white hover:bg-orangecrayola transition-all ease-in-out duration-300 cursor-pointer"
+            >
               Not Applicable
             </SelectItem>
           </Select.Group>
@@ -36,9 +56,10 @@ const SelectItem = React.forwardRef(
   ({ children, className, ...props }, forwardedRef) => {
     return (
       <Select.Item
-        className={
-          "rounded-lg border-[1px] border-granitegray ps-3 pt-[13px] pb-[14px] ff_inter text-sm text-black leading-[100%]"
-        }
+        className={classnames(
+          "rounded-lg border-[1px] border-granitegray ps-3 pt-[13px] pb-[14px] ff_inter text-sm text-black leading-[100%]",
+          className
+        )}
         {...props}
         ref={forwardedRef}
       >
