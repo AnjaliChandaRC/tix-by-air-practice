@@ -47,6 +47,7 @@
 body,
 html {
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
 }
 
 /* SCROLL BAR DESIGN CSS START HERE==================================*/
@@ -175,22 +176,28 @@ html {
   transition: all 300ms ease-in-out;
   border: 1px solid #808080;
 }
-.accordion_trigger[data-state="closed"] > .faq_arrow {
+
+.accordion_trigger[data-state="closed"]>.faq_arrow {
   transform: rotate(180deg);
 }
+
 .accordion_content {
   overflow: hidden;
 }
+
 .accordion_content[data-state="open"] {
   animation: slideDown 300ms ease-out;
 }
+
 .accordion_content[data-state="closed"] {
   animation: slideUp 300ms ease-out;
 }
+
 @keyframes slideDown {
   from {
     height: 0;
   }
+
   to {
     height: var(--radix-accordion-content-height);
   }
@@ -200,10 +207,12 @@ html {
   from {
     height: var(--radix-accordion-content-height);
   }
+
   to {
     height: 0;
   }
 }
+
 /* MEDIA QUERIES CSS START HERE==================================*/
 
 @media (max-width: 639.98px) {
