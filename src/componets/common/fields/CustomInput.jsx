@@ -15,7 +15,7 @@ const CustomInput = ({ error, handleInputChange, phoneNumber, type, placeholder,
       />
       {error && (
         <p className="text-red-500 text-xs font-inter mt-1">
-          {phoneNumber === "" ? 'Code is required' : 'Code is required'} {/* Improve error message */}
+          {phoneNumber === "" ? 'Code is required' : 'must be 6 digits'} {/* Improve error message */}
         </p>
       )}
     </>
