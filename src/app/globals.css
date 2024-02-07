@@ -133,9 +133,9 @@ html {
   }
 }
 
-.popup_cross_icon svg{
+.popup_cross_icon svg {
   width: 13px;
-  height: 13px;
+  height: 15px;
 }
 
 /* MEDIA QUERIES CSS START HERE==================================*/

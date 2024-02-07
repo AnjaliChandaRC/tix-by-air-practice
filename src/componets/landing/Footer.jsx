@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import {
-  FacebookIcon,
-  InstagramIcon,
-  TelegramIcon,
-  TwitterIcon,
-} from "../icons/Landing";
 import { FooterIconsList } from "@/utils/LandingHelper";
 
 const Footer = () => {
@@ -53,9 +47,14 @@ const Footer = () => {
 
         <div className="flex justify-center gap-4 sm:gap-5 pt-5 pb-8 sm:py-8">
           {FooterIconsList.map((data, index) => (
-            <a href={data.href} key={index} className="footer_social_icons">
+            <Link
+              href={data.href}
+              target="_blank"
+              key={index}
+              className="footer_social_icons"
+            >
               {data.image}
-            </a>
+            </Link>
           ))}
         </div>
 
