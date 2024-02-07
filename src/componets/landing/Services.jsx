@@ -4,7 +4,7 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div className='relative'>
+    <div className='relative' id='feature'>
       <Image src='/assets/images/svg/left_vector.svg' alt='hero-image' className='top-[16%] md:top-[45%] z-[-1] -right-[50px] md:left-[-35px] absolute h-[20px] md:h-[38px]' width={127} height={38} />
       <div className='container mx-auto  max-w-[1188px] py-14 lg:pt-32 lg:pb-[118px] static z-10'>
         <div className='flex sm:items-center px-6 flex-col lg:flex-row justify-between mb-7 md:mb-12'>
