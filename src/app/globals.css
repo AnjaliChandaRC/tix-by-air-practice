@@ -13,11 +13,23 @@
 }
 
 @font-face {
+  font-family: "Satoshi-Bold";
+  src: url("../../public/assets/fonts/Satoshi-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Satoshi-medium";
   src: url("../../public/assets/fonts/Satoshi-Medium.ttf");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+}
+
+.ff_satoshi_bold {
+  font-family: "Satoshi-bold";
 }
 
 .ff_satoshi_black {
@@ -68,23 +80,12 @@ html {
 }
 
 /* SLIDER CSS START HERE==================================*/
-
-@keyframes slider {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-
-  100% {
-    transform: translate3d(70rem, 0, 0);
-  }
-}
-
 .text_border {
   -webkit-text-stroke: 1.5px black;
 }
 
 .text-stroke {
-  -webkit-text-stroke: 0.79px white;
+  -webkit-text-stroke: 0.3px white;
 }
 
 .slider_text,

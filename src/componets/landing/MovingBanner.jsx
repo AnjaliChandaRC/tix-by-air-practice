@@ -6,14 +6,18 @@ export default function MovingBanner() {
   // Function to render slider text based on the given className
   const renderSliderText = (className) => (
     // Container for slider text with dynamic class and positioning
-    <div className={`flex gap-9 sm:gap-14 items-center absolute top-[50%] left-0 ${className}`}>
+    <div
+      className={`flex gap-9 sm:gap-14 items-center absolute top-[50%] left-0 ${className}`}
+    >
       {/* Map through SliderText array and render each heading */}
       {SliderText.map((obj, index) => (
         // Individual heading with dynamic styling based on index
         <h4
-        className={`text-[26px] sm:text-4xl font-bold ff_inter ${index % 2 === 0 ? "text-white" : "text-black"} ${index % 2 !== 0 ? "text-stroke" : ""}`}
-        key={index}
-      >
+          className={`text-[26px] sm:text-4xl font-bold ff_satoshi_bold ${
+            index % 2 === 0 ? "text-white" : "text-black"
+          } ${index % 2 !== 0 ? "text-stroke" : ""}`}
+          key={index}
+        >
           {/* Display heading text from SliderText array */}
           {obj.title}
         </h4>
