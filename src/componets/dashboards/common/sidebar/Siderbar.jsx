@@ -20,6 +20,11 @@ const Siderbar = () => {
             TixByAir
           </span>
         </Link>
+        <div>
+          <Link href="/" className=" text-white">
+            My Communities
+          </Link>
+        </div>
       </div>
     </>
   );
