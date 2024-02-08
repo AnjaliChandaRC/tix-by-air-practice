@@ -17,6 +17,11 @@ module.exports = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        // "sidebar-active":
+        //   "url('/assets/images/png/sidebar_active_link_img.png')",
+      },
+      backgroundSize: {
+        100: "100% 100%",
       },
       fontSize: {
         textlg: "22px",
