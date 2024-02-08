@@ -3,13 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { CrossIcon, HamburgerIcon } from "../common/icons/ToggleIcon";
-import SendCode from "./authenticationPopups/SendCode";
 
 const Header = ({ setCurrentModal }) => {
-  const [ismenupopupvisible, setIsmenupopupvisible] = useState(false);
+  const [isMenuPopupVisible, setIsMenuPopupVisible] = useState(false);
   // Add Close Function Here
   const closeMenuPopup = () => {
-    setIsmenupopupvisible(false);
+    setIsMenuPopupVisible(false);
   };
   useEffect(() => {
     document.body.addEventListener("click", closeMenuPopup);
@@ -20,7 +19,7 @@ const Header = ({ setCurrentModal }) => {
 
   // Add overflow in Body
   useEffect(() => {
-    if (ismenupopupvisible) {
+    if (isMenuPopupVisible) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
@@ -28,7 +27,7 @@ const Header = ({ setCurrentModal }) => {
     return () => {
       document.body.style.overflow = "auto";
     };
-  }, [ismenupopupvisible]);
+  }, [isMenuPopupVisible]);
 
   return (
     <>
@@ -71,16 +70,16 @@ const Header = ({ setCurrentModal }) => {
         </div>
         <button
           className="py-[15px] px-[13px] border-l-2 border-black sm:hidden"
-          onClick={() => setIsmenupopupvisible(!ismenupopupvisible)}
+          onClick={() => setIsMenuPopupVisible(!isMenuPopupVisible)}
         >
-          {ismenupopupvisible === false ? <HamburgerIcon /> : <CrossIcon />}
+          {isMenuPopupVisible === false ? <HamburgerIcon /> : <CrossIcon />}
         </button>
       </div>
 
       {/* MOBILE CODE START HERE */}
       <div
         className={`${
-          ismenupopupvisible === false ? "right-[-400px]" : "right-[5px]"
+          isMenuPopupVisible === false ? "right-[-400px]" : "right-[5px]"
         } fixed z-20 top-[45px] w-[181px] rounded-lg border-2 overflow-hidden duration-300 ease-in-out transition-all border-black bg-white shadow-md`}
       >
         <Link
@@ -103,7 +102,7 @@ const Header = ({ setCurrentModal }) => {
       </div>
 
       {/* ADD OVERLAY HERE */}
-      {ismenupopupvisible && (
+      {isMenuPopupVisible && (
         <div
           onClick={closeMenuPopup}
           className="w-screen h-screen top-0 left-0 fixed z-10 bg-overlayBg"
