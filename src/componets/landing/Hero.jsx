@@ -68,7 +68,7 @@ const Hero = () => {
             </div>
           </div>
           {/* Right content column with images */}
-          <div className="relative mt-12 sm:mt-14 md:mt-0 md:ms-6 lg:ms-10 z-[1]">
+          <div className="relative mt-12 sm:mt-14 md:mt-0 md:ms-6 lg:ms-10 z-0">
             {/* Large line image */}
             <Image
               src="/assets/images/svg/heroline.svg"

@@ -63,17 +63,13 @@ html {
 
 /*HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
-  background: var(
-    --Gradient,
-    linear-gradient(143deg, #fb981d 0%, #fb6609 89.88%)
-  );
+  background: var(--Gradient,
+      linear-gradient(143deg, #fb981d 0%, #fb6609 89.88%));
 }
 
 .log_in_btn_bg:hover {
-  background: var(
-    --Gradient,
-    linear-gradient(143deg, #fb6609 0%, #fb981d 89.88%)
-  );
+  background: var(--Gradient,
+      linear-gradient(143deg, #fb6609 0%, #fb981d 89.88%));
 }
 
 /* FOOTER CSS START HERE==================================*/
@@ -141,8 +137,13 @@ html {
 }
 
 .popup_cross_icon svg {
-  width: 13px;
+  width: 15px;
   height: 15px;
+}
+
+.popup_cross_icon:hover svg path {
+  transition: all 0.3s ease-in-out;
+  fill: #fb6609;
 }
 
 /* FAQ SECTION */
@@ -158,7 +159,7 @@ html {
   border: 1px solid #808080;
 }
 
-.AccordionTrigger[data-state="closed"] > .faq_arrow {
+.AccordionTrigger[data-state="closed"]>.faq_arrow {
   transform: rotate(180deg);
 }
 
@@ -245,3 +246,4 @@ html {
 .icon_active svg path {
   fill: #fb6609;
 }
+

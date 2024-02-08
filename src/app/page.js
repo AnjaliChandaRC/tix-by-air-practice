@@ -1,3 +1,4 @@
+import BackToTop from "@/componets/common/BackToTop";
 import CommonModal from "@/componets/common/commonModal/CommonModal";
 import Faqs from "@/componets/landing/Faqs";
 import Footer from "@/componets/landing/Footer";
@@ -8,6 +9,7 @@ import Services from "@/componets/landing/Services";
 export default function Home() {
   return (
     <div className="overflow-hidden">
+      <BackToTop/>
       <CommonModal/>
       <Header />
       <Hero />
