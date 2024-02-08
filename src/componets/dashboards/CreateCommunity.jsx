@@ -7,7 +7,7 @@ const CreateCommunity = () => {
             <div className="h-[80px] w-full bg-white border-b-2">
             </div>
             <div className="w-full  min-h-[calc(100vh-80px)] p-5 md:p-6">
-                <div className="min-h-[calc(100vh-128px)] border-[1px] rounded-2xl bg-whitesmoke  p-[22px]">
+                <div className="border-[1px] rounded-2xl bg-whitesmoke  p-[22px]">
                     <h2 className='text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]'>Create New Community</h2>
                     <form action="">
                         <div className='mt-5'>
