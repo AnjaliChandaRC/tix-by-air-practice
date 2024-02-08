@@ -102,7 +102,7 @@ const Demographics = ({ setCurrentModal }) => {
             );
           })}
         </div>
-        <CustomButton title="Submit" setCurrentModal={setCurrentModal} />
+        <CustomButton title="Submit" setCurrentModal={setCurrentModal} className='w-full' />
       </form>
     </>
   );
