@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import { CrossIcon, HamburgerIcon } from "../common/icons/ToggleIcon";
 import SendCode from "./authenticationPopups/SendCode";
 
-const Header = () => {
+const Header = ({ setCurrentModal }) => {
   const [ismenupopupvisible, setIsmenupopupvisible] = useState(false);
   // Add Close Function Here
   const closeMenuPopup = () => {
@@ -62,7 +62,10 @@ const Header = () => {
           >
             FAQ
           </Link>
-          <button className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300">
+          <button
+            onClick={() => setCurrentModal("sendCode")}
+            className="ff_inter font-semibold log_in_btn_bg border-l-2 border-smokyblack py-[27px] px-[55px] px-[29px]pt-[25px]pb-[29px] transition-all ease-in-out duration-300"
+          >
             LOG IN
           </button>
         </div>
