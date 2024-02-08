@@ -1,23 +1,49 @@
-// CustomInput.js
+"use client";
 import React from "react";
+import { EyeIcon } from "../icons/EyeIcon";
 
-const CustomInput = ({ onChange, value, type, placeholder }) => {
-  const handleInputChange = (e) => {
-    const inputValue = e.target.value.replace(/\D/g, "").slice(0, 6);
-    onChange(inputValue);
-  };
-
+export default function CustomInputs(props) {
+  const {
+    placeholder,
+    label,
+    register,
+    error,
+    backGround,
+    marginBottom,
+    color,
+    isPassword,
+    type,
+    setType,
+    isTypePassword,
+  } = props;
   return (
     <>
-      <input
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={handleInputChange}
-        className="w-full focus-visible:border-orange rounded-lg border-granitegray border-[1px] pt-[13px] pb-[14px] px-3 h-[44px] input-no-spinner outline-orange"
-      />
+      {label && <label
+        className={`mb-[15px] block text-primary text-base font-inter font-semibold ${marginBottom && marginBottom
+          }`}>
+        {label}
+      </label>}
+
+      <div className=" relative">
+        {isPassword && (
+          <span onClick={() => setType(!isTypePassword)}>
+            <style
+              className={`absolute top-1/2 -translate-y-1/2 w-[2px] ${isTypePassword && isTypePassword ? "h-[20px]" : "h-[0px]"
+                } bg-black -rotate-45 z-10 inline-block right-[20px] opacity-70 rounded-xl transation-all duration-100`}></style>
+            <EyeIcon style="absolute right-3 top-1/2 -translate-y-1/2" />
+          </span>
+        )}
+        <input
+          type={type || "text"}
+          className={`rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-xs font-normal font-inter focus-visible:border-orange text-dark-grey input-no-spinner w-full ${backGround && backGround
+            } ${color && color}`}
+          placeholder={placeholder}
+          {...register}
+        />
+      </div>
+      {error && (
+        <p className="text-red-500 text-xs font-inter mt-1">{error.message}</p>
+      )}
     </>
   );
-};
-
-export default CustomInput;
+}
