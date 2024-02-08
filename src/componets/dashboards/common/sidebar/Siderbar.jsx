@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { SidebarData } from "@/utils/CreatorsHelper";
 import { usePathname } from "next/navigation";
 const Siderbar = () => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-[244px] bg-smokyblack h-screen rounded-e-[32px] pb-4">
+      <div className="w-[244px] bg-smokyblack h-screen rounded-e-[32px] pb-4 ">
         <div className="flex flex-col justify-between h-full">
           <div>
             <Link
@@ -39,8 +39,8 @@ const Siderbar = () => {
                   >
                     {pathname === obj.sidebarLink ? (
                       <>
-                        <span className="absolute w-[30px] h-[30px] bg-white bottom-[-30px] end-0 before:content-[''] before:absolute before:w-[30px] before:h-[30px] before:bg-black before:bottom-0 before:end-0 before:rounded-tr-[40px]"></span>
-                        <span className="absolute w-[30px] h-[30px] bg-white top-[-30px] end-0 after:content-[''] after:absolute after:w-[30px] after:h-[30px] after:bg-black after:top-0 after:end-0 after:rounded-br-[40px]"></span>
+                        <span className="absolute w-[30px] h-[30px] bg-white bottom-[-30px] end-0 before:content-[''] before:absolute before:w-[30px] before:h-[30px] before:bg-smokyblack before:bottom-0 before:end-0 before:rounded-tr-[40px]"></span>
+                        <span className="absolute w-[30px] h-[30px] bg-white top-[-30px] end-0 after:content-[''] after:absolute after:w-[30px] after:h-[30px] after:bg-smokyblack after:top-0 after:end-0 after:rounded-br-[40px]"></span>
                       </>
                     ) : (
                       ""

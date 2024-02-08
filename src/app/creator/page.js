@@ -8,7 +8,7 @@ const page = () => {
   return (
     <>
       <div className="flex items-start">
-        <span>
+        <span className="hidden md:inline-block">
           <Siderbar />
         </span>
         <div className="flex flex-col w-full">
