@@ -15,8 +15,6 @@ const VerifyCode = ({ setCurrentModal }) => {
 
   // Function to handle form submission
   const submitHandler = (data) => {
-    // Log form data to the console
-    console.log(data);
     // If no validation errors, proceed to change modal
     if (!errors.code) {
       changeModalHandler();
