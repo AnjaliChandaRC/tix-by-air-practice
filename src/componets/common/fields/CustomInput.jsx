@@ -4,7 +4,6 @@ import React from "react";
 export default function CustomInputs(props) {
   const {
     placeholder,
-    label,
     register,
     error,
     backGround,
