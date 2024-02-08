@@ -5,7 +5,7 @@ import React from "react";
 
 const page = () => {
   return <>
-    {/* <div className="flex items-start">
+    <div className="flex items-start">
       <div className="hidden md:block">
         <Siderbar />
       </div>
@@ -14,8 +14,8 @@ const page = () => {
         </div>
         <MyCommunities />
       </div>
-    </div> */}
-    <CreateCommunity />
+    </div>
+    {/* <CreateCommunity /> */}
   </>;
 };
 
