@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <CommonModal/>
-      {/* <Header />
+      <Header />
       <Hero />
       <MovingBanner />
       <Services />
       <Faqs />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
