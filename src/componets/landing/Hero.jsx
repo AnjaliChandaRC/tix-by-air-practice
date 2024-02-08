@@ -4,7 +4,7 @@ import React from "react";
 import CustomButton from "../common/button/CustomButton";
 
 // Define the Hero component
-const Hero = (setCurrentModal) => {
+const Hero = ({ setCurrentModal }) => {
   return (
     // Hero section container with background and styling
     <div className="relative bg-seashell min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden pt-12 pb-20 md:pt-28 md:pb-32 lg:pb-44">
@@ -63,7 +63,9 @@ const Hero = (setCurrentModal) => {
               who&#34;s supporting you the most.
             </p>
             {/* Custom button */}
-            <CustomButton onClick={() => setCurrentModal("sendCode")} title="create your community" link="/" />
+            <button onClick={() => setCurrentModal("sendCode")}>
+              <CustomButton title="create your community" link="/" />
+            </button>
           </div>
           {/* Right content column with images */}
           <div className="relative mt-12 sm:mt-14 md:mt-0 md:ms-6 lg:ms-10 z-0">
