@@ -4,34 +4,40 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { SidebarData } from "@/utils/CreatorsHelper";
 import { usePathname } from "next/navigation";
-const Siderbar = () => {
+import { BackArrow } from "../icons/SidebarIcons";
+const Siderbar = ({ toggleSidebar }) => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-[244px] bg-smokyblack h-screen rounded-e-[32px] pb-4 ">
+      <div className="w-[275px] sm:w-[255px] md:w-[244px] bg-smokyblack h-screen rounded-e-[32px] pb-4 ">
         <div className="flex flex-col justify-between h-full">
           <div>
-            <Link
-              href="/"
-              className="flex items-center gap-1 px-[30px] pt-[30px] pb-2"
-            >
-              <Image
-                src="/assets/images/png/nav-logo.png"
-                alt="logo"
-                width={79}
-                height={54}
-              />
-              <span className="text-textlg ff_inter font-bold text-white">
-                TixByAir
+            <div className=" flex items-center gap-4 mx-5 md:mx-[30px] mt-[30px]">
+              <span
+                onClick={toggleSidebar}
+                className="cursor-pointer md:hidden"
+              >
+                <BackArrow />
               </span>
-            </Link>
-            <div className="ps-6">
+              <Link href="/" className="flex items-center gap-1">
+                <Image
+                  src="/assets/images/png/nav-logo.png"
+                  alt="logo"
+                  width={79}
+                  height={54}
+                />
+                <span className="text-textlg ff_inter font-bold text-white">
+                  TixByAir
+                </span>
+              </Link>
+            </div>
+            <div className="ps-6 mt-7">
               {SidebarData.map((obj, index) => {
                 return (
                   <Link
                     key={index}
                     href={obj.sidebarLink}
-                    className={`font-semibold text-sm flex gap-3 py-[20px] rounded-s-full ps-5 my-[22px] ${
+                    className={`font-semibold text-sm flex gap-3 py-[18px] rounded-s-full ps-5 my-[7px] ${
                       pathname === obj.sidebarLink
                         ? "bg-white items-center text-black relative"
                         : "text-white"
