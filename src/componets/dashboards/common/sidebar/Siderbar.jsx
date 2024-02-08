@@ -31,7 +31,7 @@ const Siderbar = () => {
                   <Link
                     key={index}
                     href={obj.sidebarLink}
-                    className={`font-semibold text-sm flex gap-3 py-[17px] rounded-s-full ps-5 my-[22px] ${
+                    className={`font-semibold text-sm flex gap-3 py-[20px] rounded-s-full ps-5 my-[22px] ${
                       pathname === obj.sidebarLink
                         ? "bg-white items-center text-black relative"
                         : "text-white"
