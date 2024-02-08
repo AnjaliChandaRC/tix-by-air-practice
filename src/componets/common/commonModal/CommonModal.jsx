@@ -8,12 +8,8 @@ import CreateUser from "@/componets/landing/authenticationPopups/CreateUser";
 import Demographics from "@/componets/landing/authenticationPopups/Demographics";
 import { CrossIcon } from "../icons/ToggleIcon";
 
-const CommonModal = () => {
-  const [currentModal, setCurrentModal] = useState(null);
-
+const CommonModal = ({ currentModal, setCurrentModal }) => {
   const renderCurrentModal = () => {
-    console.log(currentModal, "currentModal");
-
     switch (currentModal) {
       case "sendCode":
         return (
@@ -34,15 +30,7 @@ const CommonModal = () => {
   };
 
   return (
-    <Dialog.Root>
-      <Dialog.Trigger asChild>
-        <button
-          onClick={() => setCurrentModal("sendCode")}
-          className="text-violet11 shadow-blackA4 hover:bg-mauve3 inline-flex h-[35px] items-center justify-center rounded-[4px] bg-white px-[15px] font-medium leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:shadow-black focus:outline-none"
-        >
-          Edit profile
-        </button>
-      </Dialog.Trigger>
+    <Dialog.Root open={currentModal}>
       <Dialog.Portal>
         <Dialog.Overlay className="data-[state=open]:animate-overlayShow fixed w-screen h-screen top-0 left-0 z-0 bg-overlayBg" />
         <Dialog.Content className="data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] bg-white shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none border-2 border-black w-[90%] sm:w-[388px] rounded-[20px] p-5 sm:p-[55px]">

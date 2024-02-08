@@ -25,18 +25,20 @@ const Siderbar = () => {
                 TixByAir
               </span>
             </Link>
-            <div className="ps-6 mt-5">
+            <div className="ps-6">
               {SidebarData.map((obj, index) => {
                 return (
                   <Link
                     key={index}
                     href={obj.sidebarLink}
-                    className={`font-semibold text-sm flex gap-3 py-[20px] rounded-s-full ps-5 ${
+                    className={`font-semibold text-sm flex gap-3 py-[17px] rounded-s-full ps-5 my-[22px] ${
                       pathname === obj.sidebarLink
-                        ? "bg-white items-center text-black relative after:content-[''] after:absolute after:w-[30px] after:h-[30px] after:bg-white after:top-[-30px] after:end-0 before:content-[''] before:absolute before:w-[30px] before:h-[30px] before:bg-white before:bottom-[-30px] before:end-0 before:rounded-s-full "
+                        ? "bg-white items-center text-black relative"
                         : "text-white"
                     }`}
                   >
+                    <span className="absolute w-[30px] h-[30px] bg-white bottom-[-30px] end-0 before:content-[''] before:absolute before:w-[30px] before:h-[30px] before:bg-black before:bottom-0 before:end-0 before:rounded-tr-[40px]"></span>
+                    <span className="absolute w-[30px] h-[30px] bg-white top-[-30px] end-0 after:content-[''] after:absolute after:w-[30px] after:h-[30px] after:bg-black after:top-0 after:end-0 after:rounded-br-[40px]"></span>
                     <span
                       className={` ${
                         pathname === obj.sidebarLink ? "icon_active" : ""
