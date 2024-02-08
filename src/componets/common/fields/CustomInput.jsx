@@ -14,7 +14,7 @@ export default function CustomInputs(props) {
     <>
       <input
         type={type || "text"}
-        className={`rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-xs font-normal font-inter focus-visible:border-orange outline-orange text-dark-grey input-no-spinner w-full ${backGround && backGround
+        className={`rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-sm font-normal font-inter focus-visible:border-orange outline-orange text-dark-grey input-no-spinner w-full ${backGround && backGround
           } ${color && color}`}
         placeholder={placeholder}
         {...register}

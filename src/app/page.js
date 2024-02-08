@@ -19,7 +19,7 @@ export default function Home() {
         setCurrentModal={setCurrentModal}
       />
       <Header setCurrentModal={setCurrentModal} />
-      <Hero />
+      <Hero setCurrentModal={setCurrentModal} />
       <MovingBanner />
       <Services />
       <Faqs />

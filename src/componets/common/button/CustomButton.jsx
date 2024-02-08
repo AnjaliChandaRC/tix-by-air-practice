@@ -2,7 +2,7 @@
 import React from "react";
 
 // Define the CustomButton component
-function CustomButton({ title, changeModalHandler }) {
+function CustomButton({ title, changeModalHandler  }) {
   return (
     <>
       {/* Button text */}
