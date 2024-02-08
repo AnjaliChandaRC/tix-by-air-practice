@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <>
       {/* DESKTOP CODE START HERE */}
-      <div className="flex justify-between items-center h-[40px] sm:h-[80px] border-b-2 border-black relative z-20 bg-white">
+      <div className="flex justify-between items-center h-[40px] sm:h-[80px] border-b-2 border-black relative bg-white">
         <Link
           href="/"
           className="flex items-center gap-2 px-[10px] sm:px-[30px] py-[9px] sm:py-[10px] border-r-2 border-black"
