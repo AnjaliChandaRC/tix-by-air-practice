@@ -97,7 +97,7 @@ const Header = ({ setCurrentModal }) => {
         >
           FAQ
         </Link>
-        <button className="ff_inter font-semibold log_in_btn_bg transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center text-nowrap w-full  border-t-2 border-black">
+        <button  onClick={() => setCurrentModal("sendCode")} className="ff_inter font-semibold log_in_btn_bg transition-all ease-in-out duration-300 py-[18px] flex justify-center items-center text-nowrap w-full  border-t-2 border-black">
           LOG IN
         </button>
       </div>
