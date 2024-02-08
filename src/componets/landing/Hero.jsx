@@ -63,9 +63,7 @@ const Hero = ({ setCurrentModal }) => {
               who&#34;s supporting you the most.
             </p>
             {/* Custom button */}
-            <button onClick={() => setCurrentModal("sendCode")}>
-              <CustomButton title="create your community" link="/" />
-            </button>
+            <CustomButton title="create your community" link="/" changeModalHandler={() => setCurrentModal("sendCode")} />
           </div>
           {/* Right content column with images */}
           <div className="relative mt-12 sm:mt-14 md:mt-0 md:ms-6 lg:ms-10 z-0">
