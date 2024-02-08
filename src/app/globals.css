@@ -177,7 +177,7 @@ html {
   border: 1px solid #808080;
 }
 
-.accordion_trigger[data-state="closed"]>.faq_arrow {
+.accordion_trigger[data-state="closed"] > .faq_arrow {
   transform: rotate(180deg);
 }
 
@@ -240,4 +240,8 @@ html {
       transform: translateX(1900px) translateY(-50%);
     }
   }
+}
+/* SIDEBAR  */
+.icon_active svg path {
+  fill: #fb6609;
 }
