@@ -6,7 +6,7 @@ import { FaqArrowIcon } from "../icons/Landing";
 const Faqs = () => {
   return (
     <>
-      <div className="pb-11 lg:pb-12 mb-11 pt-5 lg:pt-0 relative">
+      <div className="pb-11 lg:pb-12 mb-11 pt-5 lg:pt-0 relative" id="faq">
         {/* Left vector image */}
         <Image
           src="/assets/images/svg/left_vector.svg"
