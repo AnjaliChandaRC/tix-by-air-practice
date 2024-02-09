@@ -72,7 +72,7 @@ const DashboardHeader = () => {
         >
           <Link
             href="/"
-            className="py-2 md:py-[13px] border border-solid border-black rounded-sm border-opacity-60 ff_inter font-normal text-black text-sm leading-[1] bg-white block w-full text-center duration-300 hover:bg-[linear-gradient(142.51deg,#FB981D_0%,#FB6609_89.88%),linear-gradient(0deg,#000000,#000000)] hover:text-white"
+            className="py-2 md:py-[13px] border border-solid border-black border-opacity-60 rounded-lg ff_inter font-normal text-black text-sm leading-[1] bg-white block w-full text-center transition-all duration-500 ease-in-out hover:bg-orangecrayola hover:text-white"
           >
             Log Out
           </Link>

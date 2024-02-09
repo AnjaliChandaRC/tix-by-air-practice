@@ -1,5 +1,6 @@
 import React from "react";
 import CustomInputs from "../common/fields/CustomInput";
+import CustomButton from "../common/button/CustomButton";
 
 const CreateCommunity = () => {
   const handleKeyPress = (e) => {
@@ -69,6 +70,27 @@ const CreateCommunity = () => {
                 </p>
               </div>
             </div>
+            <div className="mt-8">
+              <label
+                htmlFor=""
+                className="ff_inter font-semibold text-base text-black"
+              >
+                About
+              </label>
+              <div className="pt-[10px]">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Lorem Ipsum Dolor"
+                ></textarea>
+                <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
+                  This is your community’s about
+                </p>
+              </div>
+            </div>
+            <CustomButton title="Submit" />
           </form>
         </div>
       </div>
