@@ -6,7 +6,7 @@ import CustomTextArea from "../common/fields/CustomTextArea";
 import { useForm } from "react-hook-form";
 import { EyeIcon } from "../common/icons/EyeIcon";
 import { EyeClosedIcon } from "@radix-ui/react-icons";
-const CreateCommunity = ({ setCurrentModal }) => {
+const CreateCommunity = () => {
   const {
     register,
     handleSubmit,
@@ -16,7 +16,6 @@ const CreateCommunity = ({ setCurrentModal }) => {
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   // Callback function when form is submitted
   const onSubmit = (data) => {
-    console.log(data.userName); // Accessing the username from the form data
     if (errors.userName === undefined) {
       // Checking if there are no errors for username
       reset();
@@ -44,7 +43,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
   return (
     <div className="flex flex-col w-full">
       <div className="w-full min-h-[calc(100vh-80px)] p-5 md:p-6">
-        <div className="border-[1px] rounded-2xl bg-whitesmoke p-[22px]">
+        <div className="border rounded-2xl bg-whitesmoke p-[22px]">
           <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
             Create New Community
           </h2>
@@ -52,7 +51,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
             <div className="mt-5">
               <label
                 htmlFor="userName"
-                className="ff_inter font-semibold text-base text-black"
+                className="ff_inter font-semibold text-black"
               >
                 Community Name
               </label>
@@ -67,7 +66,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                   })} // Registering the username field with validation
                   error={errors.userName}
                 />
-                <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
+                <p className="ff_inter  text-sm text-shadowgray pt-2.5">
                   This is your community’s display name
                 </p>
               </div>
@@ -75,7 +74,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
             <div className="mt-8">
               <label
                 htmlFor="password"
-                className="ff_inter font-semibold text-base text-black"
+                className="ff_inter font-semibold text-black"
               >
                 Community Password
               </label>
@@ -99,7 +98,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                     {showPassword ? <EyeIcon /> : <EyeClosedIcon />}
                   </button>
                 </div>
-                <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
+                <p className="ff_inter  text-sm text-shadowgray pt-2.5">
                   This is your community’s password. Member who are not a part
                   of your community will have to type it in when they see your
                   page
@@ -109,7 +108,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
             <div className="mt-8">
               <label
                 htmlFor="interest"
-                className="ff_inter font-semibold text-base text-black"
+                className="ff_inter font-semibold text-black"
               >
                 Interest
               </label>
@@ -119,7 +118,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                     return (
                       <span
                         key={index}
-                        class="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter font-normal inline-block text-sm relative text-[#4A4641] "
+                        class="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter  inline-block text-sm relative text-[#4A4641] "
                       >
                         {obj}
                         <button
@@ -137,7 +136,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                     value={inputValue}
                     onChange={handleNameChange}
                     onKeyDown={handleKeyPress}
-                    className=" outline-none bottom-0 bg-transparent text-sm font-normal text-dark-grey"
+                    className=" outline-none bottom-0 bg-transparent text-sm  text-dark-grey"
                   />
                 </div>
                 {/* <CustomInputs
@@ -150,7 +149,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                   })} // Registering the username field with validation
                   error={errors.interest}
                 /> */}
-                <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
+                <p className="ff_inter  text-sm text-shadowgray pt-2.5">
                   This is your Community’s interest
                 </p>
               </div>
@@ -158,7 +157,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
             <div className="mt-5">
               <label
                 htmlFor="message"
-                className="ff_inter font-semibold text-base text-black"
+                className="ff_inter font-semibold text-black"
               >
                 About
               </label>
@@ -173,7 +172,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                   })} // Registering the username field with validation
                   error={errors.message}
                 />
-                <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
+                <p className="ff_inter  text-sm text-shadowgray pt-2.5">
                   This is your community’s about
                 </p>
               </div>
