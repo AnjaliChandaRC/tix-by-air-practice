@@ -47,7 +47,8 @@ const CreateCommunity = ({ setCurrentModal }) => {
               <label htmlFor="password" className="ff_inter font-semibold text-base text-black">
                 Community Password
               </label>
-              <div className="pt-[10px] relative">
+              <div className="pt-[10px] ">
+                <div className="relative">
                 <CustomInputs
                   type={showPassword ? "text" : "password"}
                   placeholder="Community Password"
@@ -59,10 +60,11 @@ const CreateCommunity = ({ setCurrentModal }) => {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)} // Toggle visibility
-                  className="absolute bottom-[44px] right-0 pr-3 flex items-center"
+                  className="absolute top-2/4 -translate-y-2/4 right-0 pr-3 flex items-center"
                 >
                   {showPassword ? <EyeIcon /> : <EyeClosedIcon />}
                 </button>
+                </div>
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
                   This is your community’s password. Member who are not a part of your community will have to type it in when they see your page
                 </p>
