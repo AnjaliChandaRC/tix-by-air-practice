@@ -13,6 +13,8 @@ const CreateCommunity = () => {
     // Check if there are no errors before proceeding
     if (!errors.userName) {
       // Here you can proceed with submitting the form or any other action
+      // After successful submission, reset the form
+      reset();
     }
   };
 
@@ -75,9 +77,9 @@ const CreateCommunity = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-8">
+            <div className="mt-5">
               <label htmlFor="message" className="ff_inter font-semibold text-base text-black">
-                Lorem Ipsum Dolor
+                About
               </label>
               <div className="pt-[10px]">
                 <CustomTextArea
@@ -88,7 +90,7 @@ const CreateCommunity = () => {
                   {...register('message', { required: 'Message is required.' })}
                   error={errors.message} />
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
-                  This is your Community’s interest
+                  This is your community’s about
                 </p>
               </div>
             </div>
