@@ -7,7 +7,9 @@ import {
   RaceSelectList,
   RelationshipSelectList,
 } from "@/utils/AuthenticationHelper";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { USER_AUTHENTICATION } from "@/utils/Content";
 
 const Demographics = ({ setCurrentModal }) => {
   const [selectedValues, setSelectedValues] = useState({
@@ -16,6 +18,8 @@ const Demographics = ({ setCurrentModal }) => {
     gender: "",
   });
   const [error, setError] = useState(false);
+  const [isUserAuthenticated, setUserAuthenticated] = useState(false);
+  const router = useRouter();
 
   // Array containing demographic categories with their properties
   const demographicsCategoryList = [
@@ -55,9 +59,15 @@ const Demographics = ({ setCurrentModal }) => {
       selectedValues.gender !== "" &&
       selectedValues.relationship !== ""
     ) {
+      setUserAuthenticated(true);
+      var x = localStorage.getItem(USER_AUTHENTICATION);
+      if (x ? router.push("/creator") : router.push(""));
       setError(false);
     }
   };
+  useEffect(() => {
+    localStorage.setItem(USER_AUTHENTICATION, isUserAuthenticated);
+  }, [isUserAuthenticated]);
 
   return (
     <>
@@ -102,7 +112,11 @@ const Demographics = ({ setCurrentModal }) => {
             );
           })}
         </div>
-        <CustomButton title="Submit" setCurrentModal={setCurrentModal} className='w-full' />
+        <CustomButton
+          title="Submit"
+          setCurrentModal={setCurrentModal}
+          className="w-full"
+        />
       </form>
     </>
   );
