@@ -21,7 +21,9 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.50.1",
     "react-hook-use-form": "^1.2.0",
-    "react-redux": "5.0.5"
+    "react-redux": "5.0.5",
+    "react-table": "^7.8.0",
+    "redux-ui": "^0.1.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
