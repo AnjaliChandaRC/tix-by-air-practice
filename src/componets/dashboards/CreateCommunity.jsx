@@ -1,7 +1,22 @@
 import React from "react";
 import CustomInputs from "../common/fields/CustomInput";
+import CustomButton from "../common/button/CustomButton";
 
 const CreateCommunity = () => {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      setValueArray((prevArray) => [...prevArray, inputValue]);
+      setInputValue("");
+      console.log(inputValue);
+    }
+  };
+  const handleRemove = (index) => {
+    setValueArray((prevArray) => {
+      const newArray = [...prevArray];
+      newArray.splice(index, 1);
+      return newArray;
+    });
+  };
   return (
     <div className="flex flex-col w-full">
       <div className="h-[80px] w-full bg-white border-b-2"></div>
@@ -55,6 +70,27 @@ const CreateCommunity = () => {
                 </p>
               </div>
             </div>
+            <div className="mt-8">
+              <label
+                htmlFor=""
+                className="ff_inter font-semibold text-base text-black"
+              >
+                About
+              </label>
+              <div className="pt-[10px]">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Lorem Ipsum Dolor"
+                ></textarea>
+                <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
+                  This is your community’s about
+                </p>
+              </div>
+            </div>
+            <CustomButton title="Submit" />
           </form>
         </div>
       </div>
