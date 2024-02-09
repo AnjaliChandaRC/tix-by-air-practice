@@ -11,7 +11,7 @@ export default function CustomTextArea(props) {
     } = props;
 
     // Concatenate the additional class names with the default classes
-    const inputClasses = `w-full h-[134px] bg-transparent rounded-lg border border-light-grey focus-visible:border-orange outline-orange  pt-[13px] pb-[14px] px-3  ${color || ""} ${className || ""}`;
+    const inputClasses = `w-full h-[134px] bg-transparent rounded-lg border border-light-grey focus-visible:border-orange outline-orange  pt-[13px] pb-[14px] px-3 placeholder:text-sm placeholder:ff_inter ${color || ""} ${className || ""}`;
 
     return (
         <>
