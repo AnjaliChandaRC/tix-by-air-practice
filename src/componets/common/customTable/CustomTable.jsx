@@ -14,7 +14,7 @@ const CustomTable = ({ headers, data }) => {
                 {data.map((row, rowIndex) => (
                     <tr className=' py-4 px-[22px]' key={rowIndex}>
                         {row.map((cell, cellIndex) => (
-                            <td className=' text-start text-black ff_inter text-base font-semibold leading-[100%] py-4 px-[22px]' key={cellIndex}>{cell}</td>
+                            <td className=' text-start text-black ff_inter text-sm leading-[100%] py-4 px-[22px]' key={cellIndex}>{cell}</td>
                         ))}
                     </tr>
                 ))}
