@@ -4,6 +4,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 @font-face {
   font-family: "Satoshi-Black";
   src: url("../../public/assets/fonts/Satoshi-Black.ttf");
@@ -43,9 +44,11 @@
 .ff_inter {
   font-family: "Inter", sans-serif;
 }
+
 .ff_poppins {
   font-family: "Poppins", sans-serif;
 }
+
 body,
 html {
   scroll-behavior: smooth;
@@ -65,17 +68,13 @@ html {
 
 /*HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
-  background: var(
-    --Gradient,
-    linear-gradient(143deg, #fb981d 0%, #fb6609 89.88%)
-  );
+  background: var(--Gradient,
+      linear-gradient(143deg, #fb981d 0%, #fb6609 89.88%));
 }
 
 .log_in_btn_bg:hover {
-  background: var(
-    --Gradient,
-    linear-gradient(143deg, #fb6609 0%, #fb981d 89.88%)
-  );
+  background: var(--Gradient,
+      linear-gradient(143deg, #fb6609 0%, #fb981d 89.88%));
 }
 
 /* FOOTER CSS START HERE==================================*/
@@ -165,7 +164,7 @@ html {
   border: 1px solid #808080;
 }
 
-.AccordionTrigger[data-state="closed"] > .faq_arrow {
+.AccordionTrigger[data-state="closed"]>.faq_arrow {
   transform: rotate(180deg);
 }
 
@@ -184,7 +183,7 @@ html {
   border: 1px solid #808080;
 }
 
-.accordion_trigger[data-state="closed"] > .faq_arrow {
+.accordion_trigger[data-state="closed"]>.faq_arrow {
   transform: rotate(180deg);
 }
 
@@ -253,14 +252,18 @@ html {
 .icon_active svg path {
   fill: #fb6609;
 }
-.table_Scroll_bar::-webkit-scrollbar {
-  height: 8px;
-  display: block!important;
-  background: #e9e9e9;
-  border-radius: 20px;
-}
-.table_Scroll_bar::-webkit-scrollbar-thumb {
-  height: 8px;
-  background: linear-gradient(142.51deg,#fb981d,#fb6609 89.88%);
-  border-radius: 20px;
+
+@media (max-width:1023.98px) {
+  .table_Scroll_bar::-webkit-scrollbar {
+    height: 8px;
+    display: block !important;
+    background: #e9e9e9;
+    border-radius: 20px;
+  }
+
+  .table_Scroll_bar::-webkit-scrollbar-thumb {
+    height: 8px;
+    background: linear-gradient(142.51deg, #fb981d, #fb6609 89.88%);
+    border-radius: 20px;
+  }
 }
