@@ -37,6 +37,7 @@ const Siderbar = ({ toggleSidebar }) => {
                   <Link
                     key={index}
                     href={obj.sidebarLink}
+                    onClick={toggleSidebar}
                     className={`font-semibold text-sm flex gap-3 py-[18px] rounded-s-full ps-5 my-[7px] ${
                       pathname === obj.sidebarLink
                         ? "bg-white items-center text-black relative"
