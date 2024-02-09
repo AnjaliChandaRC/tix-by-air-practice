@@ -8,7 +8,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex items-start h-screen">
+      <div className="flex items-start h-screen overflow-hidden">
         <span className="hidden md:inline-block">
           <Siderbar />
         </span>
@@ -17,7 +17,7 @@ const page = () => {
           <YourCommunities />
         </div>
       </div>
-      <CreateCommunity />
+      {/* <CreateCommunity /> */}
     </>
   );
 };
