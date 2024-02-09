@@ -7,7 +7,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex items-start">
+      <div className="flex items-start h-screen">
         <span className="hidden md:inline-block">
           <Siderbar />
         </span>
