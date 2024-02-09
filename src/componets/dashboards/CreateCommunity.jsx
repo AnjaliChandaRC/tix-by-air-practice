@@ -15,7 +15,7 @@ const CreateCommunity = () => {
   } = useForm();
   const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   // Callback function when form is submitted
-  const onSubmit = (data) => {
+  const onSubmit = () => {
     if (errors.userName === undefined) {
       // Checking if there are no errors for username
       reset();
