@@ -1,13 +1,14 @@
 "use client"
-import React from "react";
+import React, { useState } from "react";
 import CustomInputs from "../common/fields/CustomInput";
 import CustomButton from "../common/button/CustomButton";
 import CustomTextArea from "../common/fields/CustomTextArea";
 import { useForm } from "react-hook-form";
-
+import { EyeIcon } from "../common/icons/EyeIcon";
+import { EyeClosedIcon } from "@radix-ui/react-icons";
 const CreateCommunity = ({ setCurrentModal }) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
-
+  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
   // Callback function when form is submitted
   const onSubmit = (data) => {
     console.log(data.userName); // Accessing the username from the form data
@@ -46,15 +47,22 @@ const CreateCommunity = ({ setCurrentModal }) => {
               <label htmlFor="password" className="ff_inter font-semibold text-base text-black">
                 Community Password
               </label>
-              <div className="pt-[10px]">
+              <div className="pt-[10px] relative">
                 <CustomInputs
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   placeholder="Community Password"
                   label="password"
                   className="bg-transparent"
                   register={register('password', { required: 'Community Password is required.' })} // Registering the username field with validation
                   error={errors.password}
                 />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)} // Toggle visibility
+                  className="absolute bottom-[44px] right-0 pr-3 flex items-center"
+                >
+                  {showPassword ? <EyeIcon /> : <EyeClosedIcon />}
+                </button>
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
                   This is your community’s password. Member who are not a part of your community will have to type it in when they see your page
                 </p>
@@ -80,7 +88,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
             </div>
             <div className="mt-5">
               <label htmlFor="message" className="ff_inter font-semibold text-base text-black">
-              About
+                About
               </label>
               <div className="pt-[10px]">
                 <CustomTextArea
@@ -92,7 +100,7 @@ const CreateCommunity = ({ setCurrentModal }) => {
                   error={errors.message}
                 />
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
-                This is your community’s about
+                  This is your community’s about
                 </p>
               </div>
             </div>
