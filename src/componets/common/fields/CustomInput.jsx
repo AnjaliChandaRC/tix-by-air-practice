@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 
 export default function CustomInputs(props) {
@@ -9,15 +8,18 @@ export default function CustomInputs(props) {
     backGround,
     color,
     type,
+    className // Additional className prop to pass custom classes
   } = props;
+
+  const inputClasses = `rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-sm font-normal font-inter focus-visible:border-orange outline-orange text-dark-grey input-no-spinner w-full ${backGround || ""} ${color || ""} ${className || ""}`;
+
   return (
     <>
       <input
         type={type || "text"}
-        className={`rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-sm font-normal font-inter focus-visible:border-orange outline-orange text-dark-grey input-no-spinner w-full ${backGround && backGround
-          } ${color && color}`}
+        className={inputClasses}
         placeholder={placeholder}
-        {...register}
+        {...register} // Moved register prop here
       />
       {error && (
         <p className="text-red-500 text-xs font-inter mt-1">{error.message}</p>

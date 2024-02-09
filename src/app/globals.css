@@ -260,6 +260,7 @@ html {
 .eye_hover:hover svg path {
   fill: #fb6609;
 }
-.table_Scroll_bar::-webkit-scrollbar{
+
+.Scroll_bar_none::-webkit-scrollbar {
   display: none;
 }

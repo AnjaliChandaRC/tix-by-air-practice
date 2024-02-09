@@ -8,16 +8,17 @@ import React from "react";
 const page = () => {
   return (
     <>
-        <div className="flex h-screen">
+      {/* <div className="flex h-screen">
         <span className="hidden md:inline-block">
           <Siderbar />
         </span>
         <div className="w-full h-screen flex flex-col overflow-auto">
           <DashboardHeader />
-          <YourCommunities />
+          <MyCommunities/>
         </div>
-      </div>
-      {/* <CreateCommunity /> */}
+      </div> */}
+      <DashboardHeader />
+      <CreateCommunity />
     </>
   );
 };
