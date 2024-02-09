@@ -8,8 +8,10 @@ import { EyeIcon } from '../common/icons/EyeIcon';
 const YourCommunities = () => {
     const tableHeaders = ["Community name", "Number of members", "Manage", "View Community"];
     const tableData = [
-        ["UI/UX", 12, <div key='ui-ux' className='flex items-center gap-[6px] cursor-pointer'><EditIcon /> Edit</div>, <div key='ui-ux-view' className='flex items-center gap-[6px] cursor-pointer'><EyeIcon /> View</div>],
-        ["Designers", 5, <div key='designers' className='flex items-center gap-[6px] cursor-pointer'><EditIcon /> Edit</div>, <div key='designers-view' className='flex items-center gap-[6px] cursor-pointer'><EyeIcon /> View</div>],
+        ["UI/UX",
+         12,
+         <div key='ui-ux' className='flex items-center gap-[6px] cursor-pointer edit_hover hover:text-orangecrayola'><EditIcon /> Edit</div>, <div key='ui-ux-view' className='flex items-center gap-[6px] cursor-pointer eye_hover hover:text-orangecrayola'><EyeIcon /> View</div>],
+        ["Designers", 5, <div key='designers' className='flex items-center gap-[6px] cursor-pointer edit_hover hover:text-orangecrayola'><EditIcon /> Edit</div>, <div key='designers-view' className='flex items-center gap-[6px] cursor-pointer eye_hover hover:text-orangecrayola'><EyeIcon /> View</div>],
     ];
 
     return (
@@ -21,7 +23,7 @@ const YourCommunities = () => {
                 </div>
             </div>
             {/* Use the custom table component and pass props */}
-            <div className='mt-7 overflow-x-scroll rounded-xl table_Scroll_bar border-[1px] border-mediumgray'>
+            <div className='mt-7'>
                 <CustomTable headers={tableHeaders} data={tableData} />
             </div>
             <p className='text-graytwo ff_inter text-center text-sm leading-[100%] mt-7'>A list of your Communities</p>
