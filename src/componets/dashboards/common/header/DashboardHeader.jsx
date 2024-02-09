@@ -20,12 +20,12 @@ const DashboardHeader = () => {
       <div>
         <div
           className={`fixed top-0 start-0 w-full md:hidden h-screen bg-black  transition-all duration-600 ease-in-out  ${
-            sidebarVisible ? "opacity-40 z-10" : "opacity-0 -z-10"
+            sidebarVisible ? "opacity-40 z-[22]" : "opacity-0 -z-10"
           }`}
           onClick={toggleSidebar}
         ></div>
         <div
-          className={`fixed top-0 md:hidden !z-20 transition-all duration-400 ease-in-out ${
+          className={`fixed top-0 md:hidden !z-30 transition-all duration-400 ease-in-out ${
             sidebarVisible ? "start-0" : "start-[-100%]"
           }`}
         >

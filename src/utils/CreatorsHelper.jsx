@@ -11,7 +11,7 @@ export const SidebarData = [
   {
     icon: <MyCommunities />,
     title: "My Communities",
-    sidebarLink: "/creator",
+    sidebarLink: "/",
   },
   {
     icon: <Information />,

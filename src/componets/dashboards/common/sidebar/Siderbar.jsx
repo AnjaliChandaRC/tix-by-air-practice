@@ -9,7 +9,7 @@ const Siderbar = ({ toggleSidebar }) => {
   const pathname = usePathname();
   return (
     <>
-      <div className="w-[275px] sm:w-[255px] md:w-[244px] bg-smokyblack h-screen rounded-e-[32px] pb-4 ">
+      <div className="w-[275px] sm:w-[255px] md:w-[244px] bg-smokyblack overflow-auto h-screen rounded-e-[32px] pb-4 ">
         <div className="flex flex-col justify-between h-full">
           <div>
             <div className=" flex items-center gap-4 mx-5 md:mx-[30px] mt-[30px]">

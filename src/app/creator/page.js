@@ -16,7 +16,7 @@ const page = () => {
           <MyCommunities />
         </div>
       </div>
-      {/* <CreateCommunity /> */}
+      <CreateCommunity />
     </>
   );
 };
