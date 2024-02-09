@@ -8,11 +8,11 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <div className="flex items-start h-screen overflow-hidden">
+        <div className="flex h-screen">
         <span className="hidden md:inline-block">
           <Siderbar />
         </span>
-        <div className="flex flex-col w-full">
+        <div className="w-full h-screen flex flex-col overflow-auto">
           <DashboardHeader />
           <YourCommunities />
         </div>
