@@ -6,10 +6,14 @@ import CustomTextArea from "../common/fields/CustomTextArea";
 import { useForm } from "react-hook-form";
 
 const CreateCommunity = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data); // You can handle form submission here
+    console.log(data.userName);
+    // Check if there are no errors before proceeding
+    if (!errors.userName) {
+      // Here you can proceed with submitting the form or any other action
+    }
   };
 
   return (
@@ -21,73 +25,70 @@ const CreateCommunity = () => {
           </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mt-5">
-              <label
-                htmlFor="communityName"
-                className="ff_inter font-semibold text-base text-black">
+              <label htmlFor="userName" className="ff_inter font-semibold text-base text-black">
                 Community Name
               </label>
               <div className="pt-[10px]">
                 <CustomInputs
                   type="text"
+                  id="userName"
                   placeholder="UI/UX"
                   className='bg-transparent'
-                  {...register('communityName', { required: 'Community Name is required.' })}
-                />
+                  {...register('userName', { required: 'Community Name is required.' })}
+                  error={errors.userName} />
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
                   This is your community’s display name
                 </p>
               </div>
             </div>
             <div className="mt-8">
-              <label
-                htmlFor="communityPassword"
-                className="ff_inter font-semibold text-base text-black">
+              <label htmlFor="CommunityPassword" className="ff_inter font-semibold text-base text-black">
                 Community Password
               </label>
               <div className="pt-[10px]">
                 <CustomInputs
-                  type="password"
+                  type="Password"
+                  id="CommunityPassword"
                   placeholder="Lorem Ipsum Dolor"
                   className='bg-transparent'
-                  {...register('communityPassword', { required: 'Community Password is required.' })}
-                />
+                  {...register('CommunityPassword', { required: 'Community Password is required.' })}
+                  error={errors.CommunityPassword} />
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
-                  This is your community’s password. Members who are not a part
-                  of your community will have to type it in when they see your
-                  page
+                  This is your community’s password. Member who are not a part of your community will have to type it in when they see your page
                 </p>
               </div>
             </div>
             <div className="mt-8">
-              <label
-                htmlFor="interest"
-                className="ff_inter font-semibold text-base text-black">
+              <label htmlFor="interest" className="ff_inter font-semibold text-base text-black">
                 Interest
               </label>
               <div className="pt-[10px]">
                 <CustomInputs
                   type="text"
+                  id="interest"
                   placeholder="Lorem Ipsum Dolor"
                   className='bg-transparent'
                   {...register('interest', { required: 'Interest is required.' })}
-                />
+                  error={errors.interest} />
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
                   This is your Community’s interest
                 </p>
               </div>
             </div>
             <div className="mt-8">
-              <label
-                htmlFor="about"
-                className="ff_inter font-semibold text-base text-black" >
-                About
+              <label htmlFor="message" className="ff_inter font-semibold text-base text-black">
+                Lorem Ipsum Dolor
               </label>
               <div className="pt-[10px]">
                 <CustomTextArea
+                  type=""
+                  id="message"
                   placeholder="Lorem Ipsum Dolor"
-                  className="placeholder:text-black placeholder:text-sm placeholder:leading-[100%] placeholder:ff_inter" />
+                  className='bg-transparent'
+                  {...register('message', { required: 'Message is required.' })}
+                  error={errors.message} />
                 <p className="ff_inter font-normal text-sm text-shadowgray pt-2.5">
-                  This is your community’s about
+                  This is your Community’s interest
                 </p>
               </div>
             </div>

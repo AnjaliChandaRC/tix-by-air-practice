@@ -5,7 +5,9 @@ export default function CustomTextArea(props) {
         placeholder,
         color,
         type,
-        className
+        register,
+        className,
+        error
     } = props;
 
     // Concatenate the additional class names with the default classes
@@ -17,7 +19,11 @@ export default function CustomTextArea(props) {
                 type={type || "text"}
                 className={inputClasses} // Use the concatenated classes here
                 placeholder={placeholder}
+                {...register} // Moved register prop here
             />
+            {error && (
+                <p className="text-red-500 text-xs font-inter mt-1">{error.message}</p>
+            )}
         </>
     );
 }
