@@ -8,8 +8,8 @@ import { EyeIcon } from '../common/icons/EyeIcon';
 const YourCommunities = () => {
     const tableHeaders = ["Community name", "Number of members", "Manage", "View Community"];
     const tableData = [
-        ["UI/UX", 12, <div key='ui-ux' className='flex items-center gap-[6px]'><EditIcon /> Edit</div>, <div key='ui-ux-view' className='flex items-center gap-[6px]'><EyeIcon /> View</div>],
-        ["Designers", 5, <div key='designers' className='flex items-center gap-[6px]'><EditIcon /> Edit</div>, <div key='designers-view' className='flex items-center gap-[6px]'><EyeIcon /> View</div>],
+        ["UI/UX", 12, <div key='ui-ux' className='flex items-center gap-[6px] cursor-pointer'><EditIcon /> Edit</div>, <div key='ui-ux-view' className='flex items-center gap-[6px] cursor-pointer'><EyeIcon /> View</div>],
+        ["Designers", 5, <div key='designers' className='flex items-center gap-[6px] cursor-pointer'><EditIcon /> Edit</div>, <div key='designers-view' className='flex items-center gap-[6px] cursor-pointer'><EyeIcon /> View</div>],
     ];
 
     return (
