@@ -21,7 +21,7 @@ const YourCommunities = () => {
                 </div>
             </div>
             {/* Use the custom table component and pass props */}
-            <div className='mt-7 overflow-x-scroll rounded-xl border-[1px] border-mediumgray'>
+            <div className='mt-7 overflow-x-scroll rounded-xl table_Scroll_bar border-[1px] border-mediumgray'>
                 <CustomTable headers={tableHeaders} data={tableData} />
             </div>
             <p className='text-graytwo ff_inter text-center text-sm leading-[100%] mt-7'>A list of your Communities</p>
