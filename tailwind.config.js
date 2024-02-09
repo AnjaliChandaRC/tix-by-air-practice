@@ -56,6 +56,8 @@ module.exports = {
         darkBorder: "#4c4c4c",
         cedarbrown: "#4C3628",
         shadowgray: "#4A4A4A",
+        graytwo: "#7B7B7B",
+        mediumgray: "#B4B4B4",
       },
     },
   },
