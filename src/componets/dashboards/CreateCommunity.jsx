@@ -2,6 +2,20 @@ import React from "react";
 import CustomInputs from "../common/fields/CustomInput";
 
 const CreateCommunity = () => {
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      setValueArray((prevArray) => [...prevArray, inputValue]);
+      setInputValue("");
+      console.log(inputValue);
+    }
+  };
+  const handleRemove = (index) => {
+    setValueArray((prevArray) => {
+      const newArray = [...prevArray];
+      newArray.splice(index, 1);
+      return newArray;
+    });
+  };
   return (
     <div className="flex flex-col w-full">
       <div className="h-[80px] w-full bg-white border-b-2"></div>
