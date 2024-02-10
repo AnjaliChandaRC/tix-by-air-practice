@@ -39,9 +39,11 @@ const CreateCommunity = () => {
   // Event handler for key press
   const handleKeyPress = (e) => {
     if (e.key === "Shift") {
-      // Add input value to array on Shift key press
-      setValueArray((prevArray) => [...prevArray, inputValue]);
-      setInputValue("");
+      // Check if the array has less than 3 values before adding the input value
+      if (valueArray.length < 3) {
+        setValueArray((prevArray) => [...prevArray, inputValue]);
+        setInputValue("");
+      }
     }
   };
 
@@ -116,9 +118,9 @@ const CreateCommunity = () => {
                   </button>
                 </div>
                 <p className="ff_inter  text-sm text-shadowgray pt-2.5">
-                  This is your community’s password. Members who are not part
-                  of your community will have to type it in when they visit
-                  your page.
+                  This is your community’s password. Members who are not part of
+                  your community will have to type it in when they visit your
+                  page.
                 </p>
               </div>
             </div>
@@ -156,10 +158,17 @@ const CreateCommunity = () => {
                     value={inputValue}
                     onChange={handleNameChange}
                     onKeyDown={handleKeyPress}
+                    disabled={valueArray.length >= 3}
                     className=" outline-none bottom-0 bg-transparent text-sm  text-dark-grey "
                   />
+                  {/* Message for max values reached */}
+                  {valueArray.length >= 3 && (
+                    <span className="ff_inter text-sm text-shadowgray">
+                      Max value Reached.
+                    </span>
+                  )}
                 </div>
-                <p className="ff_inter  text-sm text-shadowgray pt-2.5">
+                <p className="ff_inter text-sm text-shadowgray pt-2.5">
                   This is your community’s interest.
                 </p>
               </div>
