@@ -156,7 +156,7 @@ const CreateCommunity = () => {
                     value={inputValue}
                     onChange={handleNameChange}
                     onKeyDown={handleKeyPress}
-                    className=" outline-none bottom-0 bg-transparent text-sm  text-dark-grey w-full h-full"
+                    className=" outline-none bottom-0 bg-transparent text-sm  text-dark-grey "
                   />
                 </div>
                 <p className="ff_inter  text-sm text-shadowgray pt-2.5">
