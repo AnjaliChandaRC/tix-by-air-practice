@@ -18,7 +18,7 @@ const Faqs = () => {
         {/* Right vector image */}
         <Image
           src="/assets/images/svg/left_lines.svg"
-          alt="left-lines"
+          alt="right-lines"
           className="z-[-1] hidden md:block -right-[70px] rotate-180 top-0 absolute h-[20px] md:h-[38px]"
           width={127}
           height={38}
