@@ -13,7 +13,10 @@ export default function RootLayout({ children }) {
         setIsSidebarVisible={setIsSidebarVisible}
       />
       <div className="w-full h-screen flex flex-col overflow-auto md:pl-[255px]">
-        <DashboardHeader setIsSidebarVisible={setIsSidebarVisible} isSidebarVisible={isSidebarVisible} />
+        <DashboardHeader
+          setIsSidebarVisible={setIsSidebarVisible}
+          isSidebarVisible={isSidebarVisible}
+        />
         <div className="flex grow w-full">{children}</div>
       </div>
     </div>
