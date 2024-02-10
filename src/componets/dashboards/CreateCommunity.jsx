@@ -6,33 +6,46 @@ import CustomTextArea from "../common/fields/CustomTextArea";
 import { useForm } from "react-hook-form";
 import { EyeIcon } from "../common/icons/EyeIcon";
 import { EyeClosedIcon } from "@radix-ui/react-icons";
+
 const CreateCommunity = () => {
+  // React Hook Form initialization
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
-  const [showPassword, setShowPassword] = useState(false); // State to toggle password visibility
+
+  // State for toggling password visibility
+  const [showPassword, setShowPassword] = useState(false);
+
   // Callback function when form is submitted
   const onSubmit = () => {
     if (errors.userName === undefined) {
-      // Checking if there are no errors for username
+      // Reset form if there are no errors for username
       reset();
     }
   };
+
+  // State for handling input value and array of values
   const [inputValue, setInputValue] = useState("");
   const [valueArray, setValueArray] = useState([]);
+
+  // Event handler for input change
   const handleNameChange = (e) => {
     setInputValue(e.target.value);
   };
+
+  // Event handler for key press
   const handleKeyPress = (e) => {
     if (e.key === "Shift") {
+      // Add input value to array on Shift key press
       setValueArray((prevArray) => [...prevArray, inputValue]);
       setInputValue("");
-      console.log(inputValue);
     }
   };
+
+  // Event handler for removing value from array
   const handleRemove = (index) => {
     setValueArray((prevArray) => {
       const newArray = [...prevArray];
@@ -40,6 +53,7 @@ const CreateCommunity = () => {
       return newArray;
     });
   };
+
   return (
     <div className="flex flex-col w-full">
       <div className="w-full min-h-[calc(100vh-80px)] p-5 md:p-6">
@@ -49,6 +63,7 @@ const CreateCommunity = () => {
           </h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mt-5">
+              {/* Community Name input field */}
               <label
                 htmlFor="userName"
                 className="ff_inter font-semibold text-black"
@@ -63,7 +78,7 @@ const CreateCommunity = () => {
                   className="bg-transparent"
                   register={register("userName", {
                     required: "Community Name is required.",
-                  })} // Registering the username field with validation
+                  })}
                   error={errors.userName}
                 />
                 <p className="ff_inter  text-sm text-shadowgray pt-2.5">
@@ -71,6 +86,7 @@ const CreateCommunity = () => {
                 </p>
               </div>
             </div>
+            {/* Community Password input field */}
             <div className="mt-8">
               <label
                 htmlFor="password"
@@ -87,24 +103,26 @@ const CreateCommunity = () => {
                     className="bg-transparent"
                     register={register("password", {
                       required: "Community Password is required.",
-                    })} // Registering the username field with validation
+                    })}
                     error={errors.password}
                   />
+                  {/* Button to toggle password visibility */}
                   <button
                     type="button"
-                    onClick={() => setShowPassword(!showPassword)} // Toggle visibility
+                    onClick={() => setShowPassword(!showPassword)}
                     className="absolute top-2/4 -translate-y-2/4 right-0 pr-3 flex items-center"
                   >
                     {showPassword ? <EyeIcon /> : <EyeClosedIcon />}
                   </button>
                 </div>
                 <p className="ff_inter  text-sm text-shadowgray pt-2.5">
-                  This is your community’s password. Member who are not a part
-                  of your community will have to type it in when they see your
-                  page
+                  This is your community’s password. Members who are not part
+                  of your community will have to type it in when they visit
+                  your page.
                 </p>
               </div>
             </div>
+            {/* Interest input field */}
             <div className="mt-8">
               <label
                 htmlFor="interest"
@@ -113,12 +131,13 @@ const CreateCommunity = () => {
                 Interest
               </label>
               <div className="pt-[10px]">
-                <div class="rounded-lg border border-light-grey h-[60px] pt-[13px] pb-[14px] px-3 input-no-spinner w-full placeholder:text-sm placeholder:ff_inter bg-transparent">
+                <div className="rounded-lg border border-light-grey h-[60px] pt-[13px] pb-[14px] px-3 input-no-spinner w-full placeholder:text-sm placeholder:ff_inter bg-transparent">
+                  {/* Displaying values and allowing removal */}
                   {valueArray.map((obj, index) => {
                     return (
                       <span
                         key={index}
-                        class="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter  inline-block text-sm relative text-[#4A4641] "
+                        className="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter  inline-block text-sm relative text-[#4A4641] "
                       >
                         {obj}
                         <button
@@ -130,6 +149,7 @@ const CreateCommunity = () => {
                       </span>
                     );
                   })}
+                  {/* Input field for adding new interests */}
                   <input
                     type="text"
                     id="Name"
@@ -139,21 +159,12 @@ const CreateCommunity = () => {
                     className=" outline-none bottom-0 bg-transparent text-sm  text-dark-grey"
                   />
                 </div>
-                {/* <CustomInputs
-                  type="text"
-                  placeholder="Interest"
-                  label="interest"
-                  className="bg-transparent "
-                  register={register("interest", {
-                    required: "Interest is required.",
-                  })} // Registering the username field with validation
-                  error={errors.interest}
-                /> */}
                 <p className="ff_inter  text-sm text-shadowgray pt-2.5">
-                  This is your Community’s interest
+                  This is your community’s interest.
                 </p>
               </div>
             </div>
+            {/* About input field */}
             <div className="mt-5">
               <label
                 htmlFor="message"
@@ -169,14 +180,15 @@ const CreateCommunity = () => {
                   className="bg-transparent "
                   register={register("message", {
                     required: "Message is required.",
-                  })} // Registering the username field with validation
+                  })}
                   error={errors.message}
                 />
                 <p className="ff_inter  text-sm text-shadowgray pt-2.5">
-                  This is your community’s about
+                  This is your community’s about section.
                 </p>
               </div>
             </div>
+            {/* Submit button */}
             <div className="mt-[30px]">
               <CustomButton title="Submit" className="w-[167px]" />
             </div>
