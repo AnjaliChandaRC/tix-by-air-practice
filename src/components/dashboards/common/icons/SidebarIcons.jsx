@@ -1,5 +1,5 @@
 // MY COMMUNITIES ICONS IN SIDEBAR
-export const MyCommunities = () => {
+export const GroupUserIcon = () => {
   return (
     <>
       <svg
@@ -18,7 +18,7 @@ export const MyCommunities = () => {
   );
 };
 // INFORMATION ICONS IN SIDEBAR
-export const Information = () => {
+export const InfoIcon = () => {
   return (
     <>
       <svg
@@ -37,7 +37,7 @@ export const Information = () => {
   );
 };
 // MANAGECONTENT ICONS IN SIDEBAR
-export const ManageContent = () => {
+export const ManageIcon = () => {
   return (
     <>
       <svg
@@ -56,26 +56,24 @@ export const ManageContent = () => {
   );
 };
 // TEXT BLAST ICONS IN SIDEBAR
-export const TextBlast = () => {
+export const TextIcon = () => {
   return (
     <>
-      <svg
-        width="21"
-        height="21"
-        viewBox="0 0 21 21"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M10.7812 10.3994C13.5437 10.3994 15.7812 8.16191 15.7812 5.39941C15.7812 2.63691 13.5437 0.399414 10.7812 0.399414C8.01875 0.399414 5.78125 2.63691 5.78125 5.39941C5.78125 8.16191 8.01875 10.3994 10.7812 10.3994ZM10.7812 12.8994C7.44375 12.8994 0.78125 14.5744 0.78125 17.8994V19.1494C0.78125 19.8369 1.34375 20.3994 2.03125 20.3994H19.5312C20.2188 20.3994 20.7812 19.8369 20.7812 19.1494V17.8994C20.7812 14.5744 14.1187 12.8994 10.7812 12.8994Z"
-          fill="white"
-        />
+      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <mask id="mask0_5716_21664" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="23" height="23">
+          <path d="M20.1146 1.56934H3.44792C2.52744 1.56934 1.78125 2.31553 1.78125 3.236V19.9027C1.78125 20.8231 2.52744 21.5693 3.44792 21.5693H20.1146C21.0351 21.5693 21.7812 20.8231 21.7812 19.9027V3.236C21.7812 2.31553 21.0351 1.56934 20.1146 1.56934Z" fill="white" stroke="white" stroke-width="2.02751" stroke-linejoin="round" />
+          <path d="M7.33594 8.79069V7.12402H16.2248V8.79069M10.6693 17.124H12.8915M11.7804 8.23513V17.124" stroke="black" stroke-width="2.02751" stroke-linecap="round" stroke-linejoin="round" />
+        </mask>
+        <g mask="url(#mask0_5716_21664)">
+          <path d="M-1.21875 -1.43066H25.4479V25.236H-1.21875V-1.43066Z" fill="white" />
+        </g>
       </svg>
+
     </>
   );
 };
 // MEMBERS ICONS IN SIDEBAR
-export const Members = () => {
+export const UserIcon = () => {
   return (
     <>
       <svg
