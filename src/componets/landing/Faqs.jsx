@@ -29,7 +29,7 @@ const Faqs = () => {
             Frequently Asked Questions
           </h4>
           {/* Description */}
-          <p className="mt-4 ff_inter font-normal text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
+          <p className="mt-4 ff_inter   text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur. Semper vitae nullam eget
             consectetur mi. Vulputate sapien a a bibendum suspendisse quam. Hac
             posuere eget nam diam velit urna adipiscing diam.
@@ -49,7 +49,7 @@ const Faqs = () => {
                         {object.question}
                         <FaqArrowIcon />
                       </Accordion.Trigger>
-                      <Accordion.Content className="ff_inter font-normal text-base text-davygray mt-2 accordion_content">
+                      <Accordion.Content className="ff_inter text-base text-davygray mt-2 accordion_content">
                         {object.answer}
                       </Accordion.Content>
                     </Accordion.Item>

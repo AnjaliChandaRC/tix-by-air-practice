@@ -22,7 +22,7 @@ export default function CustomSelect({
             error && selectedValue === ""
               ? "border-red-500"
               : "border-light-grey"
-          } h-[44px] pt-[13px] pb-[14px] px-3 text-xs font-normal font-inter focus-visible:outline-none text-dark-grey w-full`}
+          } h-[44px] pt-[13px] pb-[14px] px-3 text-xs   font-inter focus-visible:outline-none text-dark-grey w-full`}
           aria-label={fieldName}
         >
           <Select.Value placeholder="Not Applicable" />

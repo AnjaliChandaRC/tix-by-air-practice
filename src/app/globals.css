@@ -159,12 +159,12 @@ html {
   box-shadow: 6px 6px 0px 0px #000;
 }
 
-.AccordionItem[data-state="closed"] {
+.accordionItem[data-state="closed"] {
   transition: all 300ms ease-in-out;
   border: 1px solid #808080;
 }
 
-.AccordionTrigger[data-state="closed"]>.faq_arrow {
+.accordionTrigger[data-state="closed"]>.faq_arrow {
   transform: rotate(180deg);
 }
 
@@ -253,14 +253,14 @@ html {
   fill: #fb6609;
 }
 
-.edit_hover:hover svg path {
+.table_edit_hover:hover svg path {
   stroke: #fb6609;
 }
 
-.eye_hover:hover svg path {
+.table_eye_hover:hover svg path {
   fill: #fb6609;
 }
 
-.Scroll_bar_none::-webkit-scrollbar {
+.scroll_bar_none::-webkit-scrollbar {
   display: none;
 }

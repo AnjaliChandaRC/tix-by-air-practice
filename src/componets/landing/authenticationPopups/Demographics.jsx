@@ -105,7 +105,7 @@ const Demographics = ({ setCurrentModal }) => {
                   error={error}
                   fieldName={errorFieldName}
                 />
-                <p className="text-xs font-normal font-inter mt-2 text-grey">
+                <p className="text-xs   font-inter mt-2 text-grey">
                   {obj.promptMessage}
                 </p>
               </div>

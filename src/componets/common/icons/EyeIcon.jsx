@@ -1,9 +1,6 @@
-import React from "react";
-
-export const EyeIcon = ({ style }) => {
+export const EyeIcon = () => {
   return (
     <svg
-      className={`${style} `}
       width="18"
       height="13"
       viewBox="0 0 18 13"
