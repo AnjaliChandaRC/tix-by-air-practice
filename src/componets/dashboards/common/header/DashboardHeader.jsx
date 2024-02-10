@@ -1,10 +1,10 @@
 "use client";
-import { HamburgerIcon } from "@/componets/common/icons/ToggleIcon";
 import Image from "next/image";
 import React, { useState } from "react";
-import Siderbar from "../sidebar/Siderbar";
-import { DownArrow } from "../icons/SidebarIcons";
 import Link from "next/link";
+import Sidebar from "@/components/dashboards/common/sidebar/SideBar";
+import { HamburgerIcon } from "@/components/common/icons/ToggleIcon";
+import { DownArrow } from "@/components/dashboards/common/icons/SidebarIcons";
 
 const DashboardHeader = () => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -29,7 +29,7 @@ const DashboardHeader = () => {
             sidebarVisible ? "start-0" : "start-[-100%]"
           }`}
         >
-          <Siderbar toggleSidebar={toggleSidebar} />
+          <Sidebar toggleSidebar={toggleSidebar} />
         </div>
         <div className="px-5 py-[19px] w-full bg-white relative z-20 border-b border-b-black">
           <div className="flex items-center justify-between md:justify-end">
