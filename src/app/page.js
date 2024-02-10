@@ -1,12 +1,12 @@
 "use client";
-import BackToTop from "@/componets/common/BackToTop";
-import CommonModal from "@/componets/common/commonModal/CommonModal";
-import Faqs from "@/componets/landing/Faqs";
-import Footer from "@/componets/landing/Footer";
-import Header from "@/componets/landing/Header";
-import Hero from "@/componets/landing/Hero";
-import MovingBanner from "@/componets/landing/MovingBanner";
-import Services from "@/componets/landing/Services";
+import BackToTop from "@/components/common/BackToTop";
+import CommonModal from "@/components/common/commonModal/CommonModal";
+import Faqs from "@/components/landing/Faqs";
+import Footer from "@/components/landing/Footer";
+import Header from "@/components/landing/Header";
+import Hero from "@/components/landing/Hero";
+import MovingBanner from "@/components/landing/MovingBanner";
+import Services from "@/components/landing/Services";
 import { useState } from "react";
 export default function Home() {
   const [currentModal, setCurrentModal] = useState(null);

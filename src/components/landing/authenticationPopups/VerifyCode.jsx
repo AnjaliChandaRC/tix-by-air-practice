@@ -1,6 +1,6 @@
 // Import necessary dependencies
-import CustomButton from "@/componets/common/button/CustomButton";
-import CustomInputs from "@/componets/common/fields/CustomInput";
+import CustomButton from "@/components/common/button/CustomButton";
+import CustomInputs from "@/components/common/fields/CustomInput";
 import React from "react";
 import { useForm } from "react-hook-form";
 

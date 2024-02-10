@@ -4,7 +4,7 @@ import {
   Members,
   MyCommunities,
   TextBlast,
-} from "@/componets/dashboards/common/icons/SidebarIcons";
+} from "@/components/dashboards/common/icons/SidebarIcons";
 
 // SIDEBAR LINKS USE IN CREATORS
 export const SidebarData = [
