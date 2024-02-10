@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import SendCode from "@/componets/landing/authenticationPopups/SendCode";
+import SendCode from "@/components/landing/authenticationPopups/SendCode";
 import { useState } from "react";
-import VerifyCode from "@/componets/landing/authenticationPopups/VerifyCode";
-import CreateUser from "@/componets/landing/authenticationPopups/CreateUser";
-import Demographics from "@/componets/landing/authenticationPopups/Demographics";
+import VerifyCode from "@/components/landing/authenticationPopups/VerifyCode";
+import CreateUser from "@/components/landing/authenticationPopups/CreateUser";
+import Demographics from "@/components/landing/authenticationPopups/Demographics";
 import { CrossIcon } from "../icons/ToggleIcon";
 
 const CommonModal = ({ currentModal, setCurrentModal }) => {
@@ -31,12 +31,12 @@ const CommonModal = ({ currentModal, setCurrentModal }) => {
 
   return (
     <>
-      <div
+      {/* <div
         onClick={() => setCurrentModal(null)}
         className="fixed bg-[#ff00003e] h-full w-full top-0 z-10"
       >
         ddd
-      </div>
+      </div> */}
       <Dialog.Root open={currentModal}>
         <Dialog.Portal>
           {/* <Dialog.Overlay onClick={() => setCurrentModal(null)} className="data-[state=open]:animate-overlayShow fixed w-screen h-screen top-0 left-0 z-0 bg-overlayBg" /> */}

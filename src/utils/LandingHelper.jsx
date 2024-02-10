@@ -1,7 +1,7 @@
 import card_img_one from "../../public/assets/images/png/card_img_one.png";
 import card_img_two from "../../public/assets/images/png/card_img_two.png";
 import card_img_three from "../../public/assets/images/png/card_img_three.png";
-import { FacebookIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "@/componets/icons/Landing";
+import { FacebookIcon, InstagramIcon, TelegramIcon, TwitterIcon } from "@/components/icons/Landing";
 
 export const TixByAirText = [
   {

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import CustomButton from "@/componets/common/button/CustomButton"; // Importing custom button component
-import CustomInput from "@/componets/common/fields/CustomInput"; // Importing custom input component
+import CustomButton from "@/components/common/button/CustomButton"; // Importing custom button component
+import CustomInput from "@/components/common/fields/CustomInput"; // Importing custom input component
 import { useForm } from 'react-hook-form'; // Importing useForm hook for form handling
 
 // Functional component CreateUser

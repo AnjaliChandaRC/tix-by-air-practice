@@ -1,5 +1,5 @@
-import CustomButton from "@/componets/common/button/CustomButton"; // Import CustomButton component
-import CustomPhoneInput from "@/componets/common/fields/CustomPhoneInput"; // Import CustomPhoneInput component
+import CustomButton from "@/components/common/button/CustomButton"; // Import CustomButton component
+import CustomPhoneInput from "@/components/common/fields/CustomPhoneInput"; // Import CustomPhoneInput component
 import React, { useState } from "react"; // Import React and useState hook
 
 // Define SendCode component
