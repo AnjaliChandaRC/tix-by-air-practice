@@ -11,7 +11,7 @@ const PhoneNumberInput = ({ error, handleInputChange, phoneNumber }) => {
             {/* Input field for the phone number */}
             <input
                 type="text"
-                className={`rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-xs font-normal font-inter focus-visible:border-orange outline-orange text-dark-grey w-full placeholder:text-sm placeholder:ff_inter`}
+                className={`rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-xs   font-inter focus-visible:border-orange outline-orange text-dark-grey w-full placeholder:text-sm placeholder:ff_inter`}
                 name="phoneNumber"
                 value={phoneNumber}
                 onChange={handleInputChange}

@@ -9,16 +9,16 @@ const Faqs = () => {
       <div className="pb-11 lg:pb-12 mb-11 pt-5 lg:pt-0 relative" id="faq">
         {/* Left vector image */}
         <Image
-          src="/assets/images/svg/left_vector.svg"
-          alt="hero-image"
+          src="/assets/images/svg/left_lines.svg"
+          alt="left-lines"
           className="z-[-1] hidden md:block -right-[50px] bottom-0 xl:bottom-[55px] md:left-[-35px] absolute h-[20px] md:h-[38px]"
           width={127}
           height={38}
         />
         {/* Right vector image */}
         <Image
-          src="/assets/images/svg/left_vector.svg"
-          alt="hero-image"
+          src="/assets/images/svg/left_lines.svg"
+          alt="left-lines"
           className="z-[-1] hidden md:block -right-[70px] rotate-180 top-0 absolute h-[20px] md:h-[38px]"
           width={127}
           height={38}
@@ -29,7 +29,7 @@ const Faqs = () => {
             Frequently Asked Questions
           </h4>
           {/* Description */}
-          <p className="mt-4 ff_inter font-normal text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
+          <p className="mt-4 ff_inter   text-base text-davygray leading-normal max-w-[780px] mx-auto text-center">
             Lorem ipsum dolor sit amet consectetur. Semper vitae nullam eget
             consectetur mi. Vulputate sapien a a bibendum suspendisse quam. Hac
             posuere eget nam diam velit urna adipiscing diam.
@@ -49,7 +49,7 @@ const Faqs = () => {
                         {object.question}
                         <FaqArrowIcon />
                       </Accordion.Trigger>
-                      <Accordion.Content className="ff_inter font-normal text-base text-davygray mt-2 accordion_content">
+                      <Accordion.Content className="ff_inter text-base text-davygray mt-2 accordion_content">
                         {object.answer}
                       </Accordion.Content>
                     </Accordion.Item>
@@ -62,7 +62,7 @@ const Faqs = () => {
               <div className="relative max-w-[330px] sm:max-w-[476px] mx-auto">
                 <Image
                   src="/assets/images/png/faq-img.png"
-                  alt=""
+                  alt="faq-img"
                   width={476}
                   height={493}
                   className="mx-auto lg:mx-0"
@@ -71,7 +71,7 @@ const Faqs = () => {
                 <Image
                   className="w-[160px] h-[63px] absolute end-[-57px] sm:end-[-15px] lg:end-[-21px] min-[1100px]:end-[-15px] top-[25.9%]"
                   src="/assets/images/svg/single_line.svg"
-                  alt="hero-line"
+                  alt="single-line"
                   width={194}
                   height={93}
                 />

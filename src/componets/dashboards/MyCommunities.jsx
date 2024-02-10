@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const MyCommunities = () => {
     return (
-        <div className=" min-h-[calc(100vh-128px)] overflow-hidden overflow-y-scroll Scroll_bar_none m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke xl:flex items-center justify-center sm:px-12 ps-3 pe-4">
+        <div className=" min-h-[calc(100vh-128px)] overflow-hidden overflow-y-scroll scroll_bar_none m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke xl:flex items-center justify-center sm:px-12 ps-3 pe-4">
             {/* Container for content */}
             <div className="flex items-center justify-center flex-col xl:flex-row">
                 {/* Content for no communities */}
