@@ -10,7 +10,6 @@ import Services from "@/componets/landing/Services";
 import { useState } from "react";
 export default function Home() {
   const [currentModal, setCurrentModal] = useState(null);
-  console.log("currentModalcurrentModal", currentModal);
   return (
     <div className="overflow-hidden">
       <BackToTop />

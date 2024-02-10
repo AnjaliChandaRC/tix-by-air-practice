@@ -47,7 +47,7 @@ const DashboardHeader = () => {
                 />
               </span>
               <div>
-                <p className="ff_inter font-normal text-sm text-black">
+                <p className="ff_inter   text-sm text-black">
                   Cameron Williamson
                 </p>
                 <p className="ff_poppins text-davygray font-light text-xs">
@@ -72,7 +72,7 @@ const DashboardHeader = () => {
         >
           <Link
             href="/"
-            className="py-2 md:py-[13px] border border-solid border-black border-opacity-60 rounded-lg ff_inter font-normal text-black text-sm leading-[1] bg-white block w-full text-center transition-all duration-500 ease-in-out hover:bg-orangecrayola hover:text-white"
+            className="py-2 md:py-[13px] border border-solid border-black border-opacity-60 rounded-lg ff_inter   text-black text-sm leading-[1] bg-white block w-full text-center transition-all duration-500 ease-in-out hover:bg-orangecrayola hover:text-white"
           >
             Log Out
           </Link>

@@ -7,11 +7,11 @@ import { EyeIcon } from '../common/icons/EyeIcon';
 
 const YourCommunities = () => {
     // Define table headers
-    const tableHeaders = ["Community name", "Number of members", "Manage", "View Community"];
+    const tableHeaderData  = ["Community name", "Number of members", "Manage", "View Community"];
     // Define table data
-    const tableData = [
-        ["UI/UX", 12, <div key='ui-ux' className='flex items-center gap-[6px] cursor-pointer edit_hover hover:text-orangecrayola'><EditIcon /> Edit</div>, <div key='ui-ux-view' className='flex items-center gap-[6px] cursor-pointer eye_hover hover:text-orangecrayola'><EyeIcon /> View</div>],
-        ["Designers", 5, <div key='designers' className='flex items-center gap-[6px] cursor-pointer edit_hover hover:text-orangecrayola'><EditIcon /> Edit</div>, <div key='designers-view' className='flex items-center gap-[6px] cursor-pointer eye_hover hover:text-orangecrayola'><EyeIcon /> View</div>],
+    const tableRowData = [
+        ["UI/UX", 12, <div key='ui-ux' className='flex items-center gap-[6px] cursor-pointer table_edit_hover hover:text-orangecrayola'><EditIcon /> Edit</div>, <div key='ui-ux-view' className='flex items-center gap-[6px] cursor-pointer table_eye_hover hover:text-orangecrayola'><EyeIcon /> View</div>],
+        ["Designers", 5, <div key='designers' className='flex items-center gap-[6px] cursor-pointer table_edit_hover hover:text-orangecrayola'><EditIcon /> Edit</div>, <div key='designers-view' className='flex items-center gap-[6px] cursor-pointer table_eye_hover hover:text-orangecrayola'><EyeIcon /> View</div>],
     ];
 
     return (
@@ -25,7 +25,7 @@ const YourCommunities = () => {
             </div>
             {/* Custom table component */}
             <div className='mt-7'>
-                <CustomTable headers={tableHeaders} data={tableData} />
+                <CustomTable tableHeader={tableHeaderData} tableData={tableRowData} />
             </div>
             {/* Additional information */}
             <p className='text-graytwo ff_inter text-center text-sm leading-[100%] mt-7'>A list of your Communities</p>
