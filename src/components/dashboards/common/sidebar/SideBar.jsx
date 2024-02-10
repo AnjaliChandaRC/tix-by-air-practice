@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CreatorTabs from "./creator/CreatorTabs";
 
 const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
   return (
@@ -8,9 +9,10 @@ const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
         isSidebarVisible ? "start-0" : "start-[-255px] md:start-0"
       }`}
     >
-      <button onClick={() => setIsSidebarVisible(!isSidebarVisible)}>
-        close sidebar
-      </button>
+      <CreatorTabs
+        isSidebarVisible={isSidebarVisible}
+        setIsSidebarVisible={setIsSidebarVisible}
+      />
     </div>
   );
 };

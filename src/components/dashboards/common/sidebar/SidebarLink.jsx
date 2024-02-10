@@ -1,9 +1,13 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
-const SidebarLink = () => {
+const SidebarLink =({url,icons,title}) => {
   return (
-    <div>SidebarLink</div>
-  )
-}
+    <Link href={url}>
+      <span>{icons}</span>
+      <span>{title}</span>
+    </Link>
+  );
+};
 
-export default SidebarLink
+export default SidebarLink;
