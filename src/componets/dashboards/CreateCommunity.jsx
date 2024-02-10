@@ -38,7 +38,7 @@ const CreateCommunity = () => {
 
   // Event handler for key press
   const handleKeyPress = (e) => {
-    if (e.key === "Shift") {
+    if (e.key === "Enter") {
       // Check if the array has less than 3 values before adding the input value
       if (valueArray.length < 3) {
         setValueArray((prevArray) => [...prevArray, inputValue]);
@@ -55,7 +55,9 @@ const CreateCommunity = () => {
       return newArray;
     });
   };
-
+  // Determine the placeholder message based on the condition
+  const placeholderMessage =
+    valueArray.length >= 3 ? "Maximum value reached" : "Enter a value";
   return (
     <div className="flex flex-col w-full">
       <div className="w-full min-h-[calc(100vh-80px)] p-5 md:p-6">
@@ -157,16 +159,11 @@ const CreateCommunity = () => {
                     id="Name"
                     value={inputValue}
                     onChange={handleNameChange}
+                    placeholder={placeholderMessage}
                     onKeyDown={handleKeyPress}
                     disabled={valueArray.length >= 3}
-                    className=" outline-none bottom-0 bg-transparent text-sm  text-dark-grey "
+                    className="outline-none bottom-0 bg-transparent text-sm  text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey"
                   />
-                  {/* Message for max values reached */}
-                  {valueArray.length >= 3 && (
-                    <span className="ff_inter text-sm text-shadowgray">
-                      Max value Reached.
-                    </span>
-                  )}
                 </div>
                 <p className="ff_inter text-sm text-shadowgray pt-2.5">
                   This is your community’s interest.
