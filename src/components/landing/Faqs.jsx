@@ -38,19 +38,19 @@ const Faqs = () => {
             <div className="w-full lg:w-6/12 lg:ps-3 lg:pe-[23px] xl:h-[580px]">
               {/* FAQ items */}
               <Accordion.Root type="single" defaultValue="item-1" collapsible>
-                {FaqsList.map((object, index) => {
+                {FaqsList.map((obj, index) => {
                   return (
                     <Accordion.Item
-                      value={object.item}
+                      value={obj.item}
                       key={index}
                       className={`accordion_item px-5 py-[19px] rounded-[10px] mt-5`}
                     >
                       <Accordion.Trigger className="text-start ff_inter font-medium text-xl text-black flex items-center justify-between w-full accordion_trigger">
-                        {object.question}
+                        {obj.question}
                         <FaqArrowIcon />
                       </Accordion.Trigger>
                       <Accordion.Content className="ff_inter text-base text-davygray mt-2 accordion_content">
-                        {object.answer}
+                        {obj.answer}
                       </Accordion.Content>
                     </Accordion.Item>
                   );
