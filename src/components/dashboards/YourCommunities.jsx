@@ -50,7 +50,7 @@ const YourCommunities = () => {
   ];
 
   return (
-    <div className=" min-h-[calc(100vh-128px)] m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke sm:p-[22px] p-3">
+    <div className=" m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke sm:p-[22px] p-3 w-full overflow-hidden">
       {/* Section heading and button to create new community */}
       <div className="flex lg:items-center flex-col lg:flex-row lg:justify-between">
         <h2 className="text-black ff_satoshi_black text-2xl md:text-[28px] leading-[100%]">

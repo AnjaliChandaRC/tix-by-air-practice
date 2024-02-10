@@ -1,10 +1,11 @@
-import MyCommunities from "@/components/dashboards/MyCommunities";
+import YourCommunities from "@/components/dashboards/YourCommunities";
+import NotFound from "@/components/dashboards/common/NotFound";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <MyCommunities />
+      <YourCommunities />
     </>
   );
 };
