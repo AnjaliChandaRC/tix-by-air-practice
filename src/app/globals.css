@@ -65,7 +65,9 @@ html {
   background-color: #fb6609;
   border-radius: 8px;
 }
-
+.scroll_bar_none::-webkit-scrollbar {
+  display: none;
+}
 /*HEADER CSS START HERE==================================*/
 .log_in_btn_bg {
   background: var(--Gradient,
@@ -119,7 +121,7 @@ html {
   }
 }
 
-.moving_annimation {
+.moving_animation {
   animation: moving 6s infinite linear;
 }
 
@@ -218,11 +220,24 @@ html {
     height: 0;
   }
 }
+/* SIDEBAR  */
+.icon_active svg path {
+  fill: #fb6609;
+}
+
+.table_edit_hover:hover svg path {
+  stroke: #fb6609;
+}
+
+.table_eye_hover:hover svg path {
+  fill: #fb6609;
+}
+
 
 /* MEDIA QUERIES CSS START HERE==================================*/
 
 @media (max-width: 639.98px) {
-  .AccordionItem[data-state="closed"] {
+  .accordionItem[data-state="closed"] {
     border: 1px solid black;
     box-shadow: 6px 6px 0px 0px #000;
   }
@@ -248,19 +263,3 @@ html {
   }
 }
 
-/* SIDEBAR  */
-.icon_active svg path {
-  fill: #fb6609;
-}
-
-.table_edit_hover:hover svg path {
-  stroke: #fb6609;
-}
-
-.table_eye_hover:hover svg path {
-  fill: #fb6609;
-}
-
-.scroll_bar_none::-webkit-scrollbar {
-  display: none;
-}

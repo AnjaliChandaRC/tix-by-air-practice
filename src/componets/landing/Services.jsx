@@ -7,8 +7,8 @@ const Services = () => {
     <div className="relative" id="feature">
       {/* Left vector image */}
       <Image
-        src="/assets/images/svg/left_vector.svg"
-        alt="hero-image"
+        src="/assets/images/svg/left_lines.svg"
+        alt="left-lines"
         className="top-[16%] md:top-[45%] z-[-1] -right-[50px] md:left-[-35px] absolute h-[20px] md:h-[38px]"
         width={127}
         height={38}

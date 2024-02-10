@@ -18,25 +18,25 @@ const Hero = ({ setCurrentModal }) => {
       />
       {/* Left vector image */}
       <Image
-        src="/assets/images/svg/left_vector.svg"
-        alt="hero-image"
+        src="/assets/images/svg/left_lines.svg"
+        alt="left_lines"
         className="top-4 xl:top-20 -left-14 md:left-[-35px] absolute h-[20px] md:h-[38px]"
         width={127}
         height={38}
       />
-      {/* Half circle image */}
+      {/* Full circle image */}
       <Image
-        src="/assets/images/svg/fullcircel.svg"
-        alt="hero-image"
-        className="moving_annimation w-5 h-5 sm:w-7 sm:h-7 top-20 right-[3%] absolute "
+        src="/assets/images/svg/full_circle.svg"
+        alt="circle"
+        className=" moving_animation w-5 h-5 sm:w-7 sm:h-7 top-20 right-[3%] absolute "
         width={27}
         height={27}
       />
       {/* Full circle image */}
       <Image
-        src="/assets/images/svg/fullcircel.svg"
-        alt="hero-image"
-        className="moving_annimation bottom-8 md:bottom-16 lg:bottom-20 left-2/4 absolute "
+        src="/assets/images/svg/full_circle.svg"
+        alt="circle"
+        className=" moving_animation bottom-8 md:bottom-16 lg:bottom-20 left-2/4 absolute "
         width={27}
         height={27}
       />
@@ -83,7 +83,7 @@ const Hero = ({ setCurrentModal }) => {
             <Image
               className="w-[140px] xl:!w-[145px] absolute -top-[5%] left-[-26px] sm:-left-[11px] lg:-top-[4%] lg:left-2 xl:left-10 xl:-top-[2%]"
               src="/assets/images/svg/single_line.svg"
-              alt="hero-line"
+              alt="single-line"
               width={194}
               height={93}
             />
@@ -91,7 +91,7 @@ const Hero = ({ setCurrentModal }) => {
             <Image
               className="w-[140px] xl:!w-[145px] absolute bottom-[10%] -right-[37%] sm:-right-[33%] lg:-right-[27%] xl:-right-[20%] xl:bottom-[11%]"
               src="/assets/images/svg/single_line.svg"
-              alt="hero-line"
+              alt="single-line"
               width={194}
               height={93}
             />
