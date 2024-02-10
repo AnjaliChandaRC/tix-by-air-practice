@@ -61,7 +61,7 @@ const Demographics = ({ setCurrentModal }) => {
     ) {
       setUserAuthenticated(true);
       var x = localStorage.getItem(USER_AUTHENTICATION);
-      if (x ? router.push("/creator") : router.push(""));
+      if (x ? router.push("/creator/community") : router.push(""));
       setError(false);
     }
   };
