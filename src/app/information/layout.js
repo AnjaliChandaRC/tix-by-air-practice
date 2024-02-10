@@ -1,10 +1,11 @@
-import Siderbar from "@/components/dashboards/common/sidebar/Siderbar";
+import Sidebar from "@/components/dashboards/common/sidebar/SideBar";
+
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Siderbar />
+        < Sidebar />
         {children}
       </body>
     </html>
