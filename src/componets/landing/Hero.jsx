@@ -24,7 +24,7 @@ const Hero = ({ setCurrentModal }) => {
         width={127}
         height={38}
       />
-      {/* Half circle image */}
+      {/* Full circle image */}
       <Image
         src="/assets/images/svg/full_circle.svg"
         alt="circle"
