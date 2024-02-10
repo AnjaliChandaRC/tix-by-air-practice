@@ -39,7 +39,7 @@ const Header = ({ setCurrentModal }) => {
         >
           <Image
             src="/assets/images/png/nav-logo.png"
-            alt="footer logo"
+            alt="nav-logo"
             height={59}
             width={83}
             className="logo_img"
