@@ -1,4 +1,4 @@
-import Siderbar from "@/componets/dashboards/common/sidebar/Siderbar";
+import Siderbar from "@/components/dashboards/common/sidebar/Siderbar";
 
 export default function RootLayout({ children }) {
   return (

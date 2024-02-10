@@ -1,7 +1,7 @@
 "use client";
-import CustomButton from "@/componets/common/button/CustomButton";
-import { CrossIcon } from "@/componets/common/icons/ToggleIcon";
-import CustomSelect from "@/componets/common/selector/CustomSelect";
+import CustomButton from "@/components/common/button/CustomButton";
+import { CrossIcon } from "@/components/common/icons/ToggleIcon";
+import CustomSelect from "@/components/common/selector/CustomSelect";
 import {
   GenderSelectList,
   RaceSelectList,
