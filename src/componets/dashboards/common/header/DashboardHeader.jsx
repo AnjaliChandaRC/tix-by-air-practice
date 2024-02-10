@@ -6,34 +6,20 @@ import Sidebar from "@/components/dashboards/common/sidebar/SideBar";
 import { HamburgerIcon } from "@/components/common/icons/ToggleIcon";
 import { DownArrow } from "@/components/dashboards/common/icons/SidebarIcons";
 
-const DashboardHeader = () => {
-  const [sidebarVisible, setSidebarVisible] = useState(false);
+const DashboardHeader = ({ setIsSidebarVisible , isSidebarVisible }) => {
   const [profileVisible, setProfileVisible] = useState(false);
-  const toggleSidebar = () => {
-    setSidebarVisible(!sidebarVisible);
-  };
   const toggleProfile = () => {
     setProfileVisible(!profileVisible);
   };
   return (
     <>
       <div>
-        <div
-          className={`fixed top-0 start-0 w-full md:hidden h-screen bg-black  transition-all duration-600 ease-in-out  ${
-            sidebarVisible ? "opacity-40 z-[22]" : "opacity-0 -z-10"
-          }`}
-          onClick={toggleSidebar}
-        ></div>
-        <div
-          className={`fixed top-0 md:hidden !z-30 transition-all duration-400 ease-in-out ${
-            sidebarVisible ? "start-0" : "start-[-100%]"
-          }`}
-        >
-          <Sidebar toggleSidebar={toggleSidebar} />
-        </div>
         <div className="px-5 py-[19px] w-full bg-white relative z-20 border-b border-b-black">
           <div className="flex items-center justify-between md:justify-end">
-            <span className="cursor-pointer md:hidden" onClick={toggleSidebar}>
+            <span
+              className="cursor-pointer md:hidden"
+              onClick={() => setIsSidebarVisible(!isSidebarVisible)}
+            >
               <HamburgerIcon />
             </span>
             <div className="flex items-center gap-2">
