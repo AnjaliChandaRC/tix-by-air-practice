@@ -1,5 +1,6 @@
 // Information.js
 import React from 'react';
+import CommonTabs from '../common/commonTabs/CommonTabs';
 
 const Information = () => {
   const tabs = [

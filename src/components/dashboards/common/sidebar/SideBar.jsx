@@ -23,7 +23,7 @@ const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
       >
         <div className="flex flex-col justify-between h-full">
           <div className="mt-[30px]">
-            <div className="flex items-center gap-[5px] pb-1.5">
+            <div className="flex items-center gap-[5px] pb-4">
               {/* Slider back button */}
               <button
                onClick={()=>setIsSidebarVisible(false)}
@@ -45,7 +45,7 @@ const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
               </Link>
             </div>
             {/* Tabs for creators */}
-            <CreatorTabs />
+           <CreatorTabs />
           </div>
           {/* Image */}
           <Image
