@@ -1,8 +1,9 @@
 // Import necessary modules
+import { useRouter } from "next/navigation";
 import React from "react";
 // Define the CustomButton component
 function CustomButton({ title, changeModalHandler, className, isBgGradient }) {
-
+  const router = useRouter();
   return (
     <>
       {/* Button text */}

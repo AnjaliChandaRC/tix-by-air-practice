@@ -6,8 +6,10 @@ import CustomTextArea from "../common/fields/CustomTextArea";
 import { useForm } from "react-hook-form";
 import { EyeIcon } from "../common/icons/EyeIcon";
 import { EyeClosedIcon } from "@radix-ui/react-icons";
+import { useRouter } from "next/navigation";
 
 const CreateCommunity = () => {
+  const router = useRouter(); // Access the router object from Next.js
   // React Hook Form initialization
   const {
     register,
@@ -208,7 +210,7 @@ const CreateCommunity = () => {
             {/* Submit button */}
             <div className="mt-[30px] flex flex-col sm:flex-row items-center sm:items-start gap-4">
               <CustomButton isBgGradient={true} title="Submit" className="w-full max-w-[350px] sm:w-[227px] order-1" />
-              <CustomButton isBgGradient={false}
+              <CustomButton isBgGradient={false} changeModalHandler={() => router.push("/creator/information")}
                 title="View community"
                 className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2"
               />

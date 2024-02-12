@@ -5,17 +5,12 @@ import { useForm } from 'react-hook-form'; // Importing useForm hook for form ha
 
 // Functional component CreateUser
 const CreateUser = ({ setCurrentModal }) => {
-  // State to manage the visibility of demographic modal
-  const [isOpenDemographicModal, setIsOpenDemographicModal] = useState(false);
-
   // Destructuring useForm hook to handle form state and validation
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   // Callback function when form is submitted
   const onSubmit = (data) => {
-    console.log(data.userName); // Accessing the username from the form data
     if (errors.userName === undefined) { // Checking if there are no errors for username
-      setIsOpenDemographicModal(true); // Setting the demographic modal to be open
       setCurrentModal("demographics"); // Setting the current modal to demographics
     }
   };
