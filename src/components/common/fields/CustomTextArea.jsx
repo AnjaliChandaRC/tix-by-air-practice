@@ -22,7 +22,7 @@ export default function CustomTextArea(props) {
                 {...register} // Moved register prop here
             />
             {error && (
-                <p className="text-red-500 text-xs font-inter mt-1">{error.message}</p>
+                <p className="text-red-500 text-xs ff_inter mt-1">{error.message}</p>
             )}
         </>
     );

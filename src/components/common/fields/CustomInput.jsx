@@ -11,7 +11,7 @@ export default function CustomInputs(props) {
     className // Additional className prop to pass custom classes
   } = props;
 
-  const inputClasses = `rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-sm   font-inter focus-visible:border-orange outline-orange text-dark-grey input-no-spinner w-full placeholder:text-sm placeholder:ff_inter ${backGround || ""} ${color || ""} ${className || ""}`;
+  const inputClasses = `rounded-lg border border-light-grey h-[44px] pt-[13px] pb-[14px] px-3 text-sm   ff_inter focus-visible:border-orange outline-orange text-dark-grey input-no-spinner w-full placeholder:text-sm placeholder:ff_inter ${backGround || ""} ${color || ""} ${className || ""}`;
 
   return (
     <>
@@ -22,7 +22,7 @@ export default function CustomInputs(props) {
         {...register} // Moved register prop here
       />
       {error && (
-        <p className="text-red-500 text-xs font-inter mt-1">{error.message}</p>
+        <p className="text-red-500 text-xs ff_inter mt-1">{error.message}</p>
       )}
     </>
   );

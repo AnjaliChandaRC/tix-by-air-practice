@@ -25,7 +25,7 @@ export default function CustomSelect({
             error && selectedValue === "" // Applying error styles if error and no selected value
               ? "border-red-500"
               : "border-light-grey"
-          } h-[44px] pt-[13px] pb-[14px] px-3 text-xs font-inter focus-visible:outline-none text-dark-grey w-full`}
+          } h-[44px] pt-[13px] pb-[14px] px-3 text-xs ff_inter focus-visible:outline-none text-dark-grey w-full`}
           aria-label={fieldName} // Accessible label for screen readers
         >
           <Select.Value placeholder="Not Applicable" /> {/* Placeholder for selected value */}

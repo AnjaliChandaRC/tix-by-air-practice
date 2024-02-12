@@ -28,16 +28,16 @@ const YourCommunities = () => {
           {communityList && // Mapping through communityList array and rendering table rows
             communityList.map((obj, i) => (
               <tr key={i}> {/* Table row */}
-                <td className=" font-inter text-black font-normal text-sm leading-[1] pl-3 md:pl-6 py-4 w-[150px]"> {/* Table data */}
+                <td className=" ff_inter text-black font-normal text-sm leading-[100%] pl-3 md:pl-6 py-4 w-[150px]"> {/* Table data */}
                   {obj.coummunityName} {/* Displaying community name */}
                 </td>
-                <td className=" font-inter text-black font-normal text-sm leading-[1] pl-3 md:pl-6 py-4 w-[180px]"> {/* Table data */}
+                <td className=" ff_inter text-black font-normal text-sm leading-[100%] pl-3 md:pl-6 py-4 w-[180px]"> {/* Table data */}
                   {obj.totalMembers} {/* Displaying total members */}
                 </td>
                 <td className="py-4 w-[180px] pl-3 md:pl-6"> {/* Table data */}
                   <Link // Rendering Link component for editing
                     href="/creator/create-community" // Setting href for Link
-                    className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola font-inter text-black font-normal text-sm leading-[1]" // Customizing className
+                    className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola ff_inter text-black font-normal text-sm leading-[100%]" // Customizing className
                   >
                     <span>
                       <EditIcon stroke="group-hover:stroke-orangecrayola transition-all duration-200" /> {/* Rendering EditIcon */}
@@ -48,7 +48,7 @@ const YourCommunities = () => {
                 <td className="pl-3 md:pl-6 py-4 w-[150px]"> {/* Table data */}
                   <Link // Rendering Link component for viewing
                     href="/creator/information" // Setting href for Link
-                    className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola font-inter text-black font-normal text-sm leading-[1] " // Customizing className
+                    className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola ff_inter text-black font-normal text-sm leading-[100%] " // Customizing className
                   >
                     <span>
                       <EyeIcon fill="w-[13px] group-hover:fill-orangecrayola transition-all duration-300 ease-linear" /> {/* Rendering EyeIcon */}
