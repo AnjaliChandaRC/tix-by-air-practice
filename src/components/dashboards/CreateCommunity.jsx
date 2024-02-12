@@ -67,8 +67,8 @@ const CreateCommunity = () => {
   const placeholderMessage =
     valueArray.length >= 3 ? "Maximum value reached" : "Enter a value";
   return (
-    <div className="flex flex-col w-full">
-      <div className="min-h-[calc(100vh-80px)] p-5 md:p-6 w-full">
+    <div className="flex flex-col w-full h-full">
+      <div className="p-5 md:p-6 w-full">
         <div className="border rounded-2xl bg-whitesmoke p-5 sm:px-[22px] sm:py-[23px]">
           <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
             Create New Community
@@ -173,7 +173,7 @@ const CreateCommunity = () => {
                     placeholder={placeholderMessage}
                     onKeyDown={handleKeyPress}
                     disabled={valueArray.length >= 3}
-                    className="outline-none bottom-0 bg-transparent text-sm text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey w-[200px] sm:w-full"
+                    className="outline-none bottom-0 bg-transparent text-sm text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey w-[195px]"
                   />
                 </label>
                 <p className="ff_inter text-sm text-shadowgray pt-2.5">
