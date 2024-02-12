@@ -1,81 +1,55 @@
 "use client";
 import React from "react";
-import CustomButton from "../common/button/CustomButton";
-import CommonTable from "./common/commonTable/CommonTable";
+import CommonTable from "./CommonTable";
 import { EditIcon } from "../common/icons/EditIcon";
 import { EyeIcon } from "../common/icons/EyeIcon";
-import { useRouter } from "next/navigation";
-
+import { communitiesHeadList, communityList } from "@/utils/CreatorsHelper";
+import Link from "next/link";
+import Heading from "./Heading";
 
 const YourCommunities = () => {
-  const router = useRouter();
-
-  const handleClick = () => {
-    router.push("/creator/create-community");
-  };
-
-  // Define table headers
-  const tableHeaderData = [
-    "Community name",
-    "Number of members",
-    "Manage",
-    "View Community",
-  ];
-  // Define table data
-  const tableRowData = [
-    [
-      "UI/UX",
-      12,
-      <div key="ui-ux"
-        className="flex items-center gap-[6px] cursor-pointer table_edit_hover hover:text-orangecrayola"
-      >
-        <EditIcon /> Edit
-      </div>,
-      <div
-        key="ui-ux-view"
-        className="flex items-center gap-[6px] cursor-pointer table_eye_hover hover:text-orangecrayola"
-      >
-        <EyeIcon /> View
-      </div>,
-    ],
-    [
-      "Designers",
-      5,
-      <div
-        key="designers"
-        className="flex items-center gap-[6px] cursor-pointer table_edit_hover hover:text-orangecrayola"
-      >
-        <EditIcon /> Edit
-      </div>,
-      <div
-        key="designers-view"
-        className="flex items-center gap-[6px] cursor-pointer table_eye_hover hover:text-orangecrayola"
-      >
-        <EyeIcon /> View
-      </div>,
-    ],
-  ];
-
   return (
-    <div className=" m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke sm:p-[22px] p-3 w-full overflow-hidden">
-      {/* Section heading and button to create new community */}
-      <div className="flex lg:items-center flex-col lg:flex-row lg:justify-between">
-        <h2 className="text-black ff_satoshi_black text-2xl md:text-[28px] leading-[100%]">
-          Your Communities
-        </h2>
-        <div className="mt-3 lg:mt-0">
-          <CustomButton title="Create New Community" changeModalHandler={handleClick} />
-        </div>
-      </div>
-      {/* Custom table component */}
-      <div className="mt-7">
-        <CommonTable tableHeader={tableHeaderData} tableData={tableRowData} />
-      </div>
-      {/* Additional information */}
-      <p className="text-graytwo ff_inter text-center text-sm leading-[100%] mt-7">
-        A list of your Communities
-      </p>
-    </div>
+    <>
+      <Heading title="Create New Community" />
+      <CommonTable
+        tableHead={communitiesHeadList}
+        ListFooterText="A list of your Communities"
+      >
+        {communityList &&
+          communityList.map((obj, i) => (
+            <tr key={i}>
+              <td className=" font-inter text-black font-normal text-sm leading-[1] pl-3 md:pl-6 py-4 w-[150px]">
+                {obj.coummunityName}
+              </td>
+              <td className=" font-inter text-black font-normal text-sm leading-[1] pl-3 md:pl-6 py-4 w-[180px]">
+                {obj.totalMembers}
+              </td>
+              <td className="py-4 w-[180px] pl-3 md:pl-6">
+                <Link
+                  href="/"
+                  className="flex items-center gap-x-[2px]  group transition-all duration-300 hover:text-orange05 font-inter text-black font-normal text-sm leading-[1]"
+                >
+                  <span>
+                    <EditIcon stroke="group-hover:stroke-orange05 transition-all duration-200" />
+                  </span>
+                  Edit
+                </Link>
+              </td>
+              <td className="pl-3 md:pl-6 py-4 w-[150px]">
+                <Link
+                  href="/"
+                  className="flex items-center gap-x-[2px]  group transition-all duration-300 hover:text-orange05 font-inter text-black font-normal text-sm leading-[1] "
+                >
+                  <span>
+                    <EyeIcon className="w-[13px] group-hover:fill-orange05 transition-all duration-100 ease-linear" />
+                  </span>
+                  View
+                </Link>
+              </td>
+            </tr>
+          ))}
+      </CommonTable>
+    </>
   );
 };
 

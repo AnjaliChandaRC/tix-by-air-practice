@@ -3,7 +3,9 @@ import Sidebar from "@/components/dashboards/common/sidebar/SideBar";
 import DashboardHeader from "@/componets/dashboards/common/header/DashboardHeader";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+
 export default function RootLayout({ children }) {
+
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   const pathname = usePathname();
   return (
