@@ -69,7 +69,7 @@ const CreateCommunity = () => {
   return (
     <div className="flex flex-col w-full">
       <div className="min-h-[calc(100vh-80px)] p-5 md:p-6 w-full">
-        <div className="border rounded-2xl bg-whitesmoke p-[22px]">
+        <div className="border rounded-2xl bg-whitesmoke p-5 sm:px-[22px] sm:py-[23px]">
           <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
             Create New Community
           </h2>
@@ -152,7 +152,7 @@ const CreateCommunity = () => {
                     return (
                       <span
                         key={index}
-                        className="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter inline-block text-sm relative text-[#4A4641] "
+                        className="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter inline-block text-sm relative text-[#4A4641] mb-2 sm:mb-0"
                       >
                         {obj}
                         <button
@@ -173,7 +173,7 @@ const CreateCommunity = () => {
                     placeholder={placeholderMessage}
                     onKeyDown={handleKeyPress}
                     disabled={valueArray.length >= 3}
-                    className="outline-none bottom-0 bg-transparent text-sm text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey"
+                    className="outline-none bottom-0 bg-transparent text-sm text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey w-[200px] sm:w-full"
                   />
                 </label>
                 <p className="ff_inter text-sm text-shadowgray pt-2.5">
@@ -206,11 +206,11 @@ const CreateCommunity = () => {
               </div>
             </div>
             {/* Submit button */}
-            <div className="mt-[30px] flex gap-4">
-              <CustomButton isBgGradient={true} title="Submit" className="w-[227px]" />
+            <div className="mt-[30px] flex flex-col sm:flex-row items-center sm:items-start gap-4">
+              <CustomButton isBgGradient={true} title="Submit" className="w-full max-w-[350px] sm:w-[227px] order-1" />
               <CustomButton isBgGradient={false}
                 title="View community"
-                className="w-[227px] bg-white"
+                className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2"
               />
             </div>
           </form>
