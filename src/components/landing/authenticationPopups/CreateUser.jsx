@@ -45,7 +45,7 @@ const CreateUser = ({ setCurrentModal }) => {
           and any community you join.
         </p>
         {/* Button to submit the form */}
-        <CustomButton title="next" type="submit" className='w-full' />
+        <CustomButton isBgGradient={true} title="next" type="submit" className='w-full' />
       </form>
     </>
   );

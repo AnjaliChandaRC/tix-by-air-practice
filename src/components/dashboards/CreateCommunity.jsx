@@ -207,8 +207,8 @@ const CreateCommunity = () => {
             </div>
             {/* Submit button */}
             <div className="mt-[30px] flex gap-4">
-              <CustomButton title="Submit" className="w-[197px]" />
-              <CustomButton
+              <CustomButton isBgGradient={true} title="Submit" className="w-[197px]" />
+              <CustomButton isBgGradient={false}
                 title="View community"
                 className="w-[227px] bg-white"
               />
