@@ -5,6 +5,7 @@ import CommonTable from "./common/commonTable/CommonTable";
 import { EditIcon } from "../common/icons/EditIcon";
 import { EyeIcon } from "../common/icons/EyeIcon";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 
 const YourCommunities = () => {
@@ -26,33 +27,33 @@ const YourCommunities = () => {
     [
       "UI/UX",
       12,
-      <div key="ui-ux"
+      <Link href="/creator/create-community" key="ui-ux"
         className="flex items-center gap-[6px] cursor-pointer table_edit_hover hover:text-orangecrayola"
       >
         <EditIcon /> Edit
-      </div>,
-      <div
+      </Link>,
+      <Link href="/creator/information"
         key="ui-ux-view"
         className="flex items-center gap-[6px] cursor-pointer table_eye_hover hover:text-orangecrayola"
       >
         <EyeIcon /> View
-      </div>,
+      </Link>,
     ],
     [
       "Designers",
       5,
-      <div
+      <Link href="/creator/create-community"
         key="designers"
         className="flex items-center gap-[6px] cursor-pointer table_edit_hover hover:text-orangecrayola"
       >
         <EditIcon /> Edit
-      </div>,
-      <div
+      </Link>,
+      <Link href="/creator/information"
         key="designers-view"
         className="flex items-center gap-[6px] cursor-pointer table_eye_hover hover:text-orangecrayola"
       >
         <EyeIcon /> View
-      </div>,
+      </Link>,
     ],
   ];
 
