@@ -1,8 +1,8 @@
 // Import necessary modules
 import React from "react";
-
 // Define the CustomButton component
-function CustomButton({ title, changeModalHandler, className }) {
+function CustomButton({ title, changeModalHandler, className, route }) {
+
   return (
     <>
       {/* Button text */}

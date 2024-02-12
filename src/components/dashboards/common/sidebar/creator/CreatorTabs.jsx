@@ -23,7 +23,7 @@ const CreatorTabs = () => {
       {pathname !== "/creator/community" ? (
         <>
           <SidebarLink
-            url="/information"
+            url="/creator/information"
             icons={<InfoIcon />}
             title="Information"
           />

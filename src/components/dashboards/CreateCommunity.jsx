@@ -64,7 +64,7 @@ const CreateCommunity = () => {
     valueArray.length >= 3 ? "Maximum value reached" : "Enter a value";
   return (
     <div className="flex flex-col w-full">
-      <div className="w-full min-h-[calc(100vh-80px)] p-5 md:p-6">
+      <div className=" min-h-[calc(100vh-80px)] p-5 md:p-6 w-full">
         <div className="border rounded-2xl bg-whitesmoke p-[22px]">
           <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
             Create New Community
