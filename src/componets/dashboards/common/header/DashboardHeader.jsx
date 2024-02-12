@@ -84,7 +84,7 @@ const DashboardHeader = ({ setIsSidebarVisible, isSidebarVisible }) => {
         <div
           // Styles for positioning and visibility transition
           class={`w-[150px] sm:w-[180px] md:w-[200px] lg:w-[238px] p-3 sm:py-4 lg:py-6 md:px-4 border border-solid border-black rounded-lg md:rounded-[20px] bg-white absolute transition-all duration-500 z-10 right-2 ${
-            profileVisible ? "top-[85px]" : "top-[-150%]"
+            profileVisible ? "top-[61px] sm:top-[85px]" : "top-[-150%]"
           }`}
         >
           {/* Logout Link */}
