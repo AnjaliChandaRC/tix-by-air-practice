@@ -16,7 +16,7 @@ const DashboardHeader = ({ setIsSidebarVisible, isSidebarVisible }) => {
     <>
       <div>
         {/* Main Header Section */}
-        <div className="px-5 py-2 sm:py-[19px] w-full bg-white relative z-20 border-b border-b-black">
+        <div className="px-5 py-2 sm:py-[19.6px] w-full bg-white relative z-20 border-b border-b-black">
           <div
             className={`${
               pathName === "/creator/create-community"

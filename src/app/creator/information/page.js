@@ -1,10 +1,10 @@
-import NotFound from "@/components/dashboards/common/NotFound";
+import Information from "@/components/dashboards/information/Information";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <NotFound />
+      <Information />
     </>
   );
 };
