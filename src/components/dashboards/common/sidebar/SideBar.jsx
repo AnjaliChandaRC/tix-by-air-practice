@@ -6,23 +6,14 @@ import { BackArrow } from "../icons/SidebarIcons";
 import Link from "next/link";
 
 const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
-  const handleSliderBack = () => {
-    // Implement the logic to handle sliding the sidebar back
-    setIsSidebarVisible(false); // For example, close the sidebar when back button is clicked
-  };
-
-  const handleOverlayClick = () => {
-    // Close the sidebar when the overlay is clicked
-    setIsSidebarVisible(false);
-  };
-
+  
   return (
     <>
       {/* Transparent overlay */}
       {isSidebarVisible && (
         <div
           className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-30"
-          onClick={handleOverlayClick}
+          onClick={()=>setIsSidebarVisible(false)}
         ></div>
       )}
       <div
@@ -35,7 +26,7 @@ const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
             <div className="flex items-center gap-[5px]">
               {/* Slider back button */}
               <button
-                onClick={handleSliderBack}
+               onClick={()=>setIsSidebarVisible(false)}
                 className="text-white md:hidden w-[22px] h-[22px]"
               >
                 <BackArrow />
