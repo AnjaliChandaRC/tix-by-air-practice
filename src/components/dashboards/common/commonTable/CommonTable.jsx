@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommonTable = ({ tableHeader, tableData }) => {
     return (
-        <div className='border-[2px] border-mediumgray mb-3 overflow-x-scroll scroll_bar_none rounded-xl'>
+        <div className='border border-mediumgray mb-3 overflow-x-scroll scroll_bar_none rounded-xl'>
             <table className='w-full rounded-xl overflow-hidden '>
                 <thead>
                     <tr className='bg-[linear-gradient(142.51deg,#FB981D_0%,#FB6609_89.88%),linear-gradient(0deg,#000000,#000000)]' >
