@@ -11,15 +11,12 @@ import { useRouter } from "next/navigation";
 const YourCommunities = () => {
   const router = useRouter(); // Access the router object
 
-  const handleCreateNewCommunity = () => {
-    router.push("/creator/create-community");
-  };
   return (
     <>
       <div className=" m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke w-full px-[22px] py-[23px] overflow-hidden">
         <Heading
           title="Create New Community "
-          onclick={handleCreateNewCommunity}
+          onclick={()=>router.push("/creator/create-community")}
           className="mb-7 flex-col lg:flex-row  !items-start lg:!items-center gap-4 lg:gap-0"
         />
         <CommonTable
