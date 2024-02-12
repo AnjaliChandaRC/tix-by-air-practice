@@ -31,6 +31,7 @@ const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
               >
                 <BackArrow />
               </button>
+              {/* Link to home */}
               <Link href="/" className="flex items-center gap-1">
                 <Image
                   src="/assets/images/png/nav-logo.png"
@@ -43,8 +44,10 @@ const Sidebar = ({ isSidebarVisible, setIsSidebarVisible }) => {
                 </h2>
               </Link>
             </div>
+            {/* Tabs for creators */}
             <CreatorTabs />
           </div>
+          {/* Image */}
           <Image
             src="/assets/images/png/sidebar_internet_img.png"
             alt="Internet"
