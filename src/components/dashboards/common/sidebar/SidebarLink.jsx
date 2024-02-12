@@ -8,7 +8,7 @@ const SidebarLink = ({ url, icons, title }) => {
   return (
     <Link
       href={url}
-      className={`flex items-center gap-[10px] rounded-s-full py-5 my-5 ps-5 relative ${
+      className={`flex items-center gap-[10px] rounded-s-full py-4 my-3 ps-5 relative ${
         pathname === url ? "bg-white" : ""
       }`}
     >
