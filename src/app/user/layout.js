@@ -7,13 +7,13 @@ export default function RootLayout({ children }) {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
   return (
     <div className="h-screen flex">
-      < Sidebar
+      <Sidebar
         isSidebarVisible={isSidebarVisible}
         setIsSidebarVisible={setIsSidebarVisible}
       />
-      <div className="w-full h-screen flex flex-col overflow-auto pl-[255px]">
+      <div className="w-full h-screen flex flex-col overflow-auto md:pl-[255px]">
         <DashboardHeader setIsSidebarVisible={setIsSidebarVisible} />
-        <div className="flex grow w-full">{children}</div>
+        <div className="flex grow w-full overflow-y-auto">{children}</div>
       </div>
     </div>
   );

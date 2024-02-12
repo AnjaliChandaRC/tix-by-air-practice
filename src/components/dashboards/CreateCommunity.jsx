@@ -38,7 +38,8 @@ const CreateCommunity = () => {
 
   // Event handler for key press
   const handleKeyPress = (e) => {
-    if (e.key === "Shift") {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent the default form submission
       // Check if the input value is not empty
       if (inputValue.trim() !== "") {
         // Check if the array has less than 3 values before adding the input value
@@ -64,7 +65,7 @@ const CreateCommunity = () => {
     valueArray.length >= 3 ? "Maximum value reached" : "Enter a value";
   return (
     <div className="flex flex-col w-full">
-      <div className=" min-h-[calc(100vh-80px)] p-5 md:p-6 w-full">
+      <div className="min-h-[calc(100vh-80px)] p-5 md:p-6 w-full">
         <div className="border rounded-2xl bg-whitesmoke p-[22px]">
           <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
             Create New Community
@@ -202,8 +203,12 @@ const CreateCommunity = () => {
               </div>
             </div>
             {/* Submit button */}
-            <div className="mt-[30px]">
-              <CustomButton title="Submit" className="w-[167px]" />
+            <div className="mt-[30px] flex gap-4">
+              <CustomButton title="Submit" className="w-[197px]" />
+              <CustomButton
+                title="View community"
+                className="w-[227px] bg-white"
+              />
             </div>
           </form>
         </div>
