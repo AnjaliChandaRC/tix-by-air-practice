@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomInputs from "../common/fields/CustomInput";
 import CustomButton from "../common/button/CustomButton";
 import CustomTextArea from "../common/fields/CustomTextArea";
@@ -30,7 +30,10 @@ const CreateCommunity = () => {
   // State for handling input value and array of values
   const [inputValue, setInputValue] = useState("");
   const [valueArray, setValueArray] = useState([]);
-
+  useEffect(() => {
+    // Add default values to valueArray when the component mounts
+    setValueArray(["Lorem Ipsum Dolor", "Lorem Ipsum Dolor"]);
+  }, []);
   // Event handler for input change
   const handleNameChange = (e) => {
     setInputValue(e.target.value);
