@@ -38,10 +38,11 @@ const CreateCommunity = () => {
 
   // Event handler for key press
   const handleKeyPress = (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Shift") {
       // Check if the array has less than 3 values before adding the input value
       if (valueArray.length < 3) {
         setValueArray((prevArray) => [...prevArray, inputValue]);
+        console.log(valueArray);
         setInputValue("");
       }
     }
@@ -135,13 +136,16 @@ const CreateCommunity = () => {
                 Interest
               </label>
               <div className="pt-[10px]">
-                <div className="rounded-lg border border-light-grey h-[60px] pt-[13px] pb-[14px] px-3 input-no-spinner w-full placeholder:text-sm placeholder:ff_inter bg-transparent">
+                <label
+                  htmlFor="interest"
+                  className="rounded-lg border border-light-grey inline-block pt-[13px] pb-[14px] px-3 input-no-spinner w-full placeholder:text-sm placeholder:ff_inter bg-transparent"
+                >
                   {/* Displaying values and allowing removal */}
                   {valueArray.map((obj, index) => {
                     return (
                       <span
                         key={index}
-                        className="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter  inline-block text-sm relative text-[#4A4641] "
+                        className="px-2 me-2 py-1 rounded-[10px] bg-antiquewhite border border-[#888178] border-solid bg-antique-white ff_inter inline-block text-sm relative text-[#4A4641] "
                       >
                         {obj}
                         <button
@@ -156,15 +160,15 @@ const CreateCommunity = () => {
                   {/* Input field for adding new interests */}
                   <input
                     type="text"
-                    id="Name"
+                    id="interest"
                     value={inputValue}
                     onChange={handleNameChange}
                     placeholder={placeholderMessage}
                     onKeyDown={handleKeyPress}
                     disabled={valueArray.length >= 3}
-                    className="outline-none bottom-0 bg-transparent text-sm  text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey"
+                    className="outline-none bottom-0 bg-transparent text-sm text-dark-grey placeholder:ff_inter placeholder:text-sm placeholder:text-dark-grey"
                   />
-                </div>
+                </label>
                 <p className="ff_inter text-sm text-shadowgray pt-2.5">
                   This is your community’s interest.
                 </p>
