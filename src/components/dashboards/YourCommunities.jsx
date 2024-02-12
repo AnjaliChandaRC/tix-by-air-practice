@@ -19,7 +19,7 @@ const YourCommunities = () => {
       <div className=" m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke w-full px-[22px] py-[23px] overflow-hidden">
         <Heading
           title="Create New Community "
-          onclick={handleCreateNewCommunity} 
+          onclick={handleCreateNewCommunity}
           className="mb-7 flex-col lg:flex-row  !items-start lg:!items-center gap-4 lg:gap-0"
         />
         <CommonTable
@@ -37,7 +37,7 @@ const YourCommunities = () => {
                 </td>
                 <td className="py-4 w-[180px] pl-3 md:pl-6">
                   <Link
-                    href="/"
+                    href="/creator/create-community"
                     className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola font-inter text-black font-normal text-sm leading-[1]"
                   >
                     <span>
@@ -48,7 +48,7 @@ const YourCommunities = () => {
                 </td>
                 <td className="pl-3 md:pl-6 py-4 w-[150px]">
                   <Link
-                    href="/"
+                    href="/creator/information"
                     className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola font-inter text-black font-normal text-sm leading-[1] "
                   >
                     <span>
