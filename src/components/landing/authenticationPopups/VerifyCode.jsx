@@ -60,7 +60,7 @@ const VerifyCode = ({ setCurrentModal }) => {
         Refresh your page to get a new code after a few minutes
       </p>
       {/* Submit button */}
-      <CustomButton title="Verify code" className="!w-full" />
+      <CustomButton isBgGradient={true} title="Verify code" className="!w-full" />
     </form>
   );
 };

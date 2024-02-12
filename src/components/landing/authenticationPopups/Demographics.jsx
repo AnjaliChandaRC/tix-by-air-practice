@@ -113,6 +113,7 @@ const Demographics = ({ setCurrentModal }) => {
           })}
         </div>
         <CustomButton
+        isBgGradient={true}
           title="Submit"
           setCurrentModal={setCurrentModal}
           className="w-full"

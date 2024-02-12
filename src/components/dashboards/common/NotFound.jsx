@@ -13,7 +13,7 @@ const NotFound = () => {
           <h2 className="text-black ff_satoshi_black text-2xl lg:text-[28px] !leading-[150%] xl:max-w-[380px]  pt-4 xl:pt-0">There is currently no Community created by you</h2>
           {/* Button to create new community */}
           <div className=" sm:max-w-[270px] mt-4 mx-auto xl:mx-0">
-            <CustomButton title="Create New Community" />
+            <CustomButton isBgGradient={true} title="Create New Community" />
           </div>
         </div>
         {/* Image section */}
