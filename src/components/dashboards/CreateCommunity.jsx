@@ -39,11 +39,14 @@ const CreateCommunity = () => {
   // Event handler for key press
   const handleKeyPress = (e) => {
     if (e.key === "Shift") {
-      // Check if the array has less than 3 values before adding the input value
-      if (valueArray.length < 3) {
-        setValueArray((prevArray) => [...prevArray, inputValue]);
-        console.log(valueArray);
-        setInputValue("");
+      // Check if the input value is not empty
+      if (inputValue.trim() !== "") {
+        // Check if the array has less than 3 values before adding the input value
+        if (valueArray.length < 3) {
+          setValueArray((prevArray) => [...prevArray, inputValue]);
+          setInputValue("");
+          console.log(valueArray);
+        }
       }
     }
   };
