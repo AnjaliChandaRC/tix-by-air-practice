@@ -202,8 +202,12 @@ const CreateCommunity = () => {
               </div>
             </div>
             {/* Submit button */}
-            <div className="mt-[30px]">
-              <CustomButton title="Submit" className="w-[167px]" />
+            <div className="mt-[30px] flex gap-4">
+              <CustomButton title="Submit" className="w-[197px]" />
+              <CustomButton
+                title="View community"
+                className="w-[227px] bg-white"
+              />
             </div>
           </form>
         </div>
