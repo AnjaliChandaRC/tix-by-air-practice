@@ -1,12 +1,12 @@
-import CreateCommunity from '@/components/dashboards/CreateCommunity'
-import React from 'react'
+import CreateCommunity from "@/components/dashboards/CreateCommunity";
+import React from "react";
 
 const page = () => {
-    return (
-        <>
-            <CreateCommunity />
-        </>
-    )
-}
+  return (
+    <>
+      <CreateCommunity />
+    </>
+  );
+};
 
-export default page
+export default page;
