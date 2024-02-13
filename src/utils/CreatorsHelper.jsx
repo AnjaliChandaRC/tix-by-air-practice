@@ -16,3 +16,13 @@ export const communityList = [
     slug: "designers",
   },
 ];
+export const InterestsList = [
+  "Lorem Ipsum Dolor",
+  "Lorem Ipsum Dolor",
+  "Lorem Ipsum Dolor",
+];
+export const ViewList = [
+  { id: 1, link: 'https://www.tixbyair.com' },
+  { id: 2, link: 'https://www.example.com' },
+  { id: 3, link: 'https://www.anotherexample.com' }
+];
