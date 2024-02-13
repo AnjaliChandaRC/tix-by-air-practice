@@ -21,8 +21,19 @@ export const InterestsList = [
   "Lorem Ipsum Dolor",
   "Lorem Ipsum Dolor",
 ];
+
 export const ViewList = [
-  { id: 1, link: 'https://www.tixbyair.com' },
-  { id: 2, link: 'https://www.example.com' },
-  { id: 3, link: 'https://www.anotherexample.com' }
+  { title: "https://www.tixbyair.com", url: "/short-links" },
+  { title: "Lorem Ipsum Dolor", url: "#" },
+  { title: "Lorem Ipsum Dolor", url: "#" },
+];
+export const qrsList = [
+  { title: "E-commerce", url: "/create-qr" },
+  { title: "Lorem Ipsum Dolor", url: "#" },
+  { title: "Lorem Ipsum Dolor", url: "#" },
+];
+export const contentList = [
+  { title: "Test doc", url: "/submit-community" },
+  { title: "Lorem Ipsum Dolor", url: "#" },
+  { title: "Lorem Ipsum Dolor", url: "#" },
 ];

@@ -16,7 +16,7 @@ export const QrCOdeIcon = () => {
 
     )
 }
-export const ViewContentIcon = () => {
+export const ContentIcon = () => {
     return (
 <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.82812 17.7493H17.8281V15.8327H7.82812V17.7493ZM17.8281 13.916H7.82812V11.9993H17.8281V13.916ZM7.82812 10.0827H11.8281V8.16602H7.82812V10.0827Z" fill="black"/>
