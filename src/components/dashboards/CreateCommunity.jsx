@@ -7,8 +7,13 @@ import { useForm } from "react-hook-form";
 import { EyeIcon } from "../common/icons/EyeIcon";
 import { EyeClosedIcon } from "@radix-ui/react-icons";
 import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
+import { CREATE, EDIT } from "@/utils/Content";
 
 const CreateCommunity = () => {
+  const searchParams = useSearchParams();
+  const search = searchParams.get("type");
+  console.log("searchsearch", search);
   const router = useRouter(); // Access the router object from Next.js
   // React Hook Form initialization
   const {
@@ -72,9 +77,15 @@ const CreateCommunity = () => {
     <div className="flex flex-col w-full h-full">
       <div className="p-5 md:p-6 w-full">
         <div className="border rounded-2xl bg-whitesmoke p-5 sm:px-[22px] sm:py-[23px]">
-          <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
-            Create New Community
-          </h2>
+          {search === CREATE ? (
+            <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
+              Create New Community
+            </h2>
+          ) : (
+            <h2 className="text-black ff_satoshi_black leading-[100%] text-2xl md:text-[28px]">
+              Manage your Community
+            </h2>
+          )}
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="mt-5">
               {/* Community Name input field */}
@@ -209,11 +220,21 @@ const CreateCommunity = () => {
             </div>
             {/* Submit button */}
             <div className="mt-[30px] flex flex-col sm:flex-row items-center sm:items-start gap-4">
-              <CustomButton isBgGradient={true} title="Submit" className="w-full max-w-[350px] sm:w-[227px] order-1" />
-              <CustomButton isBgGradient={false} changeModalHandler={() => router.push("/creator/information")}
-                title="View community"
-                className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2"
+              <CustomButton
+                isBgGradient={true}
+                title="Submit"
+                className="w-full max-w-[350px] sm:w-[227px] order-1"
               />
+              {search === EDIT ? (
+                <CustomButton
+                  isBgGradient={false}
+                  changeModalHandler={() => router.push("/creator/information")}
+                  title="View community"
+                  className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2"
+                />
+              ) : (
+                ""
+              )}
             </div>
           </form>
         </div>

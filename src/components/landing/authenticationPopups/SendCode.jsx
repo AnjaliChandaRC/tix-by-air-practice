@@ -65,10 +65,11 @@ const SendCode = ({ setCurrentModal }) => {
         </p>
         {/* Submit button */}
         <CustomButton
-        isBgGradient={true}
-        className='w-full'
+          isBgGradient={true}
+          className="w-full"
           title="Send code" // Button title
           type="submit" // Added type submit to trigger form submission
+          
         />
       </form>
     </>

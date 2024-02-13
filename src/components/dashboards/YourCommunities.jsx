@@ -6,11 +6,10 @@ import { EyeIcon } from "../common/icons/EyeIcon"; // Importing EyeIcon componen
 import { communitiesHeadList, communityList } from "@/utils/CreatorsHelper"; // Importing data from CreatorsHelper
 import Link from "next/link"; // Importing Link component from Next.js
 import Heading from "./Heading"; // Importing Heading component
-import { useRouter } from "next/navigation"; // Importing useRouter hook from Next.js
 
 // Defining functional component named YourCommunities
 const YourCommunities = () => {
-  const router = useRouter(); // Access the router object from Next.js
+
 
   // Returning JSX for YourCommunities component
   return (
@@ -19,7 +18,6 @@ const YourCommunities = () => {
         <Heading // Rendering Heading component
           title="Your Communities" // Passing title prop
           btnTitle="Create New Community"
-          onclick={() => router.push("/creator/create-community")} // Handling click event to navigate
           className="mb-7 flex-col lg:flex-row  !items-start lg:!items-center gap-4 lg:gap-0" // Customizing className
         />
         <CommonTable // Rendering CommonTable component
@@ -27,8 +25,10 @@ const YourCommunities = () => {
           ListFooterText="A list of your Communities" // Passing ListFooterText prop
         >
           {communityList && // Mapping through communityList array and rendering table rows
-            communityList.map((obj, i) => (
-              <tr key={i}> {/* Table row */}
+            communityList.map((obj, i) => {
+              console.log("objobj",obj.slug)
+              return(
+                <tr key={i}> {/* Table row */}
                 <td className=" ff_inter text-black font-normal text-sm leading-[100%] pl-3 md:pl-6 py-4 w-[150px]"> {/* Table data */}
                   {obj.coummunityName} {/* Displaying community name */}
                 </td>
@@ -37,13 +37,13 @@ const YourCommunities = () => {
                 </td>
                 <td className="py-4 w-[180px] pl-3 md:pl-6"> {/* Table data */}
                   <Link // Rendering Link component for editing
-                    href="/creator/create-community" // Setting href for Link
+                    href="/creator/create-community?type=edit" // Setting href for Link
                     className="flex items-center gap-x-[2px] group transition-all duration-300 hover:text-orangecrayola ff_inter text-black font-normal text-sm leading-[100%]" // Customizing className
                   >
                     <span>
                       <EditIcon stroke="group-hover:stroke-orangecrayola transition-all duration-200" /> {/* Rendering EditIcon */}
                     </span>
-                    Edit {/* Text */}
+                    Edit 
                   </Link>
                 </td>
                 <td className="pl-3 md:pl-6 py-4 w-[150px]"> {/* Table data */}
@@ -58,7 +58,8 @@ const YourCommunities = () => {
                   </Link>
                 </td>
               </tr>
-            ))}
+              )
+            })}
         </CommonTable>
       </div>
     </>
