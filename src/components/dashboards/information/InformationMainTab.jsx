@@ -10,6 +10,7 @@ const InformationMainTab = () => {
         <Heading
           className="flex-col !items-start gap-4 md:flex-row md:!items-center"
           title={"UI/UX"}
+          link="/creator/create-community?type=edit"
           btnTitle={"Manage Community"}
         />
       </div>
