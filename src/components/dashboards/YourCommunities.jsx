@@ -18,6 +18,7 @@ const YourCommunities = () => {
       <div className=" m-5 md:m-6 border-[1px] rounded-2xl bg-whitesmoke w-full px-[22px] py-[23px] overflow-hidden"> {/* Container div */}
         <Heading // Rendering Heading component
           title="Your Communities" // Passing title prop
+          btnTitle="Create New Community"
           onclick={() => router.push("/creator/create-community")} // Handling click event to navigate
           className="mb-7 flex-col lg:flex-row  !items-start lg:!items-center gap-4 lg:gap-0" // Customizing className
         />
