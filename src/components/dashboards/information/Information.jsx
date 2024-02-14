@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import CommonTabs from '../common/commonTabs/CommonTabs';
 import InformationMainTab from './InformationMainTab';
-import InformationGroupTab from './InformationGroupTab';
+import InformationGroupChatTab from './InformationGroupChatTab';
 
 const Information = () => {
   const [activeTab, setActiveTab] = useState("Main");
@@ -20,7 +20,7 @@ const Information = () => {
         />
         <div>
           {activeTab === 'Main' && <InformationMainTab />}
-          {activeTab === 'Group Chat' && <InformationGroupTab />}
+          {activeTab === 'Group Chat' && <InformationGroupChatTab />}
         </div>
       </div>
     </div>

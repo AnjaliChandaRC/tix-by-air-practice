@@ -10,9 +10,9 @@ import { useSearchParams } from "next/navigation";
 import { CREATE, EDIT } from "@/utils/Content";
 
 const CreateCommunity = () => {
+
   const searchParams = useSearchParams();
   const search = searchParams.get("type");
-  console.log("searchsearch", search);
   // React Hook Form initialization
   const {
     register,
@@ -223,15 +223,13 @@ const CreateCommunity = () => {
                 title="Submit"
                 className="w-full max-w-[350px] sm:w-[227px] order-1 flex justify-center"
               />
-              {search === EDIT ? (
+              {search === EDIT && (
                 <CustomButton
                   isBgGradient={false}
                   link="/creator/information"
                   title="View community"
                   className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2 flex justify-center"
                 />
-              ) : (
-                ""
               )}
             </div>
           </form>
