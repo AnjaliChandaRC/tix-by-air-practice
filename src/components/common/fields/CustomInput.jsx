@@ -8,6 +8,7 @@ export default function CustomInputs(props) {
     backGround,
     color,
     type,
+    onChange,
     className // Additional className prop to pass custom classes
   } = props;
 
@@ -18,6 +19,7 @@ export default function CustomInputs(props) {
       <input
         type={type || "text"}
         className={inputClasses}
+        onChange={onChange}
         placeholder={placeholder}
         {...register} // Moved register prop here
       />
