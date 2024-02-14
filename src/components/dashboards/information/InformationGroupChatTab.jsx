@@ -1,10 +1,12 @@
+import CustomInputs from '@/components/common/fields/CustomInput'
 import { myMessagesList, senderMessagesList } from '@/utils/CreatorsHelper'
 import Image from 'next/image'
 import React from 'react'
 
 const InformationGroupChatTab = () => {
     return (
-        <div className='pt-8 '>
+        <>
+        <div className='mt-8  h-[calc(100vh-314px)] overflow-y-auto px-[23px]'>
             {senderMessagesList.map((obj, index) => {
                 return (
                     <div key={index} className='bg-albescentwhite rounded-[0px_16px_16px_16px] w-full max-w-[401px] pt-[15px] px-[9px] pb-[9px] ms-14 relative mt-4'>
@@ -16,7 +18,6 @@ const InformationGroupChatTab = () => {
                 )
             }
             )}
-
             <div className='flex flex-col items-end'>
                 {myMessagesList.map((obj, index) => {
                     return (
@@ -31,6 +32,12 @@ const InformationGroupChatTab = () => {
                 )}
             </div>
         </div>
+         <div className='relative over'>
+         <CustomInputs 
+         placeholder="Type your message..."
+          className="absolute border-t -bottom-14 border-0 !outline-none focus-visible:border-black h-[74px] rounded-bl-2xl rounded-br-2xl rounded-none bg-whitesmoke ps-10" />
+         </div>
+         </>
     )
 }
 

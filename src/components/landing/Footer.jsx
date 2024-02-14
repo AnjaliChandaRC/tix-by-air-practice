@@ -16,6 +16,7 @@ const Footer = () => {
             alt="footer logo"
             width={126}
             height={89}
+            sizes="100vw"
             className="w-[104px] h-[74px] md:w-[126px] md:h-[89px]"
           />
           <p className="text-[27px] sm:text-textXl ff_inter font-bold text-white leading-[100%]">

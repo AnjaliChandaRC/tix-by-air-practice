@@ -42,6 +42,7 @@ const Header = ({ setCurrentModal }) => {
             alt="nav-logo"
             height={59}
             width={83}
+            sizes="100vw"
             className="logo_img"
           />
           <p className="text-[10px] sm:text-textlg ff_inter font-bold text-black">

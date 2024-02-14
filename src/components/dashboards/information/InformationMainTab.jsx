@@ -5,7 +5,7 @@ import Heading from '../Heading'
 
 const InformationMainTab = () => {
   return (
-    <>
+    <div className='px-[23px]'>
       <div className='pt-8 pb-9'>
         <Heading
           className="flex-col !items-start gap-4 md:flex-row md:!items-center"
@@ -35,7 +35,7 @@ const InformationMainTab = () => {
       <div className='pt-10 md:pt-14'>
         <InformationMainDropDown />
       </div>
-    </>
+    </div>
   )
 }
 
