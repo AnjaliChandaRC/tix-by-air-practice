@@ -32,6 +32,7 @@ const DashboardHeader = ({ setIsSidebarVisible, isSidebarVisible }) => {
                   alt="nav-logo"
                   width={79}
                   height={56}
+                  sizes="100vw"
                   className="w-[50px] h-[30px]"
                 />
                 <p className="text-sm sm:text-2xl ff_inter font-bold text-black hidden sm:block">
