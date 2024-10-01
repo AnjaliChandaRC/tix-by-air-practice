@@ -45,6 +45,8 @@ module.exports = {
         shadowgray: "#4A4A4A",
         graytwo: "#7B7B7B",
         mediumgray: "#B4B4B4",
+        greige: "#ADA499",
+        platinum: "#EAEAEA",
       },
     },
   },

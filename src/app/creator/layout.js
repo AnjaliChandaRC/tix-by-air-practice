@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
             setIsSidebarVisible={setIsSidebarVisible}
             isSidebarVisible={isSidebarVisible}
           />
-          <div className="flex grow w-full overflow-y-auto">{children}</div>
+          <div className="flex grow w-full ">{children}</div>
         </div>
       ) : (
         <div className="h-screen flex">
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
               setIsSidebarVisible={setIsSidebarVisible}
               isSidebarVisible={isSidebarVisible}
             />
-            <div className="flex grow w-full overflow-y-auto">{children}</div>
+            <div className="flex grow w-full">{children}</div>
           </div>
         </div>
       )}

@@ -6,15 +6,13 @@ import CustomTextArea from "../common/fields/CustomTextArea";
 import { useForm } from "react-hook-form";
 import { EyeIcon } from "../common/icons/EyeIcon";
 import { EyeClosedIcon } from "@radix-ui/react-icons";
-import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { CREATE, EDIT } from "@/utils/Content";
 
 const CreateCommunity = () => {
+
   const searchParams = useSearchParams();
   const search = searchParams.get("type");
-  console.log("searchsearch", search);
-  const router = useRouter(); // Access the router object from Next.js
   // React Hook Form initialization
   const {
     register,
@@ -223,17 +221,15 @@ const CreateCommunity = () => {
               <CustomButton
                 isBgGradient={true}
                 title="Submit"
-                className="w-full max-w-[350px] sm:w-[227px] order-1"
+                className="w-full max-w-[350px] sm:w-[227px] order-1 flex justify-center"
               />
-              {search === EDIT ? (
+              {search === EDIT && (
                 <CustomButton
                   isBgGradient={false}
-                  changeModalHandler={() => router.push("/creator/information")}
+                  link="/creator/information"
                   title="View community"
-                  className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2"
+                  className="w-full max-w-[350px] sm:w-[227px] bg-white order-first sm:order-2 flex justify-center"
                 />
-              ) : (
-                ""
               )}
             </div>
           </form>

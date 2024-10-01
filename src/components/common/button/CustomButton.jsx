@@ -10,7 +10,6 @@ function CustomButton({
   className,
   isBgGradient,
 }) {
-  console.log("linklink", link);
   return (
     <>
       {/* Button text */}

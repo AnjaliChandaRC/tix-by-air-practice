@@ -18,6 +18,7 @@ const YourCommunities = () => {
         <Heading // Rendering Heading component
           title="Your Communities" // Passing title prop
           btnTitle="Create New Community"
+          link="/creator/create-community?type=create"
           className="mb-7 flex-col lg:flex-row  !items-start lg:!items-center gap-4 lg:gap-0" // Customizing className
         />
         <CommonTable // Rendering CommonTable component
